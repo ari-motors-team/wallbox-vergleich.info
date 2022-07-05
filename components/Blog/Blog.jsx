@@ -8,7 +8,7 @@ export default function Blog({ getBlogs }) {
 
   return (
     <>
-      {/* <Head page={page} /> */}
+      {/* <Head page={page} /> vsdvsdv*/}
       <div className="grid justify-center grid-cols-1 2xl:grid-cols-[auto,_320px] gap-5 2xl:mx-48 cursor-pointer  ">
         <div className="w-full ">
           {getBlogs
