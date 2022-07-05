@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="118px" height="136px" viewBox="0 0 118 136" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="background: bg-grey-lighter;">
+    <title>etv icon / reichweite copy 2</title>
+    <g id="etv-icon-/-reichweite-copy-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="bg-grey-lighter" x="0" y="0" width="118" height="136"></rect>
+        <g id="deliveryTime" transform="translate(6.000000, 15.000000)">
+            <path d="M52.551532,103.530017 C24.3850098,103.530017 1.55153203,80.6965395 1.55153203,52.5300172 C1.55153203,24.363495 24.3850098,1.53001725 52.551532,1.53001725 C80.7180543,1.53001725 103.551532,24.363495 103.551532,52.5300172 C103.512973,80.6805525 80.7020673,103.491459 52.551532,103.530017 Z" id="Path" fill="#FFFFFF" fill-rule="nonzero"></path>
+            <path d="M52.551532,3.00001623 C72.5823218,2.99597266 90.6428121,15.0596507 98.310132,33.5649138 C105.977452,52.0701769 101.741366,73.3720364 87.5774588,87.535944 C73.4135512,101.699852 52.1116917,105.935937 33.6064286,98.2686172 C15.1011655,90.6012974 3.03748745,72.5408071 3.04153101,52.5100172 C3.04705274,25.1686864 25.2102011,3.00553796 52.551532,3.00001623 M52.551532,8.61650098e-06 C31.3055391,-0.0121183164 12.1450032,12.777354 4.00703767,32.4029974 C-4.13092785,52.0286407 0.356885486,74.624133 15.3772117,89.6501824 C30.397538,104.676232 52.991319,109.172653 72.6200611,101.042164 C92.2488033,92.9116756 105.045574,73.7560132 105.041533,52.5100172 C105.008491,23.5310481 81.5304865,0.0440980672 52.551532,8.61650098e-06 Z" id="Shape" fill="bg-blue-darker" fill-rule="nonzero"></path>
+            <polyline id="Path" stroke="bg-blue-darker" stroke-width="3" points="75.611532 52.5300172 52.551532 52.5300172 41.211532 10.6400172"></polyline>
+            <line x1="52.551532" y1="97.3600172" x2="52.551532" y2="85.3200172" id="Path" stroke="bg-blue-darker" stroke-width="3"></line>
+            <line x1="52.551532" y1="7.67001725" x2="52.551532" y2="19.7600172" id="Path" stroke="bg-blue-darker" stroke-width="3"></line>
+            <line x1="19.771532" y1="52.5100172" x2="7.71153203" y2="52.5100172" id="Path" stroke="bg-blue-darker" stroke-width="3"></line>
+            <line x1="97.401532" y1="52.5100172" x2="85.331532" y2="52.5100172" id="Path" stroke="bg-blue-darker" stroke-width="3"></line>
+            <line x1="68.951532" y1="80.9200172" x2="74.971532" y2="91.3500172" id="Path" stroke="bg-blue-darker" stroke-width="3"></line>
+            <line x1="36.181532" y1="24.1500172" x2="30.131532" y2="13.6800172" id="Path" stroke="bg-blue-darker" stroke-width="3"></line>
+            <line x1="13.721532" y1="30.0900172" x2="24.181532" y2="36.1300172" id="Path" stroke="bg-blue-darker" stroke-width="3"></line>
+            <line x1="80.951532" y1="68.9100172" x2="91.391532" y2="74.9300172" id="Path" stroke="bg-blue-darker" stroke-width="3"></line>
+            <line x1="24.161532" y1="68.9100172" x2="13.721532" y2="74.9300172" id="Path" stroke="bg-blue-darker" stroke-width="3"></line>
+            <line x1="91.391532" y1="30.0900172" x2="80.931532" y2="36.1300172" id="Path" stroke="bg-blue-darker" stroke-width="3"></line>
+            <line x1="68.931532" y1="24.1500172" x2="74.971532" y2="13.6800172" id="Path" stroke="bg-blue-darker" stroke-width="3"></line>
+            <line x1="36.151532" y1="80.9200172" x2="30.131532" y2="91.3500172" id="Path" stroke="bg-blue-darker" stroke-width="3"></line>
+        </g>
+    </g>
+</svg>

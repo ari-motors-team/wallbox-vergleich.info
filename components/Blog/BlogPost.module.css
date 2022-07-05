@@ -1,0 +1,48 @@
+.blogmarkdown p {
+  margin: auto;
+  padding-left: 8px;
+  color: black;
+}
+
+@media only screen and (min-width: 300px) {
+  .blogmarkdown p {
+    padding-left: 0px;
+  }
+}
+
+.blogmarkdown {
+  @apply md:block;
+}
+
+.blogmarkdown h2,
+.blogmarkdown h1 {
+  padding-left: 8px;
+  color: black;
+}
+
+.blogmarkdown h3 {
+  padding-left: 8px;
+}
+
+.blogmarkdown::marker {
+  padding-left: 8px;
+}
+.blogmarkdown li {
+  @apply ml-8 list-disc;
+}
+
+
+.blogmarkdown span {
+  padding-left: 8px;
+}
+
+@media only screen and (min-width: 300px) {
+  .blogmarkdown span {
+    padding-left: 0px;
+  }
+}
+
+.blogmarkdown a {
+  @apply text-blue-light;
+}
+

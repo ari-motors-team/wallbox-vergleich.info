@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.elektrotransporter-vergleich.com
+
+# Sitemaps
+Sitemap: https://www.elektrotransporter-vergleich.com/sitemap.xml

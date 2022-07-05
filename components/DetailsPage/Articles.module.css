@@ -1,0 +1,42 @@
+.articles h3 {
+  display: none;
+}
+.flexbox h3,
+.fazit h3 {
+  display: none;
+}
+/* .articles p {
+  padding-bottom: 16px;
+} */
+.flexbox p {
+  padding-bottom: 6px;
+}
+
+.fazit {
+  margin-left: 2.5rem /* 40px */;
+  font-size: 10px;
+}
+.flexbox p {
+  height: auto !important;
+}
+
+.articles p {
+  padding: 0px 30px 30px 16px;
+}
+
+.containerRight,
+.containerLeft {
+  width: 48%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.flexbox {
+  /* height: 500px;
+  width: 500px; */
+  /* display: grid;
+  grid-template-columns: 2; */
+  padding: 0 !important;
+  margin: 0 !important;
+  height: auto !important;
+}

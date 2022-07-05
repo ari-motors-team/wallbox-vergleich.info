@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Content Manager</title>
+  </head>
+  <body>
+    <!-- Include the script that builds the page and powers Netlify CMS -->
+    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js">
+</script>
+
+  <script>
+    var SlugControl = createClass({
+      getInitialState: function () {
+        return { touched: false }
+      },
+
+      handleChange: function (e) {
+        this.props.field.get('mySchemaProperty')
+      },
+
+      render: function () {
+        return h('input', {
+          id: this.props.forID,
+          className: this.props.classNameWrapper,
+          type: 'text',
+          value: this.state.touched ? this.props.value : this.props.entry.get('slug'),
+          onChange: this.handleChange,
+        })
+      },
+    })
+
+    var SlugPreview = createClass({
+      render: function () {
+        return null // or show a preview
+      },
+    })
+
+    var schema = {
+      properties: { mySchemaProperty: { type: 'string' },
+},
+    }
+
+    CMS.registerWidget('slug', SlugControl, SlugPreview, schema)
+  </script>
+    
+  </body>
+</html>

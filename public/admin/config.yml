@@ -1,0 +1,1321 @@
+backend:
+  name: github
+  repo: ari-motors-team/elektrotransporter-vergleich
+  branch: dev
+  base_url: https://preview-elektrotransporter-vergleich.vercel.app
+  auth_endpoint: api/auth
+
+media_folder: public/images
+public_folder: /images
+local_backend: true
+
+i18n:
+  structure: multiple_folders
+  locales: [de, en]
+  default_locale: de
+
+collections:
+  - label: "Pages"
+    name: "pages"
+    identifier_field: path
+    folder: "content/pages"
+    create: true
+    i18n: true
+
+    fields:
+      - { label: "Title", name: "title", widget: "string", i18n: true }
+      - { label: "Path", name: "path", widget: "string", i18n: duplicate }
+      - label: "Description"
+        name: "description"
+        widget: "text"
+        i18n: true
+      - {
+          label: Image,
+          name: src,
+          widget: image,
+          i18n: duplicate,
+          choose_url: false,
+        }
+
+      - label: "Content(extra)"
+        name: "content"
+        widget: "list"
+        summary: "{{fields.name}}"
+        i18n: true
+        required: false
+        fields:
+          - { label: "Name", name: "name", widget: "string", i18n: duplicate }
+          - { label: "Markdown", name: "markdown", widget: "markdown" }
+
+  - label: "Brands"
+    name: "brands"
+    identifier_field: slug
+    slug: "{{fields.slug}}"
+    folder: "content/brands"
+    create: true
+    i18n: true
+
+    fields:
+      - { label: "Title", name: "title", widget: "string", i18n: true }
+
+      - label: "Description-SEO"
+        name: "description"
+        widget: "text"
+        i18n: true
+      - {
+          label: Logo-Image,
+          name: src,
+          widget: image,
+          i18n: duplicate,
+          choose_url: false,
+          required: true,
+        }
+      - {
+          label: "slug(SOS! WRITE ME WHENEVER YOU RENAME IT-ANGELOS-)",
+          name: "slug",
+          widget: "string",
+          i18n: duplicate,
+          required: true,
+          # update: true,
+          create: true,
+        }
+      - {
+          label: "Website Link",
+          name: "websiteLink",
+          widget: "string",
+          default: "bitte auffuelen",
+          i18n: duplicate,
+          required: true,
+        }
+      - {
+          label: "Content",
+          name: "content",
+          widget: "markdown",
+          summary: "{{fields.name}}",
+          default: "hier steht dn text",
+          i18n: true,
+          required: true,
+        }
+
+  - label: "Cars-Reviews"
+    name: "carsreviews"
+
+    folder: "content/carsreview"
+    create: true
+    slug: "{{fields.slug}}"
+    identifier_field: slug
+    i18n: true
+    fields:
+      - {
+          label: "Title",
+          name: "title",
+          widget: "string",
+          default: "ein titel",
+          i18n: true,
+          required: true,
+        }
+      - {
+          label: "slug(SOS! WRITE ME WHENEVER YOU RENAME IT-ANGELOS-)",
+          name: "slug",
+          widget: "string",
+          i18n: duplicate,
+          required: true,
+          # update: true,
+          create: true,
+        }
+      - label: "related Cars"
+        name: "relatedCars"
+        required: true
+        widget: "relation"
+        i18n: duplicate
+        collection: "vehicles"
+        search_fields: ["title"]
+        display_fields: ["title"]
+        value_field: "name"
+      - {
+          label: "Youtube Link",
+          name: "youtubeLink",
+          widget: "string",
+          default: "bitte auffuelen",
+          i18n: duplicate,
+          required: false,
+        }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        multiple: false
+        i18n: duplicate
+        required: true
+        options: ["Pritsche", "Kipper", "Kasten", "Koffer"]
+      - label: "Published at"
+        name: "publishedAt"
+        widget: "date"
+        default: ""
+        format: "MM/DD/YYYY"
+        i18n: true
+
+      - {
+          label: "Description",
+          name: "description",
+          widget: "text",
+          default: "bitte fuer SEO auffuelen",
+          i18n: true,
+          required: true,
+        }
+      - {
+          label: Image,
+          name: src,
+          widget: image,
+          i18n: duplicate,
+          choose_url: false,
+          required: false,
+        }
+
+      - label: "Content(here is the Testbericht)"
+        name: "content"
+        widget: "list"
+        summary: "{{fields.title}}"
+        i18n: true
+        required: false
+        fields:
+          - {
+              label: "Title",
+              name: "title",
+              widget: "string",
+              i18n: true,
+              required: false,
+            }
+          - {
+              label: "Bewertung-Sterne",
+              name: "stars",
+              widget: "number",
+              value_type: "float",
+              i18n: false,
+              default: 0,
+              min: 0,
+              max: 5,
+              hint: "Bitte geben Sie nur eine Zahl der Sterne ein, zum Beispiel 3 oder 3,3, NICHT 3/5",
+              # step: 2,
+              required: true,
+            }
+
+          - {
+              label: "Content",
+              name: "content",
+              widget: "markdown",
+              default: "hier steht dn text",
+              i18n: duplicate,
+              required: false,
+            }
+          - {
+              label: "Image",
+              name: "image",
+              widget: "image",
+              i18n: duplicate,
+              choose_url: true,
+              required: false,
+            }
+  - label: "Blogs"
+    name: "blogs"
+    folder: "content/blogs"
+    create: true
+    i18n: true
+    slug: "{{fields.slug}}"
+    identifier_field: slug
+    fields:
+      - {
+          label: "Title",
+          name: "title",
+          widget: "string",
+          default: "ein titel",
+          i18n: true,
+          required: true,
+        }
+      - {
+          label: "slug(SOS! WRITE ME WHENEVER YOU RENAME IT-ANGELOS-)",
+          name: "slug",
+          widget: "string",
+          i18n: duplicate,
+          required: true,
+          # update: true,
+          create: true,
+        }
+      - label: "related Cars"
+        required: false
+        name: "relatedCars"
+        widget: "relation"
+        i18n: duplicate
+        collection: "vehicles"
+        search_fields: ["title"]
+        display_fields: ["title"]
+        value_field: "name"
+        hint: "Wahl, welches Auto relevant ist"
+      - {
+          label: "Youtube Link",
+          name: "youtubeLink",
+          widget: "string",
+          default: "bitte auffuelen",
+          i18n: duplicate,
+          required: false,
+        }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        multiple: false
+        i18n: duplicate
+        required: true
+        options:
+          ["news", "subsidies", "manufacturer", "frequentlyaskedquestions"]
+      # - label: "post related vehicles"
+      #   name: "vehicle"
+      #   widget: "relation"
+      #   collection: "vehicles"
+      #   search_fields: ["name"]
+      #   display_fields: ["name"]
+      #   value_field: "rating"
+      #   required: true
+      - label: "Published at"
+        name: "publishedAt"
+        widget: "date"
+        default: ""
+        format: "MM/DD/YYYY"
+        i18n: true
+      - {
+          label: Image,
+          name: src,
+          widget: image,
+          i18n: duplicate,
+          choose_url: false,
+        }
+      - {
+          label: "Description",
+          name: "description",
+          widget: "markdown",
+          default: "bitte auffuelen",
+          i18n: true,
+          required: true,
+        }
+      - {
+          label: "Content-Body",
+          name: "body",
+          widget: "markdown",
+          default: "bitte auffuelen",
+          i18n: true,
+          required: true,
+        }
+
+  - label: "Vehicles"
+    name: "vehicles"
+    folder: "content/vehicles"
+    create: true
+    slug: "{{fields.name}}"
+    identifier_field: name
+    i18n: true
+
+    fields:
+      - {
+          label: "Title",
+          name: "title",
+          widget: "string",
+          i18n: true,
+          required: true,
+        }
+      - {
+          label: "Name-Slug(SOS! WRITE ME WHENEVER YOU RENAME IT-ANGELOS-)",
+          name: "name",
+          widget: "string",
+          i18n: duplicate,
+          required: true,
+        }
+
+      - {
+          label: "Price",
+          name: "price",
+          widget: "number",
+          value_type: "float",
+          i18n: duplicate,
+          required: true,
+        }
+      - label: "related blogs"
+        name: "relatedBlogs"
+        required: false
+        widget: "relation"
+        i18n: duplicate
+        collection: "blogs"
+        search_fields: ["title"]
+        display_fields: ["title"]
+        value_field: "slug"
+      - label: "related reviews"
+        name: "relatedReviews"
+        required: false
+        widget: "relation"
+        i18n: duplicate
+        collection: "carsreviews"
+        search_fields: ["title"]
+        display_fields: ["title"]
+        value_field: "slug"
+
+      - label: "Description"
+        name: "description"
+        widget: "markdown"
+        required: true
+        i18n: true
+      - {
+          label: Image,
+          name: src,
+          widget: image,
+          i18n: duplicate,
+          allow_multiple: true,
+        }
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+        i18n: true
+
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        required: true
+        multiple: false
+        i18n: duplicate
+        options: ["Pritsche", "Kipper", "Kasten", "Koffer"]
+      - label: "Type-Class"
+        name: "typeClass"
+        widget: "select"
+        multiple: false
+        i18n: duplicate
+        options: ["L7E", "L6E", "N1", "N1N2", "N2", "L2E"]
+        # default: ["Design"]
+      - label: "Loadingweight"
+        name: "loadingWeight"
+        required: true
+        widget: "object"
+        summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
+        i18n: true
+        fields:
+          - { label: "Key", name: "key", widget: "string", i18n: true }
+          - {
+              label: "Value",
+              name: "value",
+              widget: "number",
+              value_type: "float",
+              i18n: duplicate,
+            }
+          - {
+              label: "baseUnit",
+              name: "baseUnit",
+              widget: "string",
+              i18n: duplicate,
+            }
+      - label: "Curb Weight"
+        name: "curbweight"
+        required: true
+        widget: "object"
+        summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
+        i18n: true
+        fields:
+          - { label: "key", name: "key", widget: "string", i18n: true }
+          - {
+              label: "Value",
+              name: "value",
+              widget: "number",
+              value_type: "float",
+              i18n: duplicate,
+            }
+          - {
+              label: "baseUnit",
+              name: "baseUnit",
+              widget: "string",
+              i18n: duplicate,
+            }
+      - label: "maxSpeed"
+        name: "maxSpeed"
+        required: true
+        widget: "object"
+        summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
+        i18n: true
+        fields:
+          - { label: "Key", name: "key", widget: "string", i18n: true }
+          - {
+              label: "Value",
+              name: "value",
+              widget: "number",
+              value_type: "float",
+              i18n: duplicate,
+            }
+          - {
+              label: "baseUnit",
+              name: "baseUnit",
+              widget: "string",
+              i18n: duplicate,
+            }
+      - label: "Range-SLA"
+        name: "range230V"
+        required: true
+        widget: "object"
+        summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
+        i18n: true
+        fields:
+          - {
+              label: "Key",
+              name: "key",
+              widget: "string",
+              i18n: true,
+              required: true,
+            }
+          - {
+              label: "Value(Min auch)",
+              name: "value",
+              widget: "number",
+              value_type: "float",
+              i18n: duplicate,
+              required: true,
+            }
+          - {
+              label: "Value(nur max)",
+              name: "maxValue",
+              widget: "number",
+              value_type: "float",
+              i18n: duplicate,
+              required: true,
+            }
+
+          - {
+              label: "baseUnit",
+              name: "baseUnit",
+              widget: "string",
+              i18n: duplicate,
+              required: true,
+            }
+      - label: "Range-Lithium"
+        name: "rangeLithium"
+        widget: "object"
+        summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
+        i18n: true
+        required: true
+        fields:
+          - {
+              label: "Key",
+              name: "key",
+              widget: "string",
+              i18n: true,
+              required: true,
+            }
+          - {
+              label: "Value(Min auch)",
+              name: "value",
+              widget: "number",
+              value_type: "float",
+              i18n: duplicate,
+              required: true,
+            }
+
+          - {
+              label: "Value(nur max)",
+              name: "maxValue",
+              widget: "number",
+              value_type: "float",
+              i18n: duplicate,
+              required: true,
+            }
+          - {
+              label: "baseUnit",
+              name: "baseUnit",
+              widget: "string",
+              i18n: duplicate,
+              required: true,
+            }
+      - label: "chargingTime-230V"
+        name: "chargingTime230V"
+        required: true
+        widget: "object"
+        summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
+        i18n: true
+        fields:
+          - {
+              label: "Key",
+              name: "key",
+              widget: "string",
+              i18n: true,
+              required: true,
+            }
+          - {
+              label: "Value",
+              name: "value",
+              widget: "number",
+              value_type: "float",
+              i18n: duplicate,
+              required: true,
+            }
+          - {
+              label: "baseUnit",
+              name: "baseUnit",
+              required: true,
+              widget: "string",
+              i18n: true,
+            }
+      - label: "chargingTime-Typ2"
+        name: "chargingTimeLithium"
+        widget: "object"
+        summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
+        i18n: true
+        required: true
+        fields:
+          - {
+              label: "Key",
+              name: "key",
+              widget: "string",
+              i18n: true,
+              required: true,
+            }
+          - {
+              label: "Value",
+              name: "value",
+              widget: "number",
+              value_type: "float",
+              i18n: duplicate,
+              required: true,
+            }
+          - {
+              label: "baseUnit",
+              name: "baseUnit",
+              widget: "string",
+              i18n: true,
+              required: true,
+            }
+      - label: "chargingTime-Fast"
+        name: "chargingTimeFast"
+        required: true
+        widget: "object"
+        summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
+        i18n: true
+        fields:
+          - {
+              label: "Key",
+              name: "key",
+              widget: "string",
+              i18n: true,
+              required: true,
+            }
+          - {
+              label: "Value",
+              name: "value",
+              widget: "number",
+              value_type: "float",
+              i18n: duplicate,
+              required: true,
+            }
+          - {
+              label: "baseUnit",
+              name: "baseUnit",
+              required: true,
+              widget: "string",
+              i18n: true,
+            }
+      - label: "battery-Capacity-Blei"
+        name: "batteryCapacityBlei"
+        required: true
+        widget: "object"
+        summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
+        i18n: true
+        fields:
+          - {
+              label: "Key",
+              name: "key",
+              widget: "string",
+              i18n: true,
+              required: true,
+            }
+          - {
+              label: "Value",
+              name: "value",
+              widget: "number",
+              value_type: "float",
+              i18n: duplicate,
+              required: true,
+            }
+          - {
+              label: "baseUnit",
+              name: "baseUnit",
+              required: true,
+              widget: "string",
+              i18n: duplicate,
+            }
+      - label: "battery-Capacity-Lithium"
+        name: "batteryCapacityLithium"
+        widget: "object"
+        required: true
+        summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
+        i18n: true
+        fields:
+          - {
+              label: "Key",
+              name: "key",
+              widget: "string",
+              i18n: true,
+              required: true,
+            }
+          - {
+              label: "Value",
+              name: "value",
+              widget: "number",
+              value_type: "float",
+              i18n: duplicate,
+              required: true,
+            }
+          - {
+              label: "baseUnit",
+              name: "baseUnit",
+              required: true,
+              widget: "string",
+              i18n: duplicate,
+            }
+      - label: "battery-Included"
+        name: "batteryIncluded"
+        required: true
+        widget: "object"
+        summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
+        i18n: true
+        fields:
+          - {
+              label: "Key",
+              name: "key",
+              widget: "string",
+              i18n: true,
+              required: true,
+            }
+          - {
+              label: "Value",
+              name: "value",
+              widget: "string",
+              i18n: true,
+              required: true,
+            }
+      - label: "consumption"
+        name: "consumption"
+        required: true
+        widget: "object"
+        summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
+        i18n: true
+        fields:
+          - {
+              label: "Key",
+              name: "key",
+              widget: "string",
+              i18n: true,
+              required: true,
+            }
+          - {
+              label: "Value",
+              name: "value",
+              widget: "string",
+              i18n: true,
+              required: true,
+            }
+          - {
+              label: "baseUnit",
+              name: "baseUnit",
+              required: true,
+              widget: "string",
+              i18n: duplicate,
+            }
+
+      - label: "power"
+        name: "power"
+        required: true
+        widget: "object"
+        summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
+        i18n: true
+        fields:
+          - {
+              label: "Key",
+              name: "key",
+              widget: "string",
+              i18n: true,
+              required: true,
+            }
+          - {
+              label: "Value min/max",
+              name: "value",
+              required: true,
+              widget: "string",
+              i18n: duplicate,
+            }
+
+          - {
+              label: "baseUnit",
+              name: "baseUnit",
+              widget: "string",
+              i18n: duplicate,
+              required: true,
+            }
+      - label: "Seats"
+        name: "seats"
+        required: true
+        widget: "object"
+        summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
+        i18n: true
+        fields:
+          - { label: "Key", name: "key", widget: "string", i18n: true }
+          - {
+              label: "Value",
+              name: "value",
+              widget: "number",
+              value_type: "float",
+              i18n: duplicate,
+            }
+
+      - label: "rating"
+        name: "rating"
+        required: true
+        widget: "object"
+        summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
+        i18n: true
+        fields:
+          - {
+              label: "Result",
+              name: "key",
+              widget: "string",
+              i18n: true,
+              required: true,
+            }
+          - {
+              label: "Note",
+              name: "value",
+              widget: "number",
+              value_type: "float",
+
+              i18n: duplicate,
+              required: true,
+            }
+      - label: "guarantee"
+        name: "guarantee"
+        required: true
+        widget: "object"
+        summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
+        i18n: true
+        fields:
+          - {
+              label: "Key",
+              name: "key",
+              widget: "string",
+              i18n: true,
+              required: true,
+            }
+          - {
+              label: "Value",
+              name: "value",
+              widget: "number",
+              value_type: "float",
+              i18n: true,
+              required: true,
+            }
+          - {
+              label: "baseUnit",
+              name: "baseUnit",
+              required: true,
+              widget: "string",
+              i18n: true,
+            }
+      - label: "availability"
+        name: "availability"
+        required: true
+        widget: "object"
+        summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
+        i18n: true
+        fields:
+          - {
+              label: "Key",
+              name: "key",
+              widget: "string",
+              i18n: true,
+              required: true,
+            }
+          - {
+              label: "From-When",
+              name: "value",
+              widget: "string",
+              i18n: true,
+              required: true,
+            }
+
+      - label: "subsidies"
+        name: "subsidies"
+        widget: "object"
+        required: true
+        summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
+        i18n: true
+        fields:
+          - {
+              label: "Key",
+              name: "key",
+              widget: "string",
+              i18n: true,
+              required: true,
+            }
+          - {
+              label: "Value",
+              name: "value",
+              widget: "number",
+              value_type: "float",
+              i18n: true,
+              required: true,
+            }
+          - {
+              label: "baseUnit",
+              name: "baseUnit",
+              required: true,
+              widget: "string",
+              i18n: true,
+            }
+      - label: "battery-guarantee"
+        name: "batteryGuarantee"
+        required: true
+        widget: "object"
+        summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
+        i18n: true
+        fields:
+          - {
+              label: "Key",
+              name: "key",
+              widget: "string",
+              i18n: true,
+              required: true,
+            }
+          - {
+              label: "Value",
+              name: "value",
+              widget: "number",
+              value_type: "float",
+              i18n: true,
+              required: true,
+            }
+          - {
+              label: "Weeks/Months/Years",
+              name: "baseUnit",
+              widget: "string",
+              i18n: true,
+              required: true,
+            }
+      - label: "loading-Height"
+        name: "loadingHeight"
+        widget: "object"
+        summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
+        i18n: true
+        required: true
+        fields:
+          - {
+              label: "Key",
+              name: "key",
+              widget: "string",
+              i18n: true,
+              required: true,
+            }
+          - {
+              label: "Value",
+              name: "value",
+              widget: "number",
+              value_type: "float",
+              i18n: duplicate,
+              required: true,
+            }
+          - {
+              label: "baseUnit",
+              name: "baseUnit",
+              widget: "string",
+              i18n: duplicate,
+              required: true,
+            }
+      - label: "loading Volume in m3"
+        name: "loadingVolumeTotal"
+        widget: "object"
+        required: true
+        summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
+        i18n: true
+        fields:
+          - {
+              label: "Key",
+              name: "key",
+              widget: "string",
+              i18n: true,
+              required: true,
+            }
+          - {
+              label: "Value",
+              name: "value",
+              widget: "string",
+              i18n: duplicate,
+              required: true,
+            }
+          - {
+              label: "baseUnit",
+              name: "baseUnit",
+              required: true,
+              widget: "string",
+              i18n: duplicate,
+            }
+
+      - label: "loading area in m2"
+        name: "loadingArea"
+        required: true
+        widget: "object"
+        summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
+        i18n: true
+        fields:
+          - {
+              label: "Key",
+              name: "key",
+              widget: "string",
+              i18n: true,
+              required: true,
+            }
+          - {
+              label: "Value",
+              name: "value",
+              widget: "string",
+              i18n: duplicate,
+              required: true,
+            }
+          - {
+              label: "baseUnit",
+              name: "baseUnit",
+              required: true,
+              widget: "string",
+              i18n: duplicate,
+            }
+      - label: "Car-Sizes"
+        name: "carSizes"
+        required: true
+        widget: "object"
+        summary: "{{fields.height}}: {{fields.width}}: {{fields.length}}"
+        i18n: true
+        fields:
+          - {
+              label: "Key",
+              name: "key",
+              widget: "string",
+              i18n: true,
+              required: true,
+            }
+          - {
+              label: "height",
+              name: "height",
+              widget: "string",
+              i18n: true,
+              required: true,
+            }
+          - {
+              label: "height-Value",
+              name: "valueheight",
+              required: true,
+              widget: "number",
+              value_type: "float",
+              i18n: duplicate,
+            }
+
+          - {
+              label: "width",
+              name: "width",
+              widget: "string",
+              i18n: true,
+              required: true,
+            }
+          - {
+              label: "width-Value",
+              name: "valuewidth",
+              required: true,
+              widget: "number",
+              value_type: "float",
+              i18n: duplicate,
+            }
+
+          - {
+              label: "length",
+              name: "length",
+              widget: "string",
+              i18n: true,
+              required: true,
+            }
+          - {
+              label: "length-Value",
+              name: "valuelength",
+              widget: "number",
+              value_type: "float",
+              i18n: duplicate,
+              required: true,
+            }
+          - {
+              label: "wheelbase",
+              name: "wheelbase",
+              widget: "string",
+              i18n: true,
+              required: true,
+            }
+          - {
+              label: "wheelbase-Value",
+              name: "valuewheelbase",
+              widget: "number",
+              value_type: "float",
+              i18n: duplicate,
+              required: true,
+            }
+          - {
+              label: "baseUnit",
+              name: "baseUnit",
+              widget: "string",
+              i18n: duplicate,
+              required: true,
+            }
+      - label: "loadingVolume"
+        name: "loadingVolume"
+        widget: "object"
+        summary: "{{fields.height}}: {{fields.width}}: {{fields.length}}"
+        i18n: true
+        required: true
+        fields:
+          - {
+              label: "Key",
+              name: "key",
+              widget: "string",
+              i18n: true,
+              required: true,
+            }
+          - {
+              label: "height",
+              name: "height",
+              widget: "string",
+              i18n: true,
+              required: true,
+            }
+          - {
+              label: "height-Value",
+              name: "valueheight",
+              widget: "number",
+              value_type: "float",
+              required: true,
+              i18n: duplicate,
+            }
+
+          - {
+              label: "width",
+              name: "width",
+              widget: "string",
+              i18n: true,
+              required: true,
+            }
+          - {
+              label: "width-Value",
+              name: "valuewidth",
+              widget: "number",
+              value_type: "float",
+              i18n: duplicate,
+              required: true,
+            }
+
+          - {
+              label: "length",
+              name: "length",
+              widget: "string",
+              i18n: true,
+              required: true,
+            }
+          - {
+              label: "length-Value",
+              name: "valuelength",
+              widget: "number",
+              value_type: "float",
+              i18n: duplicate,
+              required: true,
+            }
+          - {
+              label: "baseUnit",
+              name: "baseUnit",
+              widget: "string",
+              i18n: duplicate,
+              required: true,
+            }
+      - label: "Car-Sizes-length"
+        name: "carSizesLength"
+        widget: "object"
+        required: true
+        summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
+        i18n: true
+        fields:
+          - {
+              label: "Key",
+              name: "key",
+              widget: "string",
+              i18n: true,
+              required: true,
+            }
+          - {
+              label: "Value",
+              name: "value",
+              widget: "string",
+              i18n: duplicate,
+              required: true,
+            }
+          - {
+              label: "baseUnit",
+              name: "baseUnit",
+              required: true,
+              widget: "string",
+              i18n: duplicate,
+            }
+      - label: "Car-Sizes-width"
+        name: "carSizesWidth"
+        widget: "object"
+        required: true
+        summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
+        i18n: true
+        fields:
+          - {
+              label: "Key",
+              name: "key",
+              widget: "string",
+              i18n: true,
+              required: true,
+            }
+          - {
+              label: "Value",
+              name: "value",
+              widget: "string",
+              i18n: duplicate,
+              required: true,
+            }
+          - {
+              label: "baseUnit",
+              name: "baseUnit",
+              required: true,
+              widget: "string",
+              i18n: duplicate,
+            }
+      - label: "Car-Sizes-height"
+        name: "carSizesHeight"
+        widget: "object"
+        required: true
+        summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
+        i18n: true
+        fields:
+          - {
+              label: "Key",
+              name: "key",
+              widget: "string",
+              i18n: true,
+              required: true,
+            }
+          - {
+              label: "Value",
+              name: "value",
+              widget: "string",
+              i18n: duplicate,
+              required: true,
+            }
+          - {
+              label: "baseUnit",
+              name: "baseUnit",
+              required: true,
+              widget: "string",
+              i18n: duplicate,
+            }
+
+      - label: "Loading-volume-length"
+        name: "loadingVolumeLength"
+        widget: "object"
+        required: true
+        summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
+        i18n: true
+        fields:
+          - {
+              label: "Key",
+              name: "key",
+              widget: "string",
+              i18n: true,
+              required: true,
+            }
+          - {
+              label: "Value",
+              name: "value",
+              widget: "string",
+              i18n: duplicate,
+              required: true,
+            }
+          - {
+              label: "baseUnit",
+              name: "baseUnit",
+              required: true,
+              widget: "string",
+              i18n: duplicate,
+            }
+      - label: "Loading-volume-width"
+        name: "loadingVolumeWidth"
+        widget: "object"
+        required: true
+        summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
+        i18n: true
+        fields:
+          - {
+              label: "Key",
+              name: "key",
+              widget: "string",
+              i18n: true,
+              required: true,
+            }
+          - {
+              label: "Value",
+              name: "value",
+              widget: "string",
+              i18n: duplicate,
+              required: true,
+            }
+          - {
+              label: "baseUnit",
+              name: "baseUnit",
+              required: true,
+              widget: "string",
+              i18n: duplicate,
+            }
+      - label: "Loading-volume-height"
+        name: "loadingVolumeHeight"
+        widget: "object"
+        required: true
+        summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
+        i18n: true
+        fields:
+          - {
+              label: "Key",
+              name: "key",
+              widget: "string",
+              i18n: true,
+              required: true,
+            }
+          - {
+              label: "Value",
+              name: "value",
+              widget: "string",
+              i18n: duplicate,
+              required: true,
+            }
+          - {
+              label: "baseUnit",
+              name: "baseUnit",
+              required: true,
+              widget: "string",
+              i18n: duplicate,
+            }
+      - label: "wheelbase"
+        name: "wheelbase"
+        widget: "object"
+
+        summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
+        i18n: true
+        fields:
+          - { label: "Key", name: "key", widget: "string", i18n: true }
+          - { label: "Value", name: "value", widget: "string", i18n: duplicate }
+          - {
+              label: "baseUnit",
+              name: "baseUnit",
+
+              widget: "string",
+              i18n: duplicate,
+            }

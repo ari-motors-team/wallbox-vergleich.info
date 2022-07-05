@@ -1,0 +1,28 @@
+.table {
+  width: 100%;
+  overflow: auto;
+}
+
+@media only screen and (max-width: 640px) {
+  table {
+    table-layout: fixed;
+    width: 200%;
+  }
+}
+
+tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: 0.35em;
+}
+
+table th,
+table td {
+  padding: 0.625em;
+}
+
+table th {
+  font-size: 0.85em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}

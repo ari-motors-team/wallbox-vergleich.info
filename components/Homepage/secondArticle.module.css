@@ -1,0 +1,86 @@
+.secondArticle p {
+  padding-top: 8px;
+  padding-left: 20px;
+  color: #6f89a5;
+}
+
+.secondArticle button {
+  /*  margin-top: 2rem;
+  margin-bottom: 2rem; */
+}
+
+.secondArticle h2 {
+  padding-top: 16px;
+  padding-left: 20px;
+}
+
+@media screen and (min-width: 200px) {
+  .secondArticle h2 {
+    padding-top: 0px;
+    padding-left: 0px;
+  }
+  .secondArticle p {
+    padding-top: 8px;
+    padding-left: 0px;
+    color: #6f89a5;
+  }
+  .secondArticle button {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .secondArticle h2 {
+    padding-top: 16px;
+    padding-left: 5px;
+  }
+  .secondArticle p {
+    padding-top: 8px;
+    padding-left: 5px;
+    color: #6f89a5;
+  }
+  .secondArticle button {
+    margin-top: 1rem;
+    margin-left: 5px;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .secondArticle h2 {
+    padding-left: 24px;
+  }
+  .secondArticle p {
+    padding-top: 8px;
+    padding-left: 24px;
+    color: #6f89a5;
+  }
+  .secondArticle button {
+    margin-top: 10px;
+    margin-left: 24px;
+  }
+}
+
+@media screen and (min-width: 820px) {
+  .secondArticle h2 {
+    margin-top: 0px;
+  }
+  .secondArticle p {
+    width: 90%;
+  }
+  .secondArticle button {
+    margin-top: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 910px) {
+  .secondArticle h2 {
+    margin-top: 4px;
+  }
+  .secondArticle p {
+    width: 90%;
+  }
+  .secondArticle button {
+    margin-top: 2.5rem;
+  }
+}

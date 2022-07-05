@@ -1,0 +1,28 @@
+{
+  "private": true,
+  "name": "scripts",
+  "version": "1.0.0",
+  "license": "Unlicense",
+ 
+  "scripts": {
+    
+    "flatten-images": "cd strapi-v4-migration; rm -rf images/* && flatten-directory --rootdir=\"downloads\" --outputdir=\"images\""
+  },
+  "dependencies": {
+   
+    "@pdf-lib/fontkit": "^1.1.1",
+    "aws-sdk": "^2.1046.0",
+    "fast-glob": "^3.2.11",
+    "flatten-directory": "^1.0.8",
+    "fs": "^0.0.1-security",
+    "fuzzy-search": "^3.2.1",
+    "gray-matter": "^4.0.3",
+    "javascript-stringify": "^2.1.0",
+    "node-fetch": "^2.1.0",
+    "objects-to-csv": "^1.3.6",
+    "objects-to-csv-file": "^1.0.1",
+    "pdf-lib": "^1.17.1",
+    "sharp": "^0.29.3",
+    "slugify": "^1.6.5"
+  }
+}

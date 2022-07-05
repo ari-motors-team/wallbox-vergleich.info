@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="118px" height="136px" viewBox="0 0 118 136" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="background: bg-grey-lighter;">
+    <title>etv icon / ladezeit</title>
+    <g id="etv-icon-/-ladezeit" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="bg-grey-lighter" x="0" y="0" width="118" height="136"></rect>
+        <g id="Group" transform="translate(6.000000, 5.000000)" fill-rule="nonzero">
+            <g id="speed" transform="translate(81.354008, 69.533991) rotate(90.000000) translate(-81.354008, -69.533991) translate(30.354613, 43.354008)">
+                <path d="M50.9993942,0 C78.3361901,0 100.761544,21.5311631 101.968719,48.7437591 L101.998788,49.5701059 L99,49.6553604 C98.2614329,23.6765847 76.9886664,3 50.9993942,3 C25.2700147,3 4.16328242,23.2651206 3.02708982,48.8776031 L2.99878837,49.6553604 L0,49.5701059 C0.784708287,21.968333 23.386469,0 50.9993942,0 Z" id="Path" fill="bg-blue-darker"></path>
+                <path d="M101.998788,49.5701059 L99,49.6553604 C98.2614329,23.6765847 76.9886664,3 50.9993942,3 C25.2700147,3 4.16328242,23.2651206 3.02708982,48.8776031 L2.99878837,49.6553604 L101.998788,49.5701059 Z" id="Path" fill="#FFFFFF"></path>
+                <polygon id="Path" fill="bg-blue-darker" points="52.5093942 4.78273315 52.5093942 16.8727331 49.5093942 16.8727331 49.5093942 4.78273315"></polygon>
+                <polygon id="Path" fill="bg-blue-darker" points="29.888156 10.0422547 35.938156 20.5122547 33.3406324 22.0132115 27.2906324 11.5432115"></polygon>
+                <polygon id="Path" fill="bg-blue-darker" points="12.9294795 25.9037443 23.3894795 31.9437443 21.8893089 34.541722 11.4293089 28.501722"></polygon>
+                <polygon id="Path-Copy" fill="bg-blue-darker" points="29.966296 28.9167569 53.6402874 50.1254987 51.638501 52.3599676 27.9645096 31.1512258"></polygon>
+                <polygon id="Path-Copy-2" fill="bg-blue-darker" points="62.9563936 39.9240812 64.974412 42.1439015 53.974412 52.1439015 51.9563936 49.9240812"></polygon>
+                <polygon id="Path" fill="bg-blue-darker" points="89.0993089 25.9037443 90.5994795 28.501722 80.1394795 34.541722 78.6393089 31.9437443"></polygon>
+                <polygon id="Path" fill="bg-blue-darker" points="72.1300951 10.0431853 74.7286932 11.542281 68.6886932 22.012281 66.0900951 20.5131853"></polygon>
+            </g>
+            <path d="M56,13 L56,127 L0,127 L0,13 L56,13 Z M53,16 L3,16 L3,124 L53,124 L53,16 Z" id="Rectangle" fill="bg-blue-darker"></path>
+            <polygon id="Path" fill="#FFFFFF" points="53 16 3 16 3 124 53 124"></polygon>
+            <path d="M43,0 L43,16 L13,16 L13,0 L43,0 Z M40,3 L16,3 L16,13 L40,13 L40,3 Z" id="Rectangle-Copy" fill="bg-blue-darker"></path>
+            <path d="M50.5,18.5 L5.5,18.5 L5.5,48.5 L50.5,48.5 L50.5,18.5 Z M47.5,21.5 L47.5,45.5 L8.5,45.5 L8.5,21.5 L47.5,21.5 Z" id="Rectangle-Copy-2" fill="bg-blue-darker"></path>
+            <polygon id="Rectangle-Copy-3" fill="bg-blue-darker" points="50.5 90.5 5.5 90.5 5.5 120.5 50.5 120.5"></polygon>
+            <polygon id="Rectangle-Copy-4" fill="bg-blue-darker" points="50.5 54.5 5.5 54.5 5.5 84.5 50.5 84.5"></polygon>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,147 @@
+@tailwind base;
+
+@layer base {
+  html,
+  body {
+    @apply h-full font-custom text-grey-dark;
+    color: #666666;
+  }
+  img {
+    transition: 0.3s;
+  }
+
+  h1 {
+    @apply text-3xl font-bold text-blue-dark md:text-3xl;
+  }
+
+  h2 {
+    @apply text-xl text-blue-dark md:text-2xl;
+  }
+
+  h3 {
+    @apply text-lg text-blue-dark md:text-xl;
+  }
+}
+/* for print */
+@page {
+  size: auto; /* auto is the initial value */
+  margin: 0; /* this affects the margin in the printer settings */
+}
+@tailwind components;
+
+@layer components {
+  .filter-grid {
+    grid-template-columns: repeat(auto-fill, minmax(184px, 230px));
+  }
+  .no-select {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+}
+
+@tailwind utilities;
+
+/* FROM HERE WE GIVE css for reference  */
+
+/* a:visited {
+   color: white; 
+} */
+
+.select {
+  @apply items-center text-base bg-white rounded-lg cursor-pointer;
+  /* min-width: 15ch;
+  max-width: 20ch; */
+  display: grid;
+  background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+  grid-template-areas: "select";
+}
+select:active,
+select:focus,
+input:active,
+input:focus {
+  outline: none;
+}
+select:focus {
+  padding-bottom: 0px;
+}
+/* CUSTOM CSS THAT ARE NOT FOR TAILWIND */
+.line {
+  width: 20px;
+  height: 2px;
+  background: white;
+  margin: 5px;
+}
+.logo {
+  filter: contrast(900%);
+}
+.custom-text {
+  text-align: center;
+}
+.forz {
+  background: linear-gradient(0.3turn, #f9fdff, #ffffff, #ddfffb);
+
+  filter: hue-rotate(180deg);
+  filter: saturate(3);
+}
+.forz2 {
+  background: linear-gradient(0.3turn, #daeffa, #ffffff, #ddfffb);
+
+  filter: hue-rotate(180deg);
+  filter: saturate(3);
+}
+
+/*  table */
+table {
+  width: 100%;
+  overflow: auto;
+  text-align: left;
+}
+
+@media only screen and (max-width: 640px) {
+  table {
+    table-layout: fixed;
+    width: 200%;
+  }
+}
+
+tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: 0.35em;
+}
+
+table th,
+table td {
+  padding: 0.625em;
+}
+
+table th {
+  font-size: 0.85em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+@media print {
+  .no-print,
+  footer * {
+    display: none !important;
+  }
+}
+.lineBreakClass p,
+code,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+.printpreview {
+  print-color-adjust: exact;
+}
