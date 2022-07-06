@@ -1,7 +1,6 @@
 ---
 title: ARI 458
-slug: ari-458-testbericht-von-elektrotransporter-vergleich
-relatedCars: ari-458-koffer-elektrischer-kleintransporter
+slug: ari-458-testbericht-von-wallbox-vergleichrelatedCars: ari-458-koffer-elektrischer-kleintransporter
 youtubeLink: https://www.youtube.com/watch?v=s7Vpp2pYBG4&list=PLmjRcMALs3P-QlHQfthmCPL3aRr6dT9mx
 category: Koffer
 publishedAt: 03/02/2022
@@ -46,7 +45,7 @@ content:
       ### Antrieb und Aufladung
 
 
-      Den Antrieb des ARI 458 übernimmt ein Wechselstrommotor mit einer Kraft von 7,5 kW, welcher den Elektrotransporter auf eine Höchstgeschwindigkeit von 78 Km/h beschleunigt. Die Kraft wird auf die Hinterachse übertragen, auf welcher bei Beladung auch das meiste Gewicht liegt. Damit soll auch unter Vollladung eine gute Straßenlage garantiert werden.
+      Den Antrieb des ARI 458 übernimmt ein Wechselstrommotor mit einer Kraft von 7,5 kW, welcher den WALLBOX auf eine Höchstgeschwindigkeit von 78 Km/h beschleunigt. Die Kraft wird auf die Hinterachse übertragen, auf welcher bei Beladung auch das meiste Gewicht liegt. Damit soll auch unter Vollladung eine gute Straßenlage garantiert werden.
 
 
       Bezüglich der Energiespeicherung hat der Kunde die Wahl:
@@ -72,12 +71,12 @@ content:
       Weitere erhältliche Ausstattungsoptionen sind ein Satz Winterreifen und eine orangefarbene Rundumleuchte. Auch eine orangefarbene Folierung mit rot-weißer Bestreifung für den Baustellenbereich ist verfügbar. Für sperrige Güter, wie etwa Leitern, sind ein Dachgepäckträger sowie eine Leiterklappe im hinteren Bereich des Kofferdach praktisch. Eine Anhängerkupplung ist ebenso erhältlich, allerdings darf der ARI 458 bisher nur auf Werks- und Privatgelände mit Anhänger gefahren werden.
     image: /images/ari-458-innenraum-fahrerplatz.jpg
     title: Komfort & Ausstattung
-    stars: 4
+    stars: 3
   - content: >-
       ### Bedienung & Fahrbetrieb
 
 
-      In der Praxis ist der ARI 458 sehr einfach zu bedienen. Über eine Funkfernbedienung im Schlüssel kann das Fahrzeug geöffnet und verschlossen werden, was speziell Lieferdiensten die Verriegelung mit vollen Händen ermöglicht. Der Innenraum des Elektrotransporters ist sehr übersichtlich und intuitiv bedienbar. So sind die wichtigsten Funktionen über eine Bedieneinheit in der Mitte des Armaturenbretts steuerbar. Einzig die Bedienung der elektrisch verstellbaren Außenspiegel befindet sich links vom Lenkrad neben der Tür.
+      In der Praxis ist der ARI 458 sehr einfach zu bedienen. Über eine Funkfernbedienung im Schlüssel kann das Fahrzeug geöffnet und verschlossen werden, was speziell Lieferdiensten die Verriegelung mit vollen Händen ermöglicht. Der Innenraum des WALLBOXs ist sehr übersichtlich und intuitiv bedienbar. So sind die wichtigsten Funktionen über eine Bedieneinheit in der Mitte des Armaturenbretts steuerbar. Einzig die Bedienung der elektrisch verstellbaren Außenspiegel befindet sich links vom Lenkrad neben der Tür.
 
 
       Das Radio bietet dank Touchscreen eine einfach Bedienung, die wenig Zeit und Aufmerksamkeit erfordert. So kann der Fahrer unkompliziert zwischen verschiedenen Radiosendern wählen oder im Falle einer eingelegten Navigationskarte neue Routen berechnen. Dank der Verbindungsmöglichkeit mit dem eigenen Telefon über USB oder Bluetooth ist das Telefonieren über Freisprechanlage genauso möglich wie das Abspielen von eigener Musik oder das Nutzen einer Navigations-App über den Touchscreen.
@@ -86,7 +85,7 @@ content:
       Den Ladestatus des Akkus findet der Fahrer im Tacho, ebenso wie die Information über den eingelegten Fahrmodus. Dieser ist über einen Fahrstufenschalter in der Mitte des Armaturenbretts wählbar. Neben den normalen Fahrmodi („R“, „N“ und „D“) ist auch ein ECO-Modus wählbar, bei dem Energie durch sanftes Beschleunigen sowie eine begrenzte Höchstgeschwindigkeit von 50 Km/h gespart wird. Dadurch kann die Reichweite erhöht werden.
 
 
-      Auf der Straße bewegt sich der ARI 458 recht flott und wendig. Die Beschleunigung setzt direkt ein und bringt das Fahrzeug schnell auf Geschwindigkeit. Auch außerhalb der Stadt ist der Elektrotransporter kein Verkehrshindernis, sondern kommt ohne Probleme auf die Höchstgeschwindigkeit von knapp 80 km/h. Der ARI 458 liegt gut auf der Straße und hat dank des niedrigen Schwerpunkts und Heckantrieb auch mit Ladung keinerlei Probleme in Kurven. Anfangs irritiert es etwas, dass sich der Blinker nicht von selbst zurücksetzt. Allerdings gewöhnt man sich schnell daran, dies nach dem Abbiegevorgang selbst von Hand zu erledigen.
+      Auf der Straße bewegt sich der ARI 458 recht flott und wendig. Die Beschleunigung setzt direkt ein und bringt das Fahrzeug schnell auf Geschwindigkeit. Auch außerhalb der Stadt ist der WALLBOX kein Verkehrshindernis, sondern kommt ohne Probleme auf die Höchstgeschwindigkeit von knapp 80 km/h. Der ARI 458 liegt gut auf der Straße und hat dank des niedrigen Schwerpunkts und Heckantrieb auch mit Ladung keinerlei Probleme in Kurven. Anfangs irritiert es etwas, dass sich der Blinker nicht von selbst zurücksetzt. Allerdings gewöhnt man sich schnell daran, dies nach dem Abbiegevorgang selbst von Hand zu erledigen.
 
 
       Die Wendigkeit des kompakten Transporters ist gerade in engen Innenstädten sowie Werkshallen von Vorteil. Für einfacheres Rangieren bei niedrigen Geschwindigkeiten bietet sich die optional verfügbare Servolenkung an. Positiv fällt auch das Glasdach auf, welches ein besseres Raumgefühl erzeugt und gerade an sonnigen Tagen einen angenehmen Effekt hat. Natürlich kann man bei heftiger Sonneneinstrahlung dies auch durch ein Rollo abdecken.
@@ -105,7 +104,7 @@ content:
       ### Preise & Garantie
 
 
-      In Sachen Preis ist der ARI 458 im Segment der Elektrotransporter wohl ungeschlagen. So liegt der Grundpreis der Pritschen-Version bei 13.700 Euro. Selbst mit dem „XL“-Koffer kostet das Fahrzeug mit 17.290 Euro weitaus weniger als vergleichbare Fahrzeuge der Konkurrenz. Die für Baustellen und Handwerker geeignete Kipper-Variante beginnt ab 16.400 Euro. Die Preise für das Verkaufsfahrzeug und den Food Truck starten bei 17.150 und 19.430 Euro. Der Kühlkoffer-Aufbau ist ab 19.900 Euro auf dem Markt verfügbar.
+      In Sachen Preis ist der ARI 458 im Segment der WALLBOX wohl ungeschlagen. So liegt der Grundpreis der Pritschen-Version bei 13.700 Euro. Selbst mit dem „XL“-Koffer kostet das Fahrzeug mit 17.290 Euro weitaus weniger als vergleichbare Fahrzeuge der Konkurrenz. Die für Baustellen und Handwerker geeignete Kipper-Variante beginnt ab 16.400 Euro. Die Preise für das Verkaufsfahrzeug und den Food Truck starten bei 17.150 und 19.430 Euro. Der Kühlkoffer-Aufbau ist ab 19.900 Euro auf dem Markt verfügbar.
 
 
       Das Fahrzeug kommt mit einer Herstellergarantie von 6 Monaten sowie einer Gewährleistung über eine Zeit von 2 Jahren. Auf die Lithium-Batterie haben Kunden einen Garantieanspruch von 4 Jahren bzw. 60.000 Kilometer.
@@ -116,11 +115,8 @@ content:
       ### Fazit
 
 
-      Die Einsatzmöglichkeiten des ARI 458 sind zahlreich. Je nach Aufbau ist er speziell für Liefer- und Transportbetriebe (Kofferaufbau) und Handwerks- und Baubetriebe (Pritsche und Kipper) interessant. Bei den Individualaufbauten gibt es zudem für Garten- und Landschaftsbaubetriebe praktische Varianten. Neben der Vielseitigkeit liegen die Vorteile des ARI 458 in der guten Raumnutzung, der intuitiven Bedienung sowie den niedrigen Preisen ab 13.700 Euro. Natürlich erhält der Kunde dafür kein Luxusfahrzeug, sondern einen effizienten Elektrotransporter mit sehr guter Raumnutzung und individuell anpassbaren Ausstattungs- und Funktionsmöglichkeiten.
-
-
-      #### Testurteil: 4,4
+      Die Einsatzmöglichkeiten des ARI 458 sind zahlreich. Je nach Aufbau ist er speziell für Liefer- und Transportbetriebe (Kofferaufbau) und Handwerks- und Baubetriebe (Pritsche und Kipper) interessant. Bei den Individualaufbauten gibt es zudem für Garten- und Landschaftsbaubetriebe praktische Varianten. Neben der Vielseitigkeit liegen die Vorteile des ARI 458 in der guten Raumnutzung, der intuitiven Bedienung sowie den niedrigen Preisen ab 13.700 Euro. Natürlich erhält der Kunde dafür kein Luxusfahrzeug, sondern einen effizienten WALLBOX mit sehr guter Raumnutzung und individuell anpassbaren Ausstattungs- und Funktionsmöglichkeiten.
     title: Fazit
     image: /images/ari-458-kipper-l-mit-laubgitter.jpg
-    stars: 4.4
+    stars: 3.8
 ---

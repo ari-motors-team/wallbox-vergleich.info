@@ -1,5 +1,5 @@
 ---
-title: Elektrotransporter-Vergleich
+title: Wallbox-Vergleich
 path: /home
 description: ttaetgweth SEO SEO SEO
 src: /images/medal.png

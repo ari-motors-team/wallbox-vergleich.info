@@ -1,12 +1,12 @@
 ---
-title: Diese Förderungen für Elektrotransporter gibt es jetzt!
+title: Diese Förderungen für WALLBOX gibt es jetzt!
 publishedAt: 03/01/2022
 src: /images/whatsapp-image-2022-04-27-at-22.26.12.jpeg
 contentHeading:
   title: ""
   content: ""
   image: ""
-slug: foerderungen-fuer-elektrotransporter
+slug: foerderungen-fuer-WALLBOX
 relatedCars: ari-458-food-truck-elektrisches-gastro-mobil
 vehicle:
   key: gut
@@ -14,10 +14,9 @@ vehicle:
   image: /images/Arrow-right-512.png
   totalscore: ""
 content: >-
-  # ARI 458 Testbericht von Elektrotransporter-Vergleich
+  # ARI 458 Testbericht von wallbox-vergleich
 
-
-  ![ARI 458 Koffer mit Solarpanel](/images/dsc_0666.jpg "ARI 458 Koffer mit Solarpanel - Vielseitiger Elektrotransporter")
+  ![ARI 458 Koffer mit Solarpanel](/images/dsc_0666.jpg "ARI 458 Koffer mit Solarpanel - Vielseitiger WALLBOX")
 
 
   Der ARI 458 ist ein Elektro-Kleintransporter der Fahrzeugklasse L7e mit einer zulässigen Höchstgeschwindigkeit von 80 km/h und einer maximalen Zuladung von 450 Kilogramm. Der Transporter bietet Platz für 2 Personen. 
@@ -59,7 +58,7 @@ content: >-
   ## Antrieb & Aufladung (4/5)
 
 
-  Den Antrieb des ARI 458 übernimmt ein Wechselstrommotor mit einer Kraft von 7,5 kW, welcher den Elektrotransporter auf eine Höchstgeschwindigkeit von 78 Km/h beschleunigt. Die Kraft wird auf die Hinterachse übertragen, auf welcher bei Beladung auch das meiste Gewicht liegt. Damit soll auch unter Vollladung eine gute Straßenlage garantiert werden.
+  Den Antrieb des ARI 458 übernimmt ein Wechselstrommotor mit einer Kraft von 7,5 kW, welcher den WALLBOX auf eine Höchstgeschwindigkeit von 78 Km/h beschleunigt. Die Kraft wird auf die Hinterachse übertragen, auf welcher bei Beladung auch das meiste Gewicht liegt. Damit soll auch unter Vollladung eine gute Straßenlage garantiert werden.
 
 
   Bezüglich der Energiespeicherung hat der Kunde die Wahl: 
@@ -92,7 +91,7 @@ content: >-
   ## Bedienung & Fahrbetrieb
 
 
-  In der Praxis ist der ARI 458 sehr einfach zu bedienen. Über eine Funkfernbedienung im Schlüssel kann das Fahrzeug geöffnet und verschlossen werden, was speziell Lieferdiensten die Verriegelung mit vollen Händen ermöglicht. Der Innenraum des Elektrotransporters ist sehr übersichtlich und intuitiv bedienbar. So sind die wichtigsten Funktionen über eine Bedieneinheit in der Mitte des Armaturenbretts steuerbar. Einzig die Bedienung der elektrisch verstellbaren Außenspiegel befindet sich links vom Lenkrad neben der Tür.
+  In der Praxis ist der ARI 458 sehr einfach zu bedienen. Über eine Funkfernbedienung im Schlüssel kann das Fahrzeug geöffnet und verschlossen werden, was speziell Lieferdiensten die Verriegelung mit vollen Händen ermöglicht. Der Innenraum des WALLBOXs ist sehr übersichtlich und intuitiv bedienbar. So sind die wichtigsten Funktionen über eine Bedieneinheit in der Mitte des Armaturenbretts steuerbar. Einzig die Bedienung der elektrisch verstellbaren Außenspiegel befindet sich links vom Lenkrad neben der Tür.
 
 
   Das Radio bietet dank Touchscreen eine einfach Bedienung, die wenig Zeit und Aufmerksamkeit erfordert. So kann der Fahrer unkompliziert zwischen verschiedenen Radiosendern wählen oder im Falle einer eingelegten Navigationskarte neue Routen berechnen. Dank der Verbindungsmöglichkeit mit dem eigenen Telefon über USB oder Bluetooth ist das Telefonieren über Freisprechanlage genauso möglich wie das Abspielen von eigener Musik oder das Nutzen einer Navigations-App über den Touchscreen.
@@ -101,7 +100,7 @@ content: >-
   Den Ladestatus des Akkus findet der Fahrer im Tacho, ebenso wie die Information über den eingelegten Fahrmodus. Dieser ist über einen Fahrstufenschalter in der Mitte des Armaturenbretts wählbar. Neben den normalen Fahrmodi („R“, „N“ und „D“) ist auch ein ECO-Modus wählbar, bei dem Energie durch sanftes Beschleunigen sowie eine begrenzte Höchstgeschwindigkeit von 50 Km/h gespart wird. Dadurch kann die Reichweite erhöht werden.
 
 
-  Auf der Straße bewegt sich der ARI 458 recht flott und wendig. Die Beschleunigung setzt direkt ein und bringt das Fahrzeug schnell auf Geschwindigkeit. Auch außerhalb der Stadt ist der Elektrotransporter kein Verkehrshindernis, sondern kommt ohne Probleme auf die Höchstgeschwindigkeit von knapp 80 km/h. Der ARI 458 liegt gut auf der Straße und hat dank des niedrigen Schwerpunkts und Heckantrieb auch mit Ladung keinerlei Probleme in Kurven. Anfangs irritiert es etwas, dass sich der Blinker nicht von selbst zurücksetzt. Allerdings gewöhnt man sich schnell daran, dies nach dem Abbiegevorgang selbst von Hand zu erledigen.
+  Auf der Straße bewegt sich der ARI 458 recht flott und wendig. Die Beschleunigung setzt direkt ein und bringt das Fahrzeug schnell auf Geschwindigkeit. Auch außerhalb der Stadt ist der WALLBOX kein Verkehrshindernis, sondern kommt ohne Probleme auf die Höchstgeschwindigkeit von knapp 80 km/h. Der ARI 458 liegt gut auf der Straße und hat dank des niedrigen Schwerpunkts und Heckantrieb auch mit Ladung keinerlei Probleme in Kurven. Anfangs irritiert es etwas, dass sich der Blinker nicht von selbst zurücksetzt. Allerdings gewöhnt man sich schnell daran, dies nach dem Abbiegevorgang selbst von Hand zu erledigen.
 
 
   Die Wendigkeit des kompakten Transporters ist gerade in engen Innenstädten sowie Werkshallen von Vorteil. Für einfacheres Rangieren bei niedrigen Geschwindigkeiten bietet sich die optional verfügbare Servolenkung an. Positiv fällt auch das Glasdach auf, welches ein besseres Raumgefühl erzeugt und gerade an sonnigen Tagen einen angenehmen Effekt hat. Natürlich kann man bei heftiger Sonneneinstrahlung dies auch durch ein Rollo abdecken.
@@ -122,7 +121,7 @@ content: >-
   ## Preise & Garantie (4/5)
 
 
-  In Sachen Preis ist der ARI 458 im Segment der Elektrotransporter wohl ungeschlagen. So liegt der Grundpreis der Pritschen-Version bei 13.700 Euro. Selbst mit dem „XL“-Koffer kostet das Fahrzeug mit 17.290 Euro weitaus weniger als vergleichbare Fahrzeuge der Konkurrenz. Die für Baustellen und Handwerker geeignete Kipper-Variante beginnt ab 16.400 Euro. Die Preise für das Verkaufsfahrzeug und den Food Truck starten bei 17.150 und 19.430 Euro. Der Kühlkoffer-Aufbau ist ab 19.900 Euro auf dem Markt verfügbar.   
+  In Sachen Preis ist der ARI 458 im Segment der WALLBOX wohl ungeschlagen. So liegt der Grundpreis der Pritschen-Version bei 13.700 Euro. Selbst mit dem „XL“-Koffer kostet das Fahrzeug mit 17.290 Euro weitaus weniger als vergleichbare Fahrzeuge der Konkurrenz. Die für Baustellen und Handwerker geeignete Kipper-Variante beginnt ab 16.400 Euro. Die Preise für das Verkaufsfahrzeug und den Food Truck starten bei 17.150 und 19.430 Euro. Der Kühlkoffer-Aufbau ist ab 19.900 Euro auf dem Markt verfügbar.   
 
 
   Das Fahrzeug kommt mit einer Herstellergarantie von 6 Monaten sowie einer Gewährleistung über eine Zeit von 2 Jahren. Auf die Lithium-Batterie haben Kunden einen Garantieanspruch von 4 Jahren bzw. 60.000 Kilometer.
@@ -134,7 +133,7 @@ content: >-
   ## Fazit
 
 
-  Die Einsatzmöglichkeiten des ARI 458 sind zahlreich. Je nach Aufbau ist er speziell für Liefer- und Transportbetriebe (Kofferaufbau) und Handwerks- und Baubetriebe (Pritsche und Kipper) interessant. Bei den Individualaufbauten gibt es zudem für Garten- und Landschaftsbaubetriebe praktische Varianten. Neben der Vielseitigkeit liegen die Vorteile des ARI 458 in der guten Raumnutzung, der intuitiven Bedienung sowie den niedrigen Preisen ab 13.700 Euro. Natürlich erhält der Kunde dafür kein Luxusfahrzeug, sondern einen effizienten Elektrotransporter mit sehr guter Raumnutzung und individuell anpassbaren Ausstattungs- und Funktionsmöglichkeiten.
+  Die Einsatzmöglichkeiten des ARI 458 sind zahlreich. Je nach Aufbau ist er speziell für Liefer- und Transportbetriebe (Kofferaufbau) und Handwerks- und Baubetriebe (Pritsche und Kipper) interessant. Bei den Individualaufbauten gibt es zudem für Garten- und Landschaftsbaubetriebe praktische Varianten. Neben der Vielseitigkeit liegen die Vorteile des ARI 458 in der guten Raumnutzung, der intuitiven Bedienung sowie den niedrigen Preisen ab 13.700 Euro. Natürlich erhält der Kunde dafür kein Luxusfahrzeug, sondern einen effizienten WALLBOX mit sehr guter Raumnutzung und individuell anpassbaren Ausstattungs- und Funktionsmöglichkeiten.
 
 
   ![ARI 458 Kühlkofferaufbau im Einsatz für Drensteinfurter Tafel e.V.](/images/dsc_0729.jpg "ARI 458 mit Kühlkofferaufbau - ideal für Auslieferung von Speisen und Getränken")
@@ -146,10 +145,11 @@ content: >-
   4,4
 youtubeLink: ""
 category: subsidies
-description: Beim Kauf eines Elektrotransporters können verschiedene Förderungen
+description: Beim Kauf eines WALLBOXs können verschiedene Förderungen
   in Anspruch genommen werden. Erfahren Sie, welche.
 ---
-Sie denken darüber nach, sich einen Elektrotransporter zu kaufen? Oder Ihre Flotte auf E-Mobilität umzustellen? Dann können Sie von verschiedenen Förderungen profitieren, mit denen Bund und Länder den Umstieg auf [klimafreundliche Nutzfahrzeuge](https://www.klimafreundliche-nutzfahrzeuge.de/gesamtkonzept/) vorantreiben wollen. Welche Förderungen für Elektrotransporter es gibt, wem diese zustehen und wo sie beantragt werden können, das erfahren Sie in diesem Artikel.
+
+Sie denken darüber nach, sich einen WALLBOX zu kaufen? Oder Ihre Flotte auf E-Mobilität umzustellen? Dann können Sie von verschiedenen Förderungen profitieren, mit denen Bund und Länder den Umstieg auf [klimafreundliche Nutzfahrzeuge](https://www.klimafreundliche-nutzfahrzeuge.de/gesamtkonzept/) vorantreiben wollen. Welche Förderungen für WALLBOX es gibt, wem diese zustehen und wo sie beantragt werden können, das erfahren Sie in diesem Artikel.
 
 <br />
 
@@ -173,10 +173,10 @@ Ob und in welcher Höhe die Umweltprämie ausgezahlt wird, ist abhängig vom:
 
 <br />
 
-* Gewicht
-* der Antriebsart
-* den Anschaffungskosten (Nettolistenpreis max. 65.000 Euro)
-* sowie ggf. von der Leasing-Dauer
+- Gewicht
+- der Antriebsart
+- den Anschaffungskosten (Nettolistenpreis max. 65.000 Euro)
+- sowie ggf. von der Leasing-Dauer
 
 <br />
 
@@ -216,10 +216,10 @@ Dabei gelten diese Voraussetzungen:
 
 <br />
 
-* Erstzulassung nach dem 04.11.2019
-* Erstzulassung liegt maximal 12 Monate zurück
-* Max. 15.000 km Laufleistung (hierzu bitte: [Nachweispaket für Gebrauchtwagen](https://www.bafa.de/SharedDocs/Downloads/DE/Energie/emob_formular_emob_gwa.pdf;jsessionid=C421B2C81F885A16D9B146491AA83DA8.2_cid387?__blob=publicationFile&v=7) ausfüllen)
-* zuvor keine weitere Förderung beantragt
+- Erstzulassung nach dem 04.11.2019
+- Erstzulassung liegt maximal 12 Monate zurück
+- Max. 15.000 km Laufleistung (hierzu bitte: [Nachweispaket für Gebrauchtwagen](https://www.bafa.de/SharedDocs/Downloads/DE/Energie/emob_formular_emob_gwa.pdf;jsessionid=C421B2C81F885A16D9B146491AA83DA8.2_cid387?__blob=publicationFile&v=7) ausfüllen)
+- zuvor keine weitere Förderung beantragt
 
 <br />
 
@@ -237,17 +237,17 @@ Der Antrag auf die „Umweltprämie“ kann direkt nach erfolgter Zulassung übe
 
 **Bei Kauf:**
 
-* Rechnung
-* Zulassungsbescheinigung Teil II (Fahrzeugbrief)
+- Rechnung
+- Zulassungsbescheinigung Teil II (Fahrzeugbrief)
 
 <br />
 
 **Bei Leasing:**
 
-* Leasingvertrag 
-* Zulassungsbescheinigung Teil II
-* Kalkulation der Leasingraten
-* verbindliche Bestellung
+- Leasingvertrag
+- Zulassungsbescheinigung Teil II
+- Kalkulation der Leasingraten
+- verbindliche Bestellung
 
 <br />
 
@@ -279,7 +279,7 @@ Neben der Förderung durch die Bundesregierung gibt es zudem verschiedene Förde
 
 <br />
 
-Davon profitieren auch Käufer eines Elektrotransporters der leichteren Fahrzeugklassen (z.B. L7e), welche vom Anspruch auf die Umweltprämie bisher leider ausgeschlossen sind.
+Davon profitieren auch Käufer eines WALLBOXs der leichteren Fahrzeugklassen (z.B. L7e), welche vom Anspruch auf die Umweltprämie bisher leider ausgeschlossen sind.
 
 <br />
 
@@ -287,10 +287,10 @@ Davon profitieren auch Käufer eines Elektrotransporters der leichteren Fahrzeug
 
 <br />
 
-* [Berlin – Programm „Wirtschaftsnahe Elektromobilität“](https://www.ibb-business-team.de/welmo/foerderung/): bis zu 5.000 Euro
-* [Thüringen – Programm „E-Mobil Invest“](https://www.aufbaubank.de/Foerderprogramme/e-mobilinvest): 40% der Investitionssumme bzw. maximal 12.000 Euro
-* [Nordrhein-Westfalen – Programm „ElektroMobilität NRW“](https://www.elektromobilitaet.nrw/): 40% des Kaufpreises bzw. maximal 30.000 Euro
-* [Baden-Württemberg – Programm „BW-e-Gutschein“](https://www.l-bank.de/produkte/finanzhilfen/bw-e-gutschein.html): bis zu 1.000 Euro 
+- [Berlin – Programm „Wirtschaftsnahe Elektromobilität“](https://www.ibb-business-team.de/welmo/foerderung/): bis zu 5.000 Euro
+- [Thüringen – Programm „E-Mobil Invest“](https://www.aufbaubank.de/Foerderprogramme/e-mobilinvest): 40% der Investitionssumme bzw. maximal 12.000 Euro
+- [Nordrhein-Westfalen – Programm „ElektroMobilität NRW“](https://www.elektromobilitaet.nrw/): 40% des Kaufpreises bzw. maximal 30.000 Euro
+- [Baden-Württemberg – Programm „BW-e-Gutschein“](https://www.l-bank.de/produkte/finanzhilfen/bw-e-gutschein.html): bis zu 1.000 Euro
 
 <br />
 
@@ -310,18 +310,18 @@ So haben zum Beispiel die Städte **München**, **Limburg** und **Regensburg** e
 
 <br />
 
-* [München – Programm „München emobil“](https://www.muenchen.de/rathaus/Stadtverwaltung/Referat-fuer-Gesundheit-und-Umwelt/Klimaschutz_und_Energie/Elektromobilitaet/Foerderprogramm_Elektromobilitaet): 25% des Netto-Preises bzw. maximal 3.500 Euro
-* [Regensburg – Programm „Regensburg effizient“](https://www.greendeal-regensburg.de/foerderprogramm-regensburg-effizient/elektromobilitaet/): bis zu 3.000 Euro
-* [Limburg – Programm „Limburg elektrisiert“](https://www.limburg.de/Mobilit%C3%A4t-Verkehr/Elektromobilit%C3%A4t-/Limburg-elektrisiert.php?object=tx,3251.5&ModID=7&FID=3252.425.1&NavID=3252.202&La=1): bis zu 600 Euro
+- [München – Programm „München emobil“](https://www.muenchen.de/rathaus/Stadtverwaltung/Referat-fuer-Gesundheit-und-Umwelt/Klimaschutz_und_Energie/Elektromobilitaet/Foerderprogramm_Elektromobilitaet): 25% des Netto-Preises bzw. maximal 3.500 Euro
+- [Regensburg – Programm „Regensburg effizient“](https://www.greendeal-regensburg.de/foerderprogramm-regensburg-effizient/elektromobilitaet/): bis zu 3.000 Euro
+- [Limburg – Programm „Limburg elektrisiert“](https://www.limburg.de/Mobilit%C3%A4t-Verkehr/Elektromobilit%C3%A4t-/Limburg-elektrisiert.php?object=tx,3251.5&ModID=7&FID=3252.425.1&NavID=3252.202&La=1): bis zu 600 Euro
 
 <br />
 
-Sie sehen, die Liste möglicher Förderungen für den Kauf eines Elektrotransporters kann sich sehen lassen und wächst stetig weiter.
+Sie sehen, die Liste möglicher Förderungen für den Kauf eines WALLBOXs kann sich sehen lassen und wächst stetig weiter.
 
 Gern halten wir Sie über neue Fördermöglichkeiten auf dieser Seite auf dem Laufenden. Schauen Sie also immer wieder einmal vorbei!
 
 <br />
 
-Sie wollen jetzt diese Förderungen nutzen und einen Elektrotransporter finden, der zu Ihren Ansprüchen passt?
+Sie wollen jetzt diese Förderungen nutzen und einen WALLBOX finden, der zu Ihren Ansprüchen passt?
 
-[Dann nutzen Sie gleich unseren kostenlosen Elektrotransporter-Kaufberater und finden Sie schnell und einfach den richtigen E-Transporter!](https://www.elektrotransporter-vergleich.de/caradvisor)
+[Dann nutzen Sie gleich unseren kostenlosen WALLBOX-Kaufberater und finden Sie schnell und einfach den richtigen E-Transporter!](https://www.WALLBOX-vergleich.de/caradvisor)

@@ -75,7 +75,7 @@ function FilterBlock() {
       <div className="flex flex-row flex-1 justify-between relative ">
         <div className="mt-10 relative bottom-2 md:bottom-10 2xl:bottom-2  w-fit ">
           <h1 className="pl-3 text-2xl text-black-dark">
-            Die besten E-Transporter nach Ihrer Auswahl
+            Die besten Wallboxen nach Ihrer Auswahl
           </h1>
         </div>
         <div

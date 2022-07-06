@@ -26,7 +26,7 @@ export default function Details(props) {
         <div className="2xl:px-48">
           <h1 className="px-4 pt-8 pb-4 text-2xl leading-9 tracking-wider text-center text-black lg:text-left lg:text-4xl xl:pt-12 2xl:px-48">
             {getBrand.title} Elektro-Transporter – {sortedCars.length}{" "}
-            Nutzfahrzeuge mit Elektro Antrieb im E-Transporter Vergleich
+            Nutzfahrzeuge mit Elektro Antrieb im Wallbox Vergleich
           </h1>
 
           <div className="relative w-3/5 mx-auto my-6 text-center cursor-pointer">

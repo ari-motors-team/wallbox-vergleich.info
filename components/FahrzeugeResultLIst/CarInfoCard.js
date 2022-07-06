@@ -33,7 +33,7 @@ const CarInfoCard = ({ carItem, getCarsReview, objectFit }) => {
                 <Image
                   className={
                     router.pathname ==
-                    "/fahrzeuge/elektrotransporter-nutzfahrzeuge-mit-elektro-antrieb-im-e-transporter-vergleich"
+                    "/fahrzeuge/wallbox-nutzfahrzeuge-mit-elektro-antrieb-im-e-Wallbox-Vergleich"
                       ? "rounded-md "
                       : "rounded-l-md "
                   }

@@ -14,7 +14,7 @@
 //           </Link>
 //         </button>
 //         <h2 className="m-auto py-8 text-blue-dark font-bold text-4xl ">
-//           {getCarsReview?.title} Testbericht-von-Elektrotransporter-Vergleich
+//           {getCarsReview?.title} Testbericht-von-wallbox-vergleich
 //           <Link href={`/transporter/${getCarsReview?.relatedCars}`}>
 //             <span className="lg:px-8 text-blue-dark font-bold text-xs text-left cursor-pointer">
 //               Details anzeigen

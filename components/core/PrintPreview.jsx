@@ -27,7 +27,7 @@ export default function PrintPreview({
               />
               <div className="flex items-center pl-2 ">
                 <p className="pt-1 text-xs text-white md:text-sm xl:text-lg ">
-                  ELEKTROTRANSPORTER
+                  WALLBOX
                   <br />
                   VERGLEICH
                 </p>
@@ -203,7 +203,7 @@ export default function PrintPreview({
             />
             <div className="flex items-center pl-2 ">
               <p className="pt-1 text-xs text-white md:text-sm xl:text-lg ">
-                ELEKTROTRANSPORTER
+                WALLBOX
                 <br />
                 VERGLEICH
               </p>

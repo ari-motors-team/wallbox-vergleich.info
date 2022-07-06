@@ -3,7 +3,7 @@ const { configureSitemap } = require("@sergeymyssak/nextjs-sitemap");
 const Sitemap = configureSitemap({
   domains: [
     {
-      domain: "www.elektrotransporter-vergleich.com",
+      domain: "www.wallbox-vergleich.com",
       defaultLocale: "de",
     },
   ],

@@ -16,7 +16,7 @@ const Logo = () => {
         <Link href={"/"}>
           {/* <a aria-label="home">
             <p className="pb-1 pl-1 text-xs font-bold tracking-wider text-white cursor-pointer sm:text-xxs">
-              ELEKTROTRANSPORTER
+              WALLBOX
               <br />
               VERGLEICH
             </p>
@@ -24,7 +24,7 @@ const Logo = () => {
           <div className="flex flex-col">
             <div className="flex items-center tracking-wide">
               <p className="pl-2 text-xs font-semibold text-white md:text-xs 2xl:text-sm">
-                ELEKTROTRANSPORTER
+                WALLBOX
               </p>
             </div>
             <div className="relative flex items-center tracking-wide">

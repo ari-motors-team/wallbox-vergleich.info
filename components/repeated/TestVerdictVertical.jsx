@@ -45,7 +45,7 @@ const TestVerdictVertical = ({ reviewDate, getAllReviews, carItem }) => {
       </div>
       <div className="absolute flex justify-center w-full px-8 bottom-1">
         <p className=" xs:text-[10px] text-xxs">
-          ELEKTROTRANSPORTER-VERGLEICH.DE
+          wallbox-vergleich.info
           <span className="pl-3">{`${rev + 101}/${reviewDate}`}</span>
         </p>
       </div>

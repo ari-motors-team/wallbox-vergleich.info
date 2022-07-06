@@ -40,7 +40,7 @@ const TestVerdict = ({ reviewDate, getAllReviews, carItem }) => {
       </div>
       <div className="flex flex-col pt-2">
         <p className="relative xs:text-xs text-xxs">
-          ELEKTROTRANSPORTER-VERGLEICH.DE
+          wallbox-vergleich.info
           <span className="absolute -top-3 text-3xl text-[#3FA535]">✓</span>
         </p>
         <p className="text-sm text-grey-nav">{`Testbericht ${

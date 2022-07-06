@@ -1,6 +1,6 @@
 ---
 title: Nutzfahrzeuge mit Elektro Antrieb im E-Transporter Vergleich
-path: /fahrzeuge/elektrotransporter-nutzfahrzeuge-mit-elektro-antrieb-im-e-transporter-vergleich
+path: /fahrzeuge/WALLBOX-nutzfahrzeuge-mit-elektro-antrieb-im-e-transporter-vergleich
 description: >+
   Inzwischen sind sehr viele Elektro-Transporter auf dem Markt und in
   verschiedenen Größen und Aufbau-Versionen erhältlich. Die Palette reicht vom

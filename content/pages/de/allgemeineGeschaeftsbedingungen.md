@@ -5,9 +5,9 @@ description: Allgemeine Geschäftsbedingungen
 src: /images/medal.png
 content:
   - markdown: >-
-      
 
-      Auf dieser Seite finden Sie die Allgemeinen Geschäftsbedingungen (AGB) der [www.elektrotransporter-vergleich.de](http://www.elektrotransporter-vergleich.de), X-Compare UG (nachfolgend X-Compare).
+
+      Auf dieser Seite finden Sie die Allgemeinen Geschäftsbedingungen (AGB) der [www.WALLBOX-vergleich.de](http://www.WALLBOX-vergleich.de), X-Compare UG (nachfolgend X-Compare).
 
 
 
@@ -28,7 +28,7 @@ content:
       ## 2. Leistungen von X-Compare
 
 
-      X-Compare verkauft selbst keine Elektrotransporter und erbringt keine diesbezüglichen individuellen Beratungsleistungen. X-Compare fungiert lediglich als sogenannter Tippgeber, das heißt, unsere Tätigkeit besteht alleine darin, allgemeine Kundendaten (Name, Anschrift, Telefonnummer, Verwendungszweck, Einsatzort und Anzahl der gewünschten Fahrzeuge, Branche und Zeitpunkt der geplanten Anschaffung) aufzunehmen und den Kontakt zwischen Ihnen und dem jeweiligen Produktanbieter oder dessen Vermittler herzustellen.
+      X-Compare verkauft selbst keine WALLBOX und erbringt keine diesbezüglichen individuellen Beratungsleistungen. X-Compare fungiert lediglich als sogenannter Tippgeber, das heißt, unsere Tätigkeit besteht alleine darin, allgemeine Kundendaten (Name, Anschrift, Telefonnummer, Verwendungszweck, Einsatzort und Anzahl der gewünschten Fahrzeuge, Branche und Zeitpunkt der geplanten Anschaffung) aufzunehmen und den Kontakt zwischen Ihnen und dem jeweiligen Produktanbieter oder dessen Vermittler herzustellen.
 
 
 
@@ -161,7 +161,7 @@ content:
       #### 4.1 Quellenangabe
 
 
-      Bei Zitaten muss als Quelle „www.elektrotransporter-vergleich.de“ angegeben werden.
+      Bei Zitaten muss als Quelle „www.WALLBOX-vergleich.de“ angegeben werden.
 
 
 
@@ -185,7 +185,8 @@ content:
       ### 6. Einwilligung in die Kontaktaufnahme
 
 
-      Ich willige ein, künftig über Angebote und Services der jeweiligen Anbieter und X-Compare per E-Mail, Telefon, sowie über Facebook, Instagram oder LinkedIn persönlich informiert und beraten zu werden. Diese Einwilligungserklärung kann jederzeit ohne Angabe von Gründen schriftlich oder mittels entsprechender E-Mail an info@elektrotransporter-vergleich.de widerrufen werden.
+      Ich willige ein, künftig über Angebote und Services der jeweiligen Anbieter und X-Compare per E-Mail, Telefon, sowie über Facebook, Instagram oder LinkedIn persönlich informiert und beraten zu werden. Diese Einwilligungserklärung kann jederzeit ohne Angabe von Gründen schriftlich oder mittels entsprechender E-Mail an info@WALLBOX-vergleich.de widerrufen werden.
     name: allgemeine Geschäftsbedingungen
 ---
+
 # vf

@@ -26,7 +26,7 @@ content:
       ## Kontaktmöglichkeiten
 
 
-      E-Mail-Adresse: [info@elektrotransporter-vergleich.de](http://E-Mail-Adresse:%20Info@elektrotransportervergleich.de./)
+      E-Mail-Adresse: [info@WALLBOX-vergleich.de](http://E-Mail-Adresse:%20Info@WALLBOXvergleich.de./)
 
 
       Telefon: +49 341 2251672
@@ -38,6 +38,7 @@ content:
       Inhaltlich verantwortlich: Geschäftsführer Paul Thiede.
     name: Impressum
 ---
+
 # Impressum
 
 ## Diensteanbieter
@@ -52,7 +53,7 @@ Ernst-Meyer-Straße 15,
 
 ## Kontaktmöglichkeiten
 
-E-Mail-Adresse: [Info@elektrotransporter-vergleich.de](http://E-Mail-Adresse:%20Info@elektrotransportervergleich.de./)
+E-Mail-Adresse: [Info@WALLBOX-vergleich.de](http://E-Mail-Adresse:%20Info@WALLBOXvergleich.de./)
 
 Telefon: +49 341 2251672
 

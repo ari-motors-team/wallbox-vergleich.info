@@ -12,7 +12,7 @@ const thankYou = (props) => {
         Hier können Sie gleich alle
         <Link href={"/comparePage"}>
           <a className="py-4 text-blue-600">
-            <span className="pl-2">Elektrotransporter sofort vergleichen.</span>
+            <span className="pl-2">Wallbox sofort vergleichen.</span>
           </a>
         </Link>
       </h2>

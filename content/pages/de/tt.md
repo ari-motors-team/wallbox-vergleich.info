@@ -1,11 +1,11 @@
 ---
-title: Elektrotransporter-Vergleich
+title: Wallbox-Vergleich
 path: /
 description: ttaetgweth SEO SEO SEO
 src: /images/medal.png
 content:
   - name: header
-    markdown: Schnell & einfach den **passenden Elektrotransporter** für Ihre
+    markdown: Schnell & einfach den **passenden Wallbox** für Ihre
       Ansprüche finden!
     details: ✔ unabhängig ✔ schnell ✔ immer aktuell
   - name: compareBox
@@ -13,7 +13,7 @@ content:
     details: gleichen!
   - name: eAutoAdvisor
     markdown: >-
-      ## Elektrotransporter- Kaufberater: Ihr Navi auf dem Weg zum perfekten
+      ## WALLBOX- Kaufberater: Ihr Navi auf dem Weg zum perfekten
       E-Transporter
 
 
@@ -21,16 +21,16 @@ content:
     details: Jetzt neu!
   - name: substities
     markdown: >-
-      ## Förderungen für Elektrotransporter
+      ## Förderungen für WALLBOX
 
 
-      Es gibt verschiedene Förderungen für Elektrotransporter. Informieren Sie sich hier, welche für Sie in Frage kommen!
+      Es gibt verschiedene Förderungen für WALLBOX. Informieren Sie sich hier, welche für Sie in Frage kommen!
   - name: newsletter
     markdown: >-
       ## Zum Newsletter anmelden
 
 
-      Wir versenden in regelmäßigen Abständen einen Newsletter mit aktuellen Themen und Neuigkeiten rund um Elektrotransporter. Natürlich verschicken wir keine Spam-Mails und  Sie können sich jederzeit von unserem Newsletter abmelden!
+      Wir versenden in regelmäßigen Abständen einen Newsletter mit aktuellen Themen und Neuigkeiten rund um WALLBOX. Natürlich verschicken wir keine Spam-Mails und  Sie können sich jederzeit von unserem Newsletter abmelden!
     details: Beliebte Kategorien
 ---
 

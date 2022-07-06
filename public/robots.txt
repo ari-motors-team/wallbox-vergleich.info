@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://www.elektrotransporter-vergleich.com
+Host: https://www.wallbox-vergleich.com
 
 # Sitemaps
-Sitemap: https://www.elektrotransporter-vergleich.com/sitemap.xml
+Sitemap: https://www.wallbox-vergleich.com/sitemap.xml

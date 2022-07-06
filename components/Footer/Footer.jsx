@@ -46,7 +46,7 @@ const Footer = ({ blogs, brands }) => {
         <nav className="flex flex-col justify-around my-4 xl:justify-between sm:flex-row sm:items-start lg:w-[80%] sm:pb-8 print:hidden lg:pl-8">
           <div className="flex flex-col ">
             <h3 className="flex items-end justify-center text-xs font-bold tracking-wider sm:justify-start h-14 xl:text-base">
-              <Link href="/fahrzeuge/elektrotransporter-nutzfahrzeuge-mit-elektro-antrieb-im-e-transporter-vergleich">
+              <Link href="/fahrzeuge/wallbox-nutzfahrzeuge-mit-elektro-antrieb-im-e-Wallbox-Vergleich">
                 <a className="text-white ">{`Transporter`.toUpperCase()}</a>
               </Link>
             </h3>
@@ -153,7 +153,7 @@ const Footer = ({ blogs, brands }) => {
 "
       ></div>
       <div className="flex items-center justify-center h-16 text-xs tracking-wider text-white bg-blue-darker sm:text-lg sm:h-20 print:hidden">
-        &copy; 2022 Elektrotransporter-Vergleich.de
+        &copy; 2022 wallbox-vergleich.info
       </div>
     </>
   );

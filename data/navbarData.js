@@ -8,7 +8,7 @@ const navbarData = [
   {
     id: 2,
     path: "/comparePage",
-    title: "Transporter-Vergleich",
+    title: "Wallbox-Vergleich",
   },
   {
     id: 3,

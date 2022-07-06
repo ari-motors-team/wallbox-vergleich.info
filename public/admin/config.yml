@@ -1,8 +1,8 @@
 backend:
   name: github
-  repo: ari-motors-team/elektrotransporter-vergleich
+  repo: ari-motors-team/wallbox-vergleich
   branch: dev
-  base_url: https://preview-elektrotransporter-vergleich.vercel.app
+  base_url: https://preview-wallbox-vergleich.vercel.app
   auth_endpoint: api/auth
 
 media_folder: public/images
@@ -97,10 +97,10 @@ collections:
           required: true,
         }
 
-  - label: "Cars-Reviews"
-    name: "carsreviews"
+  - label: "Wallbox-Reviews"
+    name: "wallboxreviews"
 
-    folder: "content/carsreview"
+    folder: "content/wallboxreview"
     create: true
     slug: "{{fields.slug}}"
     identifier_field: slug
@@ -304,9 +304,9 @@ collections:
           required: true,
         }
 
-  - label: "Vehicles"
-    name: "vehicles"
-    folder: "content/vehicles"
+  - label: "wallboxes"
+    name: "wallboxes"
+    folder: "content/wallboxes"
     create: true
     slug: "{{fields.name}}"
     identifier_field: name
@@ -350,7 +350,16 @@ collections:
         required: false
         widget: "relation"
         i18n: duplicate
-        collection: "carsreviews"
+        collection: "wallboxesreview"
+        search_fields: ["title"]
+        display_fields: ["title"]
+        value_field: "slug"
+      - label: "Manufacturer"
+        name: "manufacturer"
+        required: false
+        widget: "relation"
+        i18n: duplicate
+        collection: "Brands"
         search_fields: ["title"]
         display_fields: ["title"]
         value_field: "slug"
@@ -379,78 +388,15 @@ collections:
         multiple: false
         i18n: duplicate
         options: ["Pritsche", "Kipper", "Kasten", "Koffer"]
-      - label: "Type-Class"
-        name: "typeClass"
+      - label: "Connection-type-2"
+        name: "ConnectionType"
         widget: "select"
-        multiple: false
+        multiple: true
         i18n: duplicate
-        options: ["L7E", "L6E", "N1", "N1N2", "N2", "L2E"]
-        # default: ["Design"]
-      - label: "Loadingweight"
-        name: "loadingWeight"
-        required: true
-        widget: "object"
-        summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
-        i18n: true
-        fields:
-          - { label: "Key", name: "key", widget: "string", i18n: true }
-          - {
-              label: "Value",
-              name: "value",
-              widget: "number",
-              value_type: "float",
-              i18n: duplicate,
-            }
-          - {
-              label: "baseUnit",
-              name: "baseUnit",
-              widget: "string",
-              i18n: duplicate,
-            }
-      - label: "Curb Weight"
-        name: "curbweight"
-        required: true
-        widget: "object"
-        summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
-        i18n: true
-        fields:
-          - { label: "key", name: "key", widget: "string", i18n: true }
-          - {
-              label: "Value",
-              name: "value",
-              widget: "number",
-              value_type: "float",
-              i18n: duplicate,
-            }
-          - {
-              label: "baseUnit",
-              name: "baseUnit",
-              widget: "string",
-              i18n: duplicate,
-            }
-      - label: "maxSpeed"
-        name: "maxSpeed"
-        required: true
-        widget: "object"
-        summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
-        i18n: true
-        fields:
-          - { label: "Key", name: "key", widget: "string", i18n: true }
-          - {
-              label: "Value",
-              name: "value",
-              widget: "number",
-              value_type: "float",
-              i18n: duplicate,
-            }
-          - {
-              label: "baseUnit",
-              name: "baseUnit",
-              widget: "string",
-              i18n: duplicate,
-            }
-      - label: "Range-SLA"
-        name: "range230V"
+        options: ["Typ-2", "Typ-1"]
+
+      - label: "articlelnumber"
+        name: "articlelnumber"
         required: true
         widget: "object"
         summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
@@ -458,6 +404,78 @@ collections:
         fields:
           - {
               label: "Key",
+              name: "key",
+              widget: "string",
+              i18n: true,
+              required: true,
+            }
+          - {
+              label: "Value",
+              name: "value",
+              widget: "string",
+              value_type: "float",
+              i18n: duplicate,
+              required: true,
+            }
+          - {
+              label: "baseUnit",
+              name: "baseUnit",
+              required: true,
+              widget: "string",
+              i18n: true,
+            }
+      - label: "weight"
+        name: "Weight"
+        required: true
+        widget: "object"
+        summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
+        i18n: true
+        fields:
+          - { label: "Key", name: "key", widget: "string", i18n: true }
+          - {
+              label: "Value",
+              name: "value",
+              widget: "number",
+              value_type: "float",
+              i18n: duplicate,
+            }
+          - {
+              label: "baseUnit",
+              name: "baseUnit",
+              widget: "string",
+              i18n: duplicate,
+            }
+
+      - label: "operatingTemperatur"
+        name: "operatingTemperatur"
+        required: true
+        widget: "object"
+        summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
+        i18n: true
+        fields:
+          - { label: "Key", name: "key", widget: "string", i18n: true }
+          - {
+              label: "Value",
+              name: "value",
+              widget: "number",
+              value_type: "float",
+              i18n: duplicate,
+            }
+          - {
+              label: "baseUnit",
+              name: "baseUnit",
+              widget: "string",
+              i18n: duplicate,
+            }
+      - label: "connection"
+        name: "connection"
+        required: true
+        widget: "object"
+        summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
+        i18n: true
+        fields:
+          - {
+              label: "Key AND INFO cable Or Wire",
               name: "key",
               widget: "string",
               i18n: true,
@@ -487,8 +505,8 @@ collections:
               i18n: duplicate,
               required: true,
             }
-      - label: "Range-Lithium"
-        name: "rangeLithium"
+      - label: "Timer for scheduled charging"
+        name: "scheduledChargingTimer"
         widget: "object"
         summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
         i18n: true
@@ -499,63 +517,19 @@ collections:
               name: "key",
               widget: "string",
               i18n: true,
-              required: true,
-            }
-          - {
-              label: "Value(Min auch)",
-              name: "value",
-              widget: "number",
-              value_type: "float",
-              i18n: duplicate,
               required: true,
             }
 
           - {
-              label: "Value(nur max)",
-              name: "maxValue",
-              widget: "number",
-              value_type: "float",
-              i18n: duplicate,
-              required: true,
-            }
-          - {
               label: "baseUnit",
               name: "baseUnit",
               widget: "string",
               i18n: duplicate,
               required: true,
             }
-      - label: "chargingTime-230V"
-        name: "chargingTime230V"
-        required: true
-        widget: "object"
-        summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
-        i18n: true
-        fields:
-          - {
-              label: "Key",
-              name: "key",
-              widget: "string",
-              i18n: true,
-              required: true,
-            }
-          - {
-              label: "Value",
-              name: "value",
-              widget: "number",
-              value_type: "float",
-              i18n: duplicate,
-              required: true,
-            }
-          - {
-              label: "baseUnit",
-              name: "baseUnit",
-              required: true,
-              widget: "string",
-              i18n: true,
-            }
-      - label: "chargingTime-Typ2"
-        name: "chargingTimeLithium"
+
+      - label: "connection230V Availability"
+        name: "connection230VAvailability"
         widget: "object"
         summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
         i18n: true
@@ -612,35 +586,7 @@ collections:
               widget: "string",
               i18n: true,
             }
-      - label: "battery-Capacity-Blei"
-        name: "batteryCapacityBlei"
-        required: true
-        widget: "object"
-        summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
-        i18n: true
-        fields:
-          - {
-              label: "Key",
-              name: "key",
-              widget: "string",
-              i18n: true,
-              required: true,
-            }
-          - {
-              label: "Value",
-              name: "value",
-              widget: "number",
-              value_type: "float",
-              i18n: duplicate,
-              required: true,
-            }
-          - {
-              label: "baseUnit",
-              name: "baseUnit",
-              required: true,
-              widget: "string",
-              i18n: duplicate,
-            }
+
       - label: "battery-Capacity-Lithium"
         name: "batteryCapacityLithium"
         widget: "object"
@@ -749,8 +695,8 @@ collections:
               i18n: duplicate,
               required: true,
             }
-      - label: "Seats"
-        name: "seats"
+      - label: "Smart home compatible"
+        name: "SmartHomeCompatible"
         required: true
         widget: "object"
         summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
@@ -760,7 +706,7 @@ collections:
           - {
               label: "Value",
               name: "value",
-              widget: "number",
+              widget: "string",
               value_type: "float",
               i18n: duplicate,
             }
@@ -1300,22 +1246,6 @@ collections:
               label: "baseUnit",
               name: "baseUnit",
               required: true,
-              widget: "string",
-              i18n: duplicate,
-            }
-      - label: "wheelbase"
-        name: "wheelbase"
-        widget: "object"
-
-        summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
-        i18n: true
-        fields:
-          - { label: "Key", name: "key", widget: "string", i18n: true }
-          - { label: "Value", name: "value", widget: "string", i18n: duplicate }
-          - {
-              label: "baseUnit",
-              name: "baseUnit",
-
               widget: "string",
               i18n: duplicate,
             }

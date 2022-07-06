@@ -31,7 +31,7 @@ module.exports = async (request, response, stageId = 238) => {
       }
      , ${request.body.message}
  `,
-      c4f78672fa0a3a246610b8a6b143af85088c466c: `https://www.elektrotransporter-vergleich.de/sheets/${request.body.message.replace(
+      c4f78672fa0a3a246610b8a6b143af85088c466c: `https://www.wallbox-vergleich.info/sheets/${request.body.message.replace(
         /\s/g,
         ""
       )}.pdf`,

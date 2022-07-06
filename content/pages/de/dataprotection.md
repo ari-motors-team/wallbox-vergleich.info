@@ -26,7 +26,7 @@ content:
       04229 Leipzig
 
 
-      E-Mail-Adresse: Info@elektrotransportervergleich.de.
+      E-Mail-Adresse: Info@WALLBOXvergleich.de.
 
 
       ## Übersicht der Verarbeitungen

@@ -24,7 +24,7 @@ export default function FunnelTest({ getContent, getBrands }) {
   const router = useRouter();
   const filtersData = [
     {
-      title: `Welchen Aufbautyp wählen Sie für Ihren Elektrotransporter? `,
+      title: `Welchen Aufbautyp wählen Sie für Ihren wallbox? `,
       category: "categorys",
       options: [
         {
@@ -90,7 +90,7 @@ export default function FunnelTest({ getContent, getBrands }) {
     {
       category: "loadingWeights",
       title: `
-Über wie viel Zuladung soll Ihr Elektrotransporter verfügen?`,
+Über wie viel Zuladung soll Ihr wallbox verfügen?`,
 
       options: [
         {
@@ -125,7 +125,7 @@ export default function FunnelTest({ getContent, getBrands }) {
     },
     {
       category: "prices",
-      title: `Wie viel darf Ihr Elektrotransporter kosten?
+      title: `Wie viel darf Ihr wallbox kosten?
 `,
 
       options: [

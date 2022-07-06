@@ -12,7 +12,7 @@ content: >-
   <br/>
 
 
-  Die ARI Motors GmbH ist Anbieter des aktuell kleinsten Elektro-Transporters mit Straßenzulassung in Deutschland. Der Name ARI kommt aus dem Japanischen und bedeutet Ameise. Dies stehe programmatisch für die Fahrzeuge des jungen Unternehmens, welche genauso leistungsstark, wendig und vielseitig wie deren tierischen Namensgeber sind. Ziel des Anbieters sei es, kostengünstige und leistungsfähige Elektrotransporter auf deutsche und europäische Straßen zu bringen. Diese werden je nach Wunsch der Kunden und Kundinnen individuell angepasst. Die Fahrzeuge eignen sich sowohl für Kleinunternehmer und mittelständische Betriebe als auch für Großkonzerne im Flotteneinsatz.
+  Die ARI Motors GmbH ist Anbieter des aktuell kleinsten Elektro-Transporters mit Straßenzulassung in Deutschland. Der Name ARI kommt aus dem Japanischen und bedeutet Ameise. Dies stehe programmatisch für die Fahrzeuge des jungen Unternehmens, welche genauso leistungsstark, wendig und vielseitig wie deren tierischen Namensgeber sind. Ziel des Anbieters sei es, kostengünstige und leistungsfähige WALLBOX auf deutsche und europäische Straßen zu bringen. Diese werden je nach Wunsch der Kunden und Kundinnen individuell angepasst. Die Fahrzeuge eignen sich sowohl für Kleinunternehmer und mittelständische Betriebe als auch für Großkonzerne im Flotteneinsatz.
 
 
   <br/>

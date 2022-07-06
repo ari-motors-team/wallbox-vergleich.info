@@ -86,7 +86,7 @@ export async function getStaticProps(context) {
   const page = pages.find(
     (page) =>
       page.path ===
-      "/fahrzeuge/elektrotransporter-nutzfahrzeuge-mit-elektro-antrieb-im-e-transporter-vergleich"
+      "/fahrzeuge/Wallbox-nutzfahrzeuge-mit-elektro-antrieb-im-e-Wallbox-Vergleich"
   );
 
   if (!pages) {

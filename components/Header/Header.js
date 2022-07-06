@@ -54,7 +54,7 @@ const Header = () => {
             <div className="flex flex-col ">
               <div className="relative flex items-center tracking-wide ">
                 <p className="relative pl-2 font-semibold text-white text-xxs sm:text-sm lg:text-lg sm:top-1 lg:top-0">
-                  ELEKTROTRANSPORTER
+                  WALLBOX
                 </p>
               </div>
               <div className="relative flex items-center tracking-wide">
