@@ -19,9 +19,10 @@ const variants = {
     opacity: 0,
   },
 };
-
 function FiltersDesktop({ getBrands }) {
   const { state, dispatch } = useStore();
+  console.log(getBrands);
+
   return (
     <AnimatePresence initial={false}>
       <motion.div
@@ -46,7 +47,7 @@ function FiltersDesktop({ getBrands }) {
         </div>
         {filtersData.map((item, index) => (
           <div className="bg-white" key={index}>
-            <FilterItemDesktop item={item} />
+            <FilterBrandItemDesktop item={item.options} title={item.title} />
           </div>
         ))}
         <div className="bg-white">

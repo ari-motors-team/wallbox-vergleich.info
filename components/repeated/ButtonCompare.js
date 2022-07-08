@@ -8,7 +8,9 @@ function ButtonCompare(props) {
   /* control to disable/enable  the button */
   useEffect(() => {
     /* to keep disabled the button */
-    state?.autoForComparisons.find((item) => item.title === props.carItem.title)
+    state?.autoForComparisons.find(
+      (item) => item.title === props.wallboxItem.title
+    )
       ? setDisabled(true)
       : setDisabled(false);
 
@@ -21,13 +23,13 @@ function ButtonCompare(props) {
       setDisabled(false);
     }
     /* for enabling one individual button*/
-    if (state?.disabledButtons === props.carItem.title) {
+    if (state?.disabledButtons === props.wallboxItem.title) {
       setDisabled(false);
     }
   }, [
     state?.disabledButtons,
     state?.autoForComparisons,
-    props.carItem,
+    props.wallboxItem,
     state?.activeSortValues,
   ]);
   /* VERGLEICHEN BUTTON INPUT */
@@ -57,7 +59,7 @@ function ButtonCompare(props) {
               data: [
                 ...state.autoForComparisons,
                 {
-                  pic: props.carItem.src,
+                  pic: props.wallboxItem.src,
                   title: props.carItem.title,
                   price: props.carItem.price,
                   auto: props.carItem,

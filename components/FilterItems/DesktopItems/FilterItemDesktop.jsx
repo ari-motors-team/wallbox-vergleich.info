@@ -63,6 +63,7 @@ function FilterItemDesktop({ item }) {
             </div>
           </div>
           <div className="flex">
+            {/*{" "}
             <span
               className={
                 state[item.category].length > 0
@@ -71,7 +72,8 @@ function FilterItemDesktop({ item }) {
               }
             >
               ✓
-            </span>
+            </span>{" "}
+            */}
             <div
               className={
                 state?.truncates == item.title

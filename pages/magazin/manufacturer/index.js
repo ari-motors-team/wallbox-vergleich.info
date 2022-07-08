@@ -30,7 +30,7 @@ export default function manufacturer(props) {
 export async function getStaticProps(context) {
   const pages = await getContent("pages", context.locale);
   const posts = await getContent("posts", context.locale);
-  let vehicles = await getContent("vehicles", context.locale);
+  let wallboxes = await getContent("wallboxes", context.locale);
   const page = pages.find((page) => page.path === "/magazin");
   let blogs = await getContent("blogs", context.locale);
   let brands = await getContent("brands", context.locale);
@@ -45,7 +45,7 @@ export async function getStaticProps(context) {
     props: {
       page,
       posts,
-      vehicles,
+      wallboxes,
       blogs,
       brands,
     },

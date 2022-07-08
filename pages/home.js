@@ -10,13 +10,13 @@ import { useState, useEffect } from "react";
 import CompareTool from "../components/repeated/CompareTool";
 
 export default function Home(props) {
-  const [getCars, SetGetCars] = useState(props.vehicles);
+  const [getCars, SetGetCars] = useState(props.wallboxes);
   const [getContent, SetGetContent] = useState(props.page);
   const [getMarkdownContext, SetGetMarkdownContext] = useState(props.context);
   const [getBrands, SetGetBrands] = useState(props.brands);
   useEffect(() => {
     SetGetBrands(props.brands);
-    SetGetCars(props.vehicles);
+    SetGetCars(props.wallboxes);
     SetGetContent(props.page);
     SetGetMarkdownContext(props.context);
   }, [props]);
@@ -32,7 +32,7 @@ export default function Home(props) {
         getBrands={props.brands}
       />
       <div className="mb-10">
-        <TopSlider getCars={props.vehicles} getContent={props.page} />
+        <TopSlider getCars={props.wallboxes} getContent={props.page} />
       </div>
       <BlogArticles getMarkdownContext={props.context} />
       <NewsLetter getMarkdownContext={props.context} />
@@ -42,7 +42,8 @@ export default function Home(props) {
 
 export async function getStaticProps(context) {
   const pages = await getContent("pages", context.locale);
-  let vehicles = await getContent("vehicles", context.locale);
+  let wallboxes = await getContent("wallboxes", context.locale);
+  //wallboxes
   let blogs = await getContent("blogs", context.locale);
   let brands = await getContent("brands", context.locale);
   const page = pages.find((page) => page.path === "/home");
@@ -70,7 +71,7 @@ export async function getStaticProps(context) {
     props: {
       context: { header, eAutoAdvisor, substities, newsletter },
       page,
-      vehicles,
+      wallboxes,
       blogs,
       brands,
     },

@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import Form from "./Form";
 import Modal from "../core/Modal";
 
-function ButtonAnfragen({ carItem }) {
+function ButtonAnfragen({ wallboxItem }) {
   /* HOOKS */
 
   const router = useRouter();
@@ -16,7 +16,7 @@ function ButtonAnfragen({ carItem }) {
     <div className="flex">
       <Modal open={open} setOpen={setOpen}>
         <div className="">
-          <Form open={open} setOpen={setOpen} carItem={carItem} />
+          <Form open={open} setOpen={setOpen} wallboxItem={wallboxItem} />
         </div>
       </Modal>
 

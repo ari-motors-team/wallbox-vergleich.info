@@ -8,78 +8,80 @@ import { useState, useEffect } from "react";
 import FiltersMobile from "../components/FilterItems/MobileFIlters/FiltersMobile";
 import FiltersDesktop from "../components/FilterItems/DesktopItems/FiltersDesktop";
 export default function comparePage(props) {
-  const [sortedCars, setSortedCars] = useState([]);
+  const [sortedWallboxes, setSortedWallboxes] = useState([]);
   const [getBrands, setGetBrands] = useState([]);
   /* .find(
     (item) => vehicle?.relatedReviews == item.slug
   ) */
+  console.log(sortedWallboxes);
+
   const [getCarsReviews, setGetCarsReviews] = useState([]);
   const { state, dispatch } = useStore();
   useEffect(() => {
-    setSortedCars(props.vehicles);
+    setSortedWallboxes(props.wallboxes);
     setGetBrands(props.brands);
-    setGetCarsReviews(props.carsreviews);
+    setGetCarsReviews(props.wallboxreviews);
     /* PRICE SORTING */
-    const getCarslowestPrice = props.vehicles
-      ?.sort((a, b) => parseFloat(a.price) * 1 - parseFloat(b.price) * 1)
-      .map((item) => item);
+    // const getCarslowestPrice = props.wallboxes
+    //   ?.sort((a, b) => parseFloat(a.price) * 1 - parseFloat(b.price) * 1)
+    //   .map((item) => item);
 
-    const getCarshighestPrice = props.vehicles
-      ?.sort((a, b) => parseFloat(b.price) - parseFloat(a.price))
-      .map((item) => item);
-    //
-    // alphabetical sorting
-    const getCarsAlphabetical = props.vehicles
-      ?.sort(function (a, b) {
-        return a.name === b.name ? 0 : a.name < b.name ? -1 : 1;
-      })
-      .map((item) => item);
-    // /* cᴀʀs ᴡᴇɪɢʜᴛ ғɪʟᴛᴇʀ */
-    const getCarslightest = props.vehicles
-      ?.sort((a, b) => b.loadingWeight.value - a.loadingWeight.value)
-      .map((item) => item);
-    const getCarsBymaxSpeed = props.vehicles
-      ?.sort((a, b) => b.maxSpeed.value - a.maxSpeed.value)
-      .map((item) => item);
-    // /* ᴄᴀʀs ʀᴀɴɢᴇ ғɪʟᴛᴇʀ */
+    // const getCarshighestPrice = props.wallboxes
+    //   ?.sort((a, b) => parseFloat(b.price) - parseFloat(a.price))
+    //   .map((item) => item);
+    // //
+    // // alphabetical sorting
+    // const getCarsAlphabetical = props.wallboxes
+    //   ?.sort(function (a, b) {
+    //     return a.name === b.name ? 0 : a.name < b.name ? -1 : 1;
+    //   })
+    //   .map((item) => item);
+    // // /* cᴀʀs ᴡᴇɪɢʜᴛ ғɪʟᴛᴇʀ */
+    // const getCarslightest = props.wallboxes
+    //   ?.sort((a, b) => b.loadingWeight.value - a.loadingWeight.value)
+    //   .map((item) => item);
+    // const getCarsBymaxSpeed = props.wallboxes
+    //   ?.sort((a, b) => b.maxSpeed.value - a.maxSpeed.value)
+    //   .map((item) => item);
+    // // /* ᴄᴀʀs ʀᴀɴɢᴇ ғɪʟᴛᴇʀ */
 
-    const getCarsByRange = props.vehicles
-      ?.sort((a, b) => b.rangeLithium.value - a.rangeLithium.value)
-      .map((item) => item);
+    // const getCarsByRange = props.wallboxes
+    //   ?.sort((a, b) => b.rangeLithium.value - a.rangeLithium.value)
+    //   .map((item) => item);
 
-    // /* ᴄᴀʀs ᴄʜᴀʀɢɪɴɢ ᴛɪᴍᴇ ғɪʟᴛᴇʀ */
-    const getCarsfastest = props.vehicles
-      ?.sort(
-        (a, b) => a.chargingTimeLithium.value - b.chargingTimeLithium.value
-      )
-      .map((item) => item);
+    // // /* ᴄᴀʀs ᴄʜᴀʀɢɪɴɢ ᴛɪᴍᴇ ғɪʟᴛᴇʀ */
+    // const getCarsfastest = props.wallboxes
+    //   ?.sort(
+    //     (a, b) => a.chargingTimeLithium.value - b.chargingTimeLithium.value
+    //   )
+    //   .map((item) => item);
 
     /* initial value */
-    setSortedCars(getCarsAlphabetical);
-    if (state?.activeSortValues[0]?.sortType === "alphabetical") {
-      setSortedCars(getCarsAlphabetical);
-    }
-    /* ɢᴇᴛ ʀᴇsᴜʟᴛs from sorting */
-    if (state?.activeSortValues[0]?.sortType === "lowest") {
-      setSortedCars(getCarslowestPrice);
-    }
-    if (state?.activeSortValues[0]?.sortType === "highest") {
-      setSortedCars(getCarshighestPrice);
-    }
+    // setSortedWallboxes(getCarsAlphabetical);
+    // if (state?.activeSortValues[0]?.sortType === "alphabetical") {
+    //   setSortedWallboxes(getCarsAlphabetical);
+    // }
+    // /* ɢᴇᴛ ʀᴇsᴜʟᴛs from sorting */
+    // if (state?.activeSortValues[0]?.sortType === "lowest") {
+    //   setSortedWallboxes(getCarslowestPrice);
+    // }
+    // if (state?.activeSortValues[0]?.sortType === "highest") {
+    //   setSortedWallboxes(getCarshighestPrice);
+    // }
 
-    if (state?.activeSortValues[0]?.sortType === "highestWeight") {
-      setSortedCars(getCarslightest);
-    }
-    if (state?.activeSortValues[0]?.sortType == "highestRange") {
-      setSortedCars(getCarsByRange);
-    }
-    if (state?.activeSortValues[0]?.sortType === "highestVmax") {
-      setSortedCars(getCarsBymaxSpeed);
-    }
-    if (state?.activeSortValues[0]?.sortType === "chargingTimeLithium") {
-      setSortedCars(getCarsfastest);
-    }
-  }, [props.vehicles, state?.activeSortValues]);
+    // if (state?.activeSortValues[0]?.sortType === "highestWeight") {
+    //   setSortedWallboxes(getCarslightest);
+    // }
+    // if (state?.activeSortValues[0]?.sortType == "highestRange") {
+    //   setSortedWallboxes(getCarsByRange);
+    // }
+    // if (state?.activeSortValues[0]?.sortType === "highestVmax") {
+    //   setSortedWallboxes(getCarsBymaxSpeed);
+    // }
+    // if (state?.activeSortValues[0]?.sortType === "chargingTimeLithium") {
+    //   setSortedWallboxes(getCarsfastest);
+    // }
+  }, [props.wallboxes, state?.activeSortValues]);
   return (
     <div className="relative">
       <Head page={props.page} />
@@ -97,7 +99,7 @@ export default function comparePage(props) {
           </div>
           <div className="mb-10 xl:pr-2 2xl:pr-40">
             <ResultList
-              sortedCars={sortedCars}
+              sortedWallboxes={sortedWallboxes}
               getCarsReviews={getCarsReviews}
             />
           </div>
@@ -111,7 +113,7 @@ export default function comparePage(props) {
 }
 export async function getStaticProps(context) {
   const pages = await getContent("pages", context.locale);
-  let vehicles = await getContent("vehicles", context.locale);
+  let wallboxes = await getContent("wallboxes", context.locale);
   let blogs = await getContent("blogs", context.locale);
   let carsreviews = await getContent("carsreview", context.locale);
   let brands = await getContent("brands", context.locale);
@@ -126,7 +128,7 @@ export async function getStaticProps(context) {
   return {
     props: {
       brands,
-      vehicles,
+      wallboxes,
       page,
       blogs,
       carsreviews,

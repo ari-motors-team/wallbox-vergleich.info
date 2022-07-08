@@ -101,7 +101,7 @@ export default function activeCompare(props) {
 export async function getStaticProps(context) {
   const pages = await getContent("pages", context.locale);
   /* get all vehicles */
-  let vehicles = await getContent("vehicles", context.locale);
+  let wallboxes = await getContent("wallboxes", context.locale);
   const page = pages.find((page) => page.path === "/activecompare");
   let brands = await getContent("brands", context.locale);
   /* get all blogs */

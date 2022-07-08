@@ -233,7 +233,7 @@ function ActiveFilterEntry(props) {
           state?.loadingWeights.length ||
           state?.maxSpeeds.length ||
           state?.chargingTimeLithiums.length ||
-          state?.categorys.length ||
+          state?.weatherResistances.length ||
           state?.brands.length
             ? "flex justify-end items-start lg:items-end md:justify-start pr-2 h-10"
             : "hidden"

@@ -11,32 +11,32 @@ import ButtonAnfragen from "../repeated/ButtonAnfragen";
 import usePrice from "../../hooks/usePrice";
 import StarsRating from "../repeated/StarsRating";
 
-function CarCard({ carItem, rev, reviewDate, getAllReviews }) {
+function CarCard({ wallboxItem, rev, reviewDate, getAllReviews }) {
   const objectFit = "cover";
   /* HOOKS */
   const { state, dispatch } = useStore();
   const [showDetails, setShowDetails] = useState(false);
-  const price = usePrice(carItem?.price);
+  const price = usePrice(wallboxItem?.price);
   return (
     <div className="mb-4 overflow-hidden border-t shadow-lg lg:shadow-none lg:border-2 lg:border-grey-lighter lg:rounded-xl">
       <div className="relative flex sm:flex-row">
         <div className="relative flex flex-col justify-between flex-1 pl-2 lg:pl-0">
-          <Link href={`/transporter/${carItem.name}`}>
+          <Link href={`/transporter/${wallboxItem.name}`}>
             <a>
               <h3 className="flex items-center py-2 text-xl font-bold leading-7 title text-black-darkest sm:pl-2 2xl:hidden">
-                {carItem.title}
+                {wallboxItem.title}
               </h3>
             </a>
           </Link>
 
           <div className="w-full pb-6 lg:pb-0">
-            <Link href={`/transporter/${carItem.name}`} passHref>
+            <Link href={`/transporter/${wallboxItem.name}`} passHref>
               <a className="relative w-full ">
-                {carItem?.src && (
+                {wallboxItem?.src && (
                   <Image
                     className="rounded-l-md"
-                    src={carItem.src}
-                    alt={carItem.title}
+                    src={wallboxItem.src}
+                    alt={wallboxItem.title}
                     width={600}
                     height={394}
                     objectFit="cover"
@@ -50,7 +50,7 @@ function CarCard({ carItem, rev, reviewDate, getAllReviews }) {
 
         <div className=" hidden lg:flex lg:my-auto lg:w-[45%]">
           <CarCardDetailsDesktop
-            carItem={carItem}
+            wallboxItem={wallboxItem}
             rev={rev}
             reviewDate={reviewDate}
             getAllReviews={getAllReviews}
@@ -73,12 +73,12 @@ function CarCard({ carItem, rev, reviewDate, getAllReviews }) {
           <div className="relative flex flex-col justify-end flex-1 2xl:right-2 sm:justify-center">
             <div className="flex justify-center pb-2 md:scale-[140%] sm:scale-[100%] xl:mt-8 3xl:hidden ">
               {/* {mobileRatingBox} */}
-              <StarsRating stars={carItem?.rating.value} />
+              <StarsRating stars={wallboxItem?.rating.value} />
             </div>
             <div className="pb-1">
-              <ButtonAnfragen carItem={carItem.title} />
+              <ButtonAnfragen wallboxItem={wallboxItem.title} />
             </div>
-            <ButtonCompare carItem={carItem} />
+            <ButtonCompare wallboxItem={wallboxItem} />
           </div>
           {/* BUTTONS end */}
           <div
@@ -107,7 +107,7 @@ function CarCard({ carItem, rev, reviewDate, getAllReviews }) {
       <div
         className={showDetails ? "container-product-details w-full" : "hidden"}
       >
-        <CarCardDetailsMobile carItem={carItem} />
+        {/*    <CarCardDetailsMobile wallboxItem={wallboxItem} /> */}
       </div>
     </div>
   );

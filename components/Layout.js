@@ -32,7 +32,7 @@ export default function Layout(props) {
 export async function getStaticProps(context) {
   let blogs = await getContent("blogs", context.locale);
 
-  let vehicles = await getContent("vehicles", context.locale);
+  let wallboxes = await getContent("wallboxes", context.locale);
   let brands = await getContent("brands", context.locale);
   // let page = await getContent("pages", context.locale);
   return {
@@ -41,7 +41,7 @@ export async function getStaticProps(context) {
       blogs,
 
       params: context.params,
-      vehicles,
+      wallboxes,
     },
   };
 }

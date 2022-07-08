@@ -13,7 +13,7 @@ import PrintPreview from "../../components/core/PrintPreview";
 
 export default function Details(props) {
   /* getCars hook for the slider */
-  const [getCars, SetGetCars] = useState(props.vehicles);
+  const [getCars, SetGetCars] = useState(props.wallboxes);
   /* carItem hook for the ONE car that it is displayed */
   const [carItem, SetCarItem] = useState(props.vehicle);
   /* for the "TestBericht" part  */
@@ -29,7 +29,7 @@ export default function Details(props) {
   const [getBlogs, SetGetBlogs] = useState(props.blogs);
   useEffect(() => {
     setValueFromUseEffect(props.params.cartitle);
-    SetGetCars(props.vehicles);
+    SetGetCars(props.wallboxes);
     SetCarItem(props.vehicle);
     SetGetBlogContext(props.relatedBlog);
     SetTestReview(props.getTestReview);
@@ -83,7 +83,7 @@ export async function getStaticProps(context) {
     context.params.cartitle,
     context.locale
   );
-  let vehicles = await getContent("vehicles", context.locale);
+  let wallboxes = await getContent("wallboxes", context.locale);
 
   /*  get the first 4 from this category for the slider */
   vehicles = Object.entries(vehicles).map(([key, value]) => {
@@ -140,7 +140,7 @@ export async function getStaticProps(context) {
   return {
     props: {
       vehicle,
-      vehicles,
+      wallboxes,
       relatedBlog,
       getTestReview,
       carsreview,

@@ -9,7 +9,7 @@ import Link from "next/link";
 import FahrzeugeResultList from "../../components/FahrzeugeResultLIst/FahrzeugeResultList";
 export default function fahrzeuge(props) {
   const { state, dispatch } = useStore();
-  const [sortedCars, SetSortedCars] = useState(props.vehicles);
+  const [sortedCars, SetSortedCars] = useState(props.wallboxes);
   const [getContent, SetGetContent] = useState(props.page);
   const [getCarsReview, SetCarsReview] = useState(props.carsreviews);
   const [getMarkdownContext, SetGetMarkdownContext] = useState(props.context);
@@ -25,7 +25,7 @@ export default function fahrzeuge(props) {
     // });
 
     SetSortedCars(
-      props.vehicles.sort((a, b) => a.rating.value - b.rating.value)
+      props.wallboxes.sort((a, b) => a.rating.value - b.rating.value)
     );
 
     SetCarsReview(props.carsreviews);
@@ -78,7 +78,7 @@ export default function fahrzeuge(props) {
 export async function getStaticProps(context) {
   const pages = await getContent("pages", context.locale);
   const posts = await getContent("posts", context.locale);
-  let vehicles = await getContent("vehicles", context.locale);
+  let wallboxes = await getContent("wallboxes", context.locale);
   let blogs = await getContent("blogs", context.locale);
   let carsreviews = await getContent("carsreview", context.locale);
   let brands = await getContent("brands", context.locale);
@@ -98,7 +98,7 @@ export async function getStaticProps(context) {
   return {
     props: {
       page,
-      vehicles,
+      wallboxes,
       posts,
       blogs,
       brands,

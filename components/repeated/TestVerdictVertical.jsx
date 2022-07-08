@@ -1,17 +1,17 @@
 import Image from "next/image";
 import { FcCheckmark } from "react-icons/fc";
 import StarsRating from "./StarsRating";
-const TestVerdictVertical = ({ reviewDate, getAllReviews, carItem }) => {
+const TestVerdictVertical = ({ reviewDate, getAllReviews, wallboxItem }) => {
   let rev = getAllReviews
     .map((item, index) => {
       let res;
-      carItem?.relatedReviews == item.slug ? (res = index) : null;
+      wallboxItem?.relatedReviews == item.slug ? (res = index) : null;
       return res;
     })
     .find((value) => value != undefined);
   /* date */
   reviewDate =
-    getAllReviews.find((item) => item.slug == carItem?.relatedReviews)
+    getAllReviews.find((item) => item.slug == wallboxItem?.relatedReviews)
       .publishedAt || 22;
 
   reviewDate = reviewDate.slice(-2);
@@ -26,7 +26,7 @@ const TestVerdictVertical = ({ reviewDate, getAllReviews, carItem }) => {
             </p>
           </div>
           <div className="flex justify-center scale-95">
-            <StarsRating stars={carItem.rating.value} />
+            <StarsRating stars={wallboxItem.rating.value} />
           </div>
         </div>
         <div className="relative flex justify-center right-3 bottom-3 w-28 ">

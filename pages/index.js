@@ -11,7 +11,6 @@ import { useStore } from "../components/store";
 
 export default function Home(props) {
   const { state, dispatch } = useStore();
-  // console.log(state, "index");
   useEffect(() => {
     if (!props.page || !dispatch) return;
     // console.log(props.page.content, "testtest");
@@ -26,10 +25,10 @@ export default function Home(props) {
         getMarkdownContext={props.context}
         getBrands={props.brands}
       />
-      <TopSlider getCars={props.vehicles} getContent={props.page} />
+      <TopSlider getCars={props.wallboxes} getContent={props.page} />
       <BlogArticles getMarkdownContext={props.context} />
       <Funnel
-        getCars={props.vehicles}
+        getCars={props.wallboxes}
         getContent={props.page}
         getBrands={props.brands}
       />
@@ -40,7 +39,7 @@ export default function Home(props) {
 
 export async function getStaticProps(context) {
   const pages = await getContent("pages", context.locale);
-  let vehicles = await getContent("vehicles", context.locale);
+  let wallboxes = await getContent("wallboxes", context.locale);
   let blogs = await getContent("blogs", context.locale);
   let brands = await getContent("brands", context.locale);
   const page = pages.find((page) => page.path === "/");
@@ -69,7 +68,7 @@ export async function getStaticProps(context) {
     props: {
       context: { header, eAutoAdvisor, substities, newsletter },
       page,
-      vehicles,
+      wallboxes,
       blogs,
       brands,
     },

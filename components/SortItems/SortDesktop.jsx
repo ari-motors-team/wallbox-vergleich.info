@@ -9,28 +9,19 @@ const sortBy2 = [
     sortCategory: "Niedrigster Preis",
     sortType: "lowest",
   },
-
   {
     sortCategory: "Höchster Preis",
     sortType: "highest",
   },
 
   {
-    sortCategory: "Beste Ladenzeit",
-    sortType: "chargingTimeLithium",
+    sortCategory: "Meist gekaufte",
+    sortType: "meistGekaufte",
   },
   {
-    sortCategory: "Höchste Zuladung",
-    sortType: "highestWeight",
+    sortCategory: "Sale",
+    sortType: "sale",
   },
-  {
-    sortCategory: "Höchste Reichweite",
-    sortType: "highestRange",
-  },
-  // {
-  //   sortCategory: sortingCate[7],
-  //   sortType: "highestVmax",
-  // },
 ];
 function SortDesktop() {
   const { state, dispatch } = useStore();

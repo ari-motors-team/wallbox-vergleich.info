@@ -29,7 +29,7 @@ const variants = {
 //   "Aufbautyp",
 // ];
 
-function FilterBrandItemDesktop({ item }) {
+function FilterBrandItemDesktop({ item, title }) {
   // const item = props.item;
   const { state, dispatch } = useStore();
 
@@ -60,7 +60,9 @@ function FilterBrandItemDesktop({ item }) {
               />
             </div>
             <div className="pl-4 my-auto text-xs lg:text-base">
-              <h4 className="font-bold text-blue-darker">Hersteller</h4>
+              <h4 className="font-bold text-blue-darker">
+                {title ? title : "Hersteller"}
+              </h4>
             </div>
           </div>
           <div className="flex">

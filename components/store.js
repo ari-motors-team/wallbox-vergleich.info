@@ -15,6 +15,8 @@ const reducer = (state, action) => {
       return { ...state, chargingTimeLithiums: action.data };
     case "category":
       return { ...state, categorys: action.data };
+    case "weatherResistance":
+      return { ...state, weatherResistances: action.data };
     case "brand":
       return { ...state, brands: action.data };
 
@@ -51,6 +53,7 @@ const initialState = {
   rangeLithiums: [],
   loadingWeights: [],
   maxSpeeds: [],
+  weatherResistances: [],
   chargingTimeLithiums: [],
   categorys: [],
   brands: [],

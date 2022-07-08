@@ -8,12 +8,12 @@ import BlogPost from "../../components/Blog/BlogPost";
 
 export default function Blogs(props) {
   /* getBlogContext hook for the ONE car that it is displayed */
-  const [relatedVehicles, SetRelatedVehicles] = useState(props.vehicles);
+  const [relatedVehicles, SetRelatedVehicles] = useState(props.wallboxes);
   const [getBlogContext, SetGetBlogContext] = useState(props.blog);
   const [valueFromUseEffect, setValueFromUseEffect] = useState(null);
   useEffect(() => {
     setValueFromUseEffect(props.params.blogtitle);
-    SetRelatedVehicles(props.vehicles);
+    SetRelatedVehicles(props.wallboxes);
     SetGetBlogContext(props.blog);
   }, [props]);
 
@@ -36,7 +36,7 @@ export async function getStaticProps(context) {
     context.locale
   );
 
-  let vehicles = await getContent("vehicles", context.locale);
+  let wallboxes = await getContent("wallboxes", context.locale);
 
   /*  get the cars from this category for the slider */
   vehicles = Object.entries(vehicles).map(([key, value]) => {

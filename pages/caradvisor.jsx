@@ -7,7 +7,7 @@ import Image from "next/image";
 import data from "../data/stepsData";
 import { useStore } from "../components/store";
 export default function caradvisor(props) {
-  const [getCars, SetGetCars] = useState(props.vehicles);
+  const [getCars, SetGetCars] = useState(props.wallboxes);
   const [getBrands, SetGetBrands] = useState(props.brands);
   const { state, dispatch } = useStore();
 
@@ -69,7 +69,7 @@ export default function caradvisor(props) {
 export async function getStaticProps(context) {
   const pages = await getContent("pages", context.locale);
   const posts = await getContent("posts", context.locale);
-  let vehicles = await getContent("vehicles", context.locale);
+  let wallboxes = await getContent("wallboxes", context.locale);
   const page = pages.find((page) => page.path === "/caradvisor");
   let brands = await getContent("brands", context.locale);
 

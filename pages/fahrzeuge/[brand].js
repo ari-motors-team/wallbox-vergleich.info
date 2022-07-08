@@ -71,7 +71,7 @@ export async function getStaticProps(context) {
     context.params.brand,
     context.locale
   );
-  let vehicles = await getContent("vehicles", context.locale);
+  let wallboxes = await getContent("wallboxes", context.locale);
   let sortedCars = vehicles.filter(
     (car) =>
       car.name.split(/[\s-]+/)[0] == context.params.brand.split(/[\s-]+/)[0]
@@ -89,7 +89,7 @@ export async function getStaticProps(context) {
     props: {
       brand,
       brands,
-      vehicles,
+      wallboxes,
       sortedCars,
       params: context.params,
       getContext,

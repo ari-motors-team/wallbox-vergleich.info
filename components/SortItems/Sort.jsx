@@ -38,17 +38,14 @@ function Sort({ getContent }) {
       sortCategory: "Höchster Preis",
       sortType: "highest",
     },
+
     {
-      sortCategory: "Beste Ladenzeit",
-      sortType: "chargingTimeLithium",
+      sortCategory: "Meist gekaufte",
+      sortType: "meistGekaufte",
     },
     {
-      sortCategory: "Höchste Zuladung",
-      sortType: "highestWeight",
-    },
-    {
-      sortCategory: "Höchste Reichweite",
-      sortType: "highestRange",
+      sortCategory: "Sale",
+      sortType: "sale",
     },
   ];
   useEffect(() => {
