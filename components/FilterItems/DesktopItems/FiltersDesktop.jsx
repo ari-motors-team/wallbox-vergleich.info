@@ -21,7 +21,6 @@ const variants = {
 };
 function FiltersDesktop({ getBrands }) {
   const { state, dispatch } = useStore();
-  console.log(getBrands);
 
   return (
     <AnimatePresence initial={false}>

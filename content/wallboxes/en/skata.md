@@ -3,6 +3,7 @@ title: skata
 name: skata
 price: 425
 relatedBlogs: WALLBOX-kaufberater-in-3-schritten-zum-passenden-e-transporter
+manufacturer: angelo-motors
 description: zdcgb
 src: /images/ladezeit-2x.png
 category:
@@ -13,7 +14,7 @@ articlelnumber:
   key: artikelnummer
   value: 001-016-000001
   baseUnit: "0"
-Weight:
+weight:
   key: Gewicht
   value: 33
   baseUnit: kg
@@ -31,13 +32,14 @@ connection:
 scheduledChargingTimer:
   key: Timer für Zeit- gesteuertes Laden
   baseUnit: nein
+  value: Ja
 connection230VAvailability:
   key: Anschluss 230V
   value: nein
   baseUnit: "0"
 chargeStatusPreview:
   key: Ladestatus- anzeige
-  value: 0
+  value: no idea
   baseUnit: sdv
 consumption:
   key: df
@@ -64,6 +66,10 @@ climateNeutral:
   key: Klimaneutral
   value: nein
   baseUnit: "0"
+connectionsNumber:
+  key: ANSCHLUSS ANZAHL
+  value: 2
+  baseUnit: stecker
 subsidies:
   key: Förderung
   value: 440 und 441
@@ -90,17 +96,26 @@ tension:
   value: 230
   maxValue: 400
   baseUnit: V
-sizesLength:
-  key: Maße
-  value: 295 x 386 x 177
-  baseUnit: mm
+sizesTotal:
+  key: Masse
+  value: 3x3x3
+  baseUnit: cm
 sizesWidth:
   key: daf
   value: adrg
   baseUnit: drg
+sizesLength:
+  key: Maße
+  value: 295 x 386 x 177
+  baseUnit: mm
+Weight:
+  key: Gewicht
+  value: 33
+  baseUnit: kg
 sizesHeight:
   key: dsrg
   value: aerg
   baseUnit: srg
 ---
+
 zsfvzdf

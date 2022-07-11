@@ -13,7 +13,7 @@ export default function comparePage(props) {
   /* .find(
     (item) => vehicle?.relatedReviews == item.slug
   ) */
-  console.log(sortedWallboxes);
+  console.log();
 
   const [getCarsReviews, setGetCarsReviews] = useState([]);
   const { state, dispatch } = useStore();

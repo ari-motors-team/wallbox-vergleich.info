@@ -2,7 +2,7 @@ import Image from "next/image";
 
 function CarCardProps(props) {
   /*   let imagesForProp = [image, image2, image3, image4]; */
-
+  console.log(props.details?.value);
   return (
     <div className="flex items-center h-20 pl-2 xl:pl-4">
       <div className="rounded-full bg-[#E7EEF2] ">
@@ -20,7 +20,12 @@ function CarCardProps(props) {
       <div className="flex flex-col justify-center flex-1 text-sm lg:pl-2 ">
         <div className="font-bold text-blue-dark ">{props.details?.key}</div>
         <div className="font-bold text-grey-dark ">
-          {props.details?.value ? props.details?.value : "-"}
+          {props.details?.value && !Array.isArray(props.details?.value)
+            ? props.details?.value
+            : ""}
+          {Array.isArray(props.details?.value)
+            ? props.details?.value[0] + "/" + props.details?.value[1]
+            : ""}
           {props.details?.maxValue &&
           props.details?.maxValue !== props.details?.value
             ? ` - ${props.details?.maxValue} `

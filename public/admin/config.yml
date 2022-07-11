@@ -366,7 +366,7 @@ collections:
         required: false
         widget: "relation"
         i18n: duplicate
-        collection: "Brands"
+        collection: "brands"
         search_fields: ["title"]
         display_fields: ["title"]
         value_field: "slug"
@@ -505,7 +505,7 @@ collections:
               required: true,
               multiple: true,
               i18n: duplicate,
-              options: [0, 0.3, 2, 3.5, 5, 6, 7, 7.5, 10],
+              options: ["0", "0.3", "2", "3.5", "5", "6", "7", " 7.5", "10"],
             }
 
           - {
@@ -770,6 +770,35 @@ collections:
               label: "value",
               name: "value",
               widget: "string",
+              i18n: true,
+              required: true,
+            }
+          - {
+              label: "-",
+              name: "baseUnit",
+              widget: "string",
+              i18n: true,
+              required: true,
+            }
+
+      - label: " number of connections(Anschluss Anzahl)"
+        name: "connectionsNumber"
+        required: true
+        widget: "object"
+        summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
+        i18n: true
+        fields:
+          - {
+              label: "Key",
+              name: "key",
+              widget: "string",
+              i18n: true,
+              required: true,
+            }
+          - {
+              label: "value",
+              name: "value",
+              widget: "number",
               i18n: true,
               required: true,
             }

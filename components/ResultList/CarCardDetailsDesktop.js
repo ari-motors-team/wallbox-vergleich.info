@@ -34,18 +34,15 @@ function CarCardDetailsDesktop({
       </Link>
       <div className="grid w-full grid-cols-2 px-2 2xl:grid-cols-2 3xl:grid-cols-3">
         <div className="flex flex-col justify-between h-48 py-4 ">
-          <CarCardProps details={wallboxItem?.weight} image={image} />
-          <CarCardProps details={wallboxItem?.tension} image={image2} />
+          <CarCardProps details={wallboxItem?.connection} image={image} />
+          <CarCardProps
+            details={wallboxItem?.operatingTemperatur}
+            image={image2}
+          />
         </div>
         <div className="flex flex-col justify-between h-48 py-4 ">
-          <CarCardProps
-            details={wallboxItem?.weatherResistance}
-            image={image4}
-          />
-          <CarCardProps
-            details={wallboxItem?.electricityCounter}
-            image={image3}
-          />
+          <CarCardProps details={wallboxItem?.power} image={image4} />
+          <CarCardProps details={wallboxItem?.guarantee} image={image3} />
         </div>
 
         <div className="relative items-center justify-center flex-1 hidden 3xl:flex">
