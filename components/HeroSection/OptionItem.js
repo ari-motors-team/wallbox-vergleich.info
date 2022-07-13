@@ -2,7 +2,7 @@
 //
 const OptionItem = ({ details }) => {
   return details.map((option) => (
-    <option key={option.id} value={option.value}>
+    <option key={option.id} value={option.value ? option.value : option.title}>
       {option.title}
     </option>
   ));
