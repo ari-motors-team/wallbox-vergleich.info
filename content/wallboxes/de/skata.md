@@ -39,7 +39,7 @@ connection230VAvailability:
   baseUnit: "0"
 chargeStatusPreview:
   key: Ladestatus- anzeige
-  value: no idea
+  value: über app
   baseUnit: sdv
 consumption:
   key: df
@@ -47,7 +47,7 @@ consumption:
   baseUnit: kw
 power:
   key: Ladeleistung
-  value: 11 -22
+  value: "11& 22"
   baseUnit: KW
 SmartHomeCompatible:
   key: Smarthomekompatibel

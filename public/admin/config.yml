@@ -515,7 +515,7 @@ collections:
               i18n: duplicate,
               required: true,
             }
-      - label: "Timer for scheduled charging"
+      - label: "Timer for scheduled charging (Timer für Zeit-gesteuertes Laden)"
         name: "scheduledChargingTimer"
         widget: "object"
         summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
@@ -533,7 +533,7 @@ collections:
               label: "Value",
               name: "value",
               widget: "select",
-              options: ["Ja", "Nein"],
+              options: ["Display", "Über App", "LED"],
               i18n: duplicate,
               required: false,
             }
@@ -591,8 +591,8 @@ collections:
           - {
               label: "Value",
               name: "value",
-              widget: "string",
-              value_type: "float",
+              widget: "select",
+              options: [Display, "über app", "LED", "über app und LED"],
               i18n: duplicate,
               required: true,
             }
@@ -648,11 +648,13 @@ collections:
               required: true,
             }
           - {
-              label: "Value (min-max)",
-              hint: "IN THE FORM min-max",
+              label: "Value ",
+
               name: "value",
               required: true,
-              widget: "string",
+              widget: "select",
+              # multiple: true,
+              options: ["22", "11", "11 & 22"],
               i18n: duplicate,
             }
 

@@ -5,18 +5,18 @@ const reducer = (state, action) => {
     /* filter */
     case "price":
       return { ...state, prices: action.data };
-    case "rangeLithium":
-      return { ...state, rangeLithiums: action.data };
-    case "loadingWeight":
-      return { ...state, loadingWeights: action.data };
-    case "maxSpeed":
-      return { ...state, maxSpeeds: action.data };
-    case "chargingTimeLithium":
-      return { ...state, chargingTimeLithiums: action.data };
-    case "category":
-      return { ...state, categorys: action.data };
     case "weatherResistance":
       return { ...state, weatherResistances: action.data };
+    case "electricityCounter":
+      return { ...state, electricityCounters: action.data };
+    case "chargeStatusPreview":
+      return { ...state, chargeStatusPreviews: action.data };
+    case "power":
+      return { ...state, powers: action.data };
+
+    case "connection":
+      return { ...state, connections: action.data };
+
     case "brand":
       return { ...state, brands: action.data };
 
@@ -50,12 +50,13 @@ const reducer = (state, action) => {
 const initialState = {
   mobileNavActive: false,
   prices: [],
-  rangeLithiums: [],
-  loadingWeights: [],
-  maxSpeeds: [],
+
+  electricityCounters: [],
+  chargeStatusPreviews: [],
   weatherResistances: [],
-  chargingTimeLithiums: [],
-  categorys: [],
+  powers: [],
+  connections: [],
+
   brands: [],
   truncates: "",
   /*  states for comparison popup */

@@ -14,27 +14,27 @@ function ActiveFilterEntry(props) {
   const { state, dispatch } = useStore();
   const [filterData, setFilterData] = useState([]);
   const [herstellerData, setHerstellerData] = useState([]);
-
+  console.log(state?.chargeStatusPreviews.map((el) => `${el.min}  `).join(""));
   useEffect(() => {
     if (
       state?.prices.length ||
-      state?.rangeLithiums.length ||
-      state?.loadingWeights.length ||
-      state?.maxSpeeds.length ||
-      state?.chargingTimeLithiums.length ||
-      state?.categorys.length ||
-      state?.brands.length
+      state?.brands.length ||
+      state?.electricityCounters.length ||
+      state?.chargeStatusPreviews.length ||
+      state?.weatherResistances.length ||
+      state?.powers.length ||
+      state?.connections.length
     ) {
       props.setShowAll(true);
     }
     if (
       !state?.prices.length &&
-      !state?.rangeLithiums.length &&
-      !state?.loadingWeights.length &&
-      !state?.maxSpeeds.length &&
-      !state?.chargingTimeLithiums.length &&
-      !state?.categorys.length &&
-      !state?.brands.length
+      !state?.brands.length &&
+      !state?.electricityCounters.length &&
+      !state?.chargeStatusPreviews.length &&
+      !state?.weatherResistances.length &&
+      !state?.powers.length &&
+      !state?.connections.length
     ) {
       props.setShowAll(false);
     }
@@ -63,65 +63,35 @@ function ActiveFilterEntry(props) {
       },
       {
         id: 2,
-        value: state?.rangeLithiums.length
-          ? state?.rangeLithiums
-              .map(
-                (el) =>
-                  `${
-                    el?.max < 99999 ? el.min + "-" + el.max : "ab " + el.min
-                  }  km`
-              )
-              .join("")
+        value: state?.powers.length
+          ? state?.powers.map((el) => `${el.min}  `).join("")
           : null,
         image: image,
       },
       {
         id: 3,
-        value: state?.loadingWeights.length
-          ? state?.loadingWeights
-              .map(
-                (el) =>
-                  `${
-                    el?.max < 99999 ? el.min + "-" + el.max : "ab " + el.min
-                  }  kg`
-              )
-              .join("")
+        value: state?.chargeStatusPreviews.length
+          ? state?.chargeStatusPreviews.map((el) => `${el.min}  `).join("")
           : null,
         image: image2,
       },
       {
         id: 4,
         value:
-          state?.maxSpeeds.length || state?.maxSpeeds.length == undefined
-            ? state?.maxSpeeds
-                .map(
-                  (el) =>
-                    `${
-                      el?.max < 99999 ? el.min + "-" + el.max : "ab " + el.min
-                    } km/h`
-                )
-                .join("")
+          state?.electricityCounters.length ||
+          state?.electricityCounters.length == undefined
+            ? state?.electricityCounters.map((el) => `${el.min} `).join("")
             : null,
         image: image3,
       },
       {
         id: 5,
         value:
-          state?.chargingTimeLithiums.length ||
-          state?.chargingTimeLithiums.length == undefined
-            ? state?.chargingTimeLithiums
-                .map((el) => `${el.min} Stunden `)
-                .join("")
+          state?.weatherResistances.length ||
+          state?.weatherResistances.length == undefined
+            ? state?.weatherResistances.map((el) => `${el.min}  `).join("")
             : null,
         image: image5,
-      },
-      {
-        id: 6,
-        value:
-          state?.categorys.length || state?.categorys == undefined
-            ? state?.categorys.map((el) => "Typ " + el.min).join("")
-            : null,
-        image: image6,
       },
     ]);
     setHerstellerData(
@@ -137,12 +107,12 @@ function ActiveFilterEntry(props) {
     );
   }, [
     state?.prices,
-    state?.rangeLithiums,
-    state?.loadingWeights,
-    state?.maxSpeeds,
-    state?.chargingTimeLithiums,
-    state?.categorys,
     state?.brands,
+    state?.powers,
+    state?.chargeStatusPreviews,
+    state?.electricityCounters,
+    state?.weatherResistances,
+    state?.connections,
   ]);
   return (
     <div
@@ -176,12 +146,13 @@ function ActiveFilterEntry(props) {
           <div
             onClick={() => {
               if (item.id === 1) dispatch({ type: "price", data: [] });
-              if (item.id === 2) dispatch({ type: "rangeLithium", data: [] });
-              if (item.id === 3) dispatch({ type: "loadingWeight", data: [] });
-              if (item.id === 4) dispatch({ type: "maxSpeed", data: [] });
+              if (item.id === 2) dispatch({ type: "power", data: [] });
+              if (item.id === 3)
+                dispatch({ type: "chargeStatusPreview", data: [] });
+              if (item.id === 4)
+                dispatch({ type: "electricityCounters", data: [] });
               if (item.id === 5)
-                dispatch({ type: "chargingTimeLithium", data: [] });
-              if (item.id === 6) dispatch({ type: "category", data: [] });
+                dispatch({ type: "weatherResistances", data: [] });
             }}
             className={"w-3.5 my-auto mr-4 cursor-pointer"}
           >
@@ -228,11 +199,10 @@ function ActiveFilterEntry(props) {
       {/* REMOVE ALL FILTERS */}
       <div
         className={
-          state?.rangeLithiums.length ||
+          state?.electricityCounters.length ||
           state?.prices.length ||
-          state?.loadingWeights.length ||
-          state?.maxSpeeds.length ||
-          state?.chargingTimeLithiums.length ||
+          state?.chargeStatusPreviews.length ||
+          state?.powers.length ||
           state?.weatherResistances.length ||
           state?.brands.length
             ? "flex justify-end items-start lg:items-end md:justify-start pr-2 h-10"
@@ -244,11 +214,11 @@ function ActiveFilterEntry(props) {
           onClick={() => {
             props.setShowAll(!props.showAll);
             dispatch({
-              type: "rangeLithium",
+              type: "power",
               data: [],
             });
             dispatch({
-              type: "loadingWeight",
+              type: "chargeStatusPreview",
               data: [],
             });
             dispatch({
@@ -256,17 +226,14 @@ function ActiveFilterEntry(props) {
               data: [],
             });
             dispatch({
-              type: "maxSpeed",
+              type: "electricityCounter",
               data: [],
             });
             dispatch({
-              type: "chargingTimeLithium",
+              type: "weatherResistance",
               data: [],
             });
-            dispatch({
-              type: "category",
-              data: [],
-            });
+
             dispatch({
               type: "brands",
               data: [],

@@ -1,6 +1,6 @@
 ---
-title: skata
-name: skata
+title: skata2
+name: skata2
 price: 425
 relatedBlogs: WALLBOX-kaufberater-in-3-schritten-zum-passenden-e-transporter
 manufacturer: angelo-motors
@@ -47,7 +47,7 @@ consumption:
   baseUnit: kw
 power:
   key: Ladeleistung
-  value: 11 -22
+  value: "11& 22"
   baseUnit: KW
 SmartHomeCompatible:
   key: Smarthomekompatibel
@@ -100,22 +100,10 @@ sizesTotal:
   key: Masse
   value: 3x3x3
   baseUnit: cm
-sizesWidth:
-  key: daf
-  value: adrg
-  baseUnit: drg
 sizesLength:
   key: Maße
   value: 295 x 386 x 177
   baseUnit: mm
-Weight:
-  key: Gewicht
-  value: 33
-  baseUnit: kg
-sizesHeight:
-  key: dsrg
-  value: aerg
-  baseUnit: srg
 ---
 
 zsfvzdf

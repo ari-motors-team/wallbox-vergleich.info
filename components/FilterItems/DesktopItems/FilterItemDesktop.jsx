@@ -31,7 +31,8 @@ const variants = {
 function FilterItemDesktop({ item }) {
   // const item = props.item;
   const { state, dispatch } = useStore();
-
+  // console.log("state for item category", state[item.category]);
+  // console.log("only each item category", item.category);
   /* to render the four ranges */
 
   return (
@@ -63,17 +64,16 @@ function FilterItemDesktop({ item }) {
             </div>
           </div>
           <div className="flex">
-            {/*{" "}
             <span
               className={
-                state[item.category].length > 0
+                state[item.category].length
                   ? "flex text-green-700 text-xl h-6"
                   : "hidden"
               }
             >
               ✓
-            </span>{" "}
-            */}
+            </span>
+
             <div
               className={
                 state?.truncates == item.title
@@ -120,10 +120,10 @@ function FilterItemDesktop({ item }) {
                   key={checkbox.value}
                 ></FilterCheckbox>
                 <label
-                  forhtml={checkbox.name}
+                  forhtml={checkbox.title}
                   className="inline-flex items-center pl-5 text-lg text-blue-extra "
                 >
-                  {checkbox.name}
+                  {checkbox.title}
                 </label>
               </div>
             ))}

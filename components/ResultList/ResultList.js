@@ -97,7 +97,6 @@ const ResultList = (props) => {
 
     // setShownWallboxes(filteredCars);
     setShownWallboxes(props.sortedWallboxes);
-    console.log(shownWallboxes);
   }, [
     // state?.prices,
     // state?.loadingWeights,

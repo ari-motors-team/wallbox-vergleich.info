@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 import OptionItem from "../HeroSection/OptionItem";
-import styles from "../HeroSection/HeroSection.module.css";
 
 const details = [
   {
@@ -13,49 +12,44 @@ const details = [
     options: [
       {
         id: "1",
-        name: "1-10000 €",
-        value: "0-10000 ",
+        title: "1-500 €",
+        value: "0-500 ",
       },
       {
         id: "2",
-        name: "10001-20000 €",
-        value: "10001-20000",
+        title: "501-1000 €",
+        value: "501-1000",
       },
       {
         id: "3",
-        name: "20001-40000 €",
-        value: "20001",
+        title: "1001-1500 €",
+        value: "1001-1500",
       },
       {
         id: "4",
-        name: "40001-80000 €",
-        value: "40001-80000",
+        title: "1501-2000 €",
+        value: "1501-2000",
       },
     ],
   },
 
   {
-    category: "Reichweite",
+    category: "Ladeleistung (kW)",
     options: [
       {
         id: "1",
-        name: "ab 50 km ",
-        value: "50",
+        title: "11 KW ",
+        value: "11",
       },
       {
         id: "2",
-        name: "ab 100km",
-        value: "100",
+        title: "22 KW",
+        value: "22",
       },
       {
         id: "3",
-        name: "ab 150km",
-        value: "150",
-      },
-      {
-        id: "4",
-        name: "ab 200km",
-        value: "200",
+        title: "11 & 22 KW",
+        value: "11 & 22",
       },
     ],
   },
@@ -65,31 +59,31 @@ const details = [
     options: [
       {
         id: "1",
-        name: "ab 100kg",
+        title: "ab 100kg",
         value: "100",
       },
       {
         id: "2",
-        name: "ab 250kg",
+        title: "ab 250kg",
         value: "250",
       },
       {
         id: "3",
-        name: "ab 450kg",
+        title: "ab 450kg",
         value: "450",
       },
       {
         id: "4",
-        name: "ab 500kg",
+        title: "ab 500kg",
         value: "500",
       },
     ],
   },
 ];
-const CompareTool = () => {
+const CompareTool = ({ getBrands }) => {
   const router = useRouter();
   const { state, dispatch } = useStore();
-
+  console.log(getBrands);
   const [choosePrice, setChoosePrice] = useState(details[0].options[0].value);
   const [chooseRange, setChooseRange] = useState(details[1].options[0].value);
   const [chooseWeight, setChooseWeight] = useState(details[2].options[0].value);
@@ -109,7 +103,7 @@ const CompareTool = () => {
 
           <div className="h-14 lg:w-68  w-full pt-2 shadow-angelos1 text-base rounded-sm bg-white lg:w-[14vw]">
             <label className="flex flex-row justify-between px-2 text-left ">
-              Reichweite
+              Ladeleistung
               <div className="relative top-5">▼</div>
             </label>
             <div className="m-1 ">
@@ -147,7 +141,7 @@ const CompareTool = () => {
           {/* weight */}
           <div className="h-14 lg:w-[14vw] w-full my-4 pt-2 shadow-angelos1 text-base rounded-sm bg-white ">
             <label className="flex flex-row justify-between px-2 text-left">
-              Nutzlast
+              Hersteller
               <div className="relative top-5">▼</div>
             </label>
 
@@ -159,7 +153,7 @@ const CompareTool = () => {
                   setChooseWeight(e.target.value);
                 }}
               >
-                <OptionItem details={details[2].options} />
+                <OptionItem details={getBrands} />
               </select>
             </div>
           </div>

@@ -34,7 +34,6 @@ function FilterBrandItemDesktop({ item, title }) {
   const { state, dispatch } = useStore();
 
   /* to render the four ranges */
-
   return (
     <>
       {/* truncate state */}
@@ -69,7 +68,7 @@ function FilterBrandItemDesktop({ item, title }) {
             {/* for the green ✔️ */}
             <span
               className={
-                state.brands.length > 0
+                state?.brands.length > 0
                   ? "flex text-green-700 text-xl h-6"
                   : "hidden"
               }

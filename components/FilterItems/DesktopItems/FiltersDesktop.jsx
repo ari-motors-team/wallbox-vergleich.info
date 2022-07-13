@@ -19,6 +19,7 @@ const variants = {
     opacity: 0,
   },
 };
+
 function FiltersDesktop({ getBrands }) {
   const { state, dispatch } = useStore();
 
@@ -46,7 +47,7 @@ function FiltersDesktop({ getBrands }) {
         </div>
         {filtersData.map((item, index) => (
           <div className="bg-white" key={index}>
-            <FilterBrandItemDesktop item={item.options} title={item.title} />
+            <FilterItemDesktop item={item} />
           </div>
         ))}
         <div className="bg-white">
