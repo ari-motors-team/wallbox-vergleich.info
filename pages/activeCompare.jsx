@@ -47,7 +47,7 @@ const carDetails = [
 export default function activeCompare(props) {
   const { state, dispatch } = useStore();
 
-  let comparedCars = state?.autoForComparisons?.map((el) => el.auto);
+  let comparedWallboxes = state?.autoForComparisons?.map((el) => el.auto);
 
   return (
     <div className="main-wrapper 2xl:px-40">
@@ -59,7 +59,9 @@ export default function activeCompare(props) {
       </div>
       {/* BACK BUTTON */}
       <div
-        className={comparedCars.length > 1 ? "pl-4 block lg:hidden" : "hidden"}
+        className={
+          comparedWallboxes.length > 1 ? "pl-4 block lg:hidden" : "hidden"
+        }
       >
         <button className="h-10 mb-8 text-sm rounded-md w-52 text-blue-darker bg-grey-lighter">
           <Link href="/comparePage">
@@ -73,23 +75,26 @@ export default function activeCompare(props) {
       <div className="grid grid-flow-col pb-20 overflow-x-scroll scrollbar-hide">
         <div className="w-full">
           <div className="relative grid grid-flow-col overflow-x-scroll scrollbar-hide">
-            <ActiveCompareImages comparedCars={comparedCars} />
+            <ActiveCompareImages comparedWallboxes={comparedWallboxes} />
           </div>
 
           <div className="grid grid-flow-col auto-cols-[minmax(160px,_1fr)]">
             <ActiveCompareEntries
-              /*   stars={comparedCars} */
+              /*   stars={comparedWallboxes} */
               keys={allKeys}
-              comparedCars={comparedCars}
+              comparedWallboxes={comparedWallboxes}
             />
           </div>
           <div className="grid grid-flow-col auto-cols-[minmax(160px,_1fr)]">
-            <ActiveCompareSizes keys={carSizes} comparedCars={comparedCars} />
+            <ActiveCompareSizes
+              keys={carSizes}
+              comparedWallboxes={comparedWallboxes}
+            />
           </div>
           <div className="grid grid-flow-col auto-cols-[minmax(160px,_1fr)]">
             <ActiveCompareDetails
               keys={carDetails}
-              comparedCars={comparedCars}
+              comparedWallboxes={comparedWallboxes}
             />
           </div>
         </div>
@@ -100,7 +105,7 @@ export default function activeCompare(props) {
 
 export async function getStaticProps(context) {
   const pages = await getContent("pages", context.locale);
-  /* get all vehicles */
+  /* get all wallboxes */
   let wallboxes = await getContent("wallboxes", context.locale);
   const page = pages.find((page) => page.path === "/activecompare");
   let brands = await getContent("brands", context.locale);
@@ -114,7 +119,7 @@ export async function getStaticProps(context) {
 
   return {
     props: {
-      vehicles,
+      wallboxes,
       brands,
       blogs,
       page,

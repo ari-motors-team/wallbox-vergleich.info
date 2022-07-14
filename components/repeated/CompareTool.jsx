@@ -149,7 +149,7 @@ const CompareTool = ({ getBrands }) => {
                     type: "power",
                     data: [
                       {
-                        min: Number(choosePower),
+                        min: choosePower,
                         max: 100000,
                       },
                     ],
