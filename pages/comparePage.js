@@ -13,7 +13,6 @@ export default function comparePage(props) {
   /* .find(
     (item) => vehicle?.relatedReviews == item.slug
   ) */
-  console.log();
 
   const [getCarsReviews, setGetCarsReviews] = useState([]);
   const { state, dispatch } = useStore();
@@ -36,7 +35,6 @@ export default function comparePage(props) {
         return a.name === b.name ? 0 : a.name < b.name ? -1 : 1;
       })
       .map((item) => item);
-    console.log(state?.activeSortValues[0]?.sortType);
     /* initial value */
     setSortedWallboxes(getCarsAlphabetical);
     if (state?.activeSortValues[0]?.sortType === "alphabetical") {
