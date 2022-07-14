@@ -9,102 +9,82 @@ const ResultList = (props) => {
 
   /* useEffect to apply the filters */
   useEffect(() => {
-    // if (
-    //   !state?.prices ||
-    //   !state?.loadingWeights ||
-    //   !state?.rangeLithiums ||
-    //   !state?.maxSpeeds ||
-    //   !state?.chargingTimeLithiums ||
-    //   !state?.categorys ||
-    //   !state?.brands ||
-    //   props.sortedCars?.length === 0
-    // )
-    //   return;
-    /*   if (state?.brands?.length > 0) {
-      let filteredCarsUponBrand = props.sortedCars.filter((car) => {
-        return state.brands.filter((brand) => brand.includes(car.brand));
-      }); */
+    if (
+      !state?.prices ||
+      !state?.electricityCounters ||
+      !state?.chargeStatusPreviews ||
+      !state?.weatherResistances ||
+      !state?.powers ||
+      !state?.connections ||
+      !state?.brands ||
+      props.sortedWallboxes.length === 0
+    )
+      return;
 
-    /*  filteredCars = filteredCars.filter((car, index) => {
+    let filteredWallboxes = props.sortedWallboxes?.filter((wallbox) => {
+      if (
+        state?.prices?.length > 0 &&
+        state?.prices?.every(
+          (entry) => entry.min > wallbox.price || entry.max < wallbox.price
+        )
+      )
+        return false;
 
-        return car.name.split(/[\s-]+/)[0] == state?.brands.split(/[\s-]+/)[0];
-      }); */
-    /* let sortedCars = vehicles.filter(
-   (car) =>
-     car.name.split(/[\s-]+/)[0] == context.params.brand.split(/[\s-]+/)[0]
- ); */
-    // let filteredCars = props.sortedCars?.filter((car) => {
-    //   let rangeval = car.rangeLithium.value;
-    //   let chargingTimeval = car.chargingTimeLithium.value;
-    //   //declaring the right range and charging time according to the battery
-    //   car.rangeLithium.value == 0 ? (rangeval = car.range230V.value) : null;
-    //   car.chargingTimeLithium.value == 0
-    //     ? (chargingTimeval = car.chargingTime230V.value)
-    //     : null;
-    //   if (
-    //     state?.prices?.length > 0 &&
-    //     state?.prices?.every(
-    //       (entry) => entry.min > car.price || entry.max < car.price
-    //     )
-    //   )
-    //     return false;
+      if (
+        state?.electricityCounters?.length > 0 &&
+        !state?.electricityCounters?.some(
+          (entry) => entry.min == wallbox.electricityCounter.value
+        )
+      )
+        return false;
+      if (
+        state?.chargeStatusPreviews?.length > 0 &&
+        !state?.chargeStatusPreviews?.some(
+          (entry) => entry.min == wallbox.chargeStatusPreview.value
+        )
+      )
+        return false;
+      if (
+        state?.weatherResistances?.length > 0 &&
+        !state?.weatherResistances?.some(
+          (entry) => entry.min == wallbox.weatherResistance.value
+        )
+      )
+        return false;
+      if (
+        state?.powers?.length > 0 &&
+        !state?.powers?.some((entry) => entry.min.match(wallbox.power.value))
+      )
+        return false;
+      if (
+        state?.connections?.length > 0 &&
+        !state?.connections?.some(
+          (entry) =>
+            entry.min <
+            wallbox.connection.value.reduce((max, x) =>
+              Number(max) < Number(x) ? Number(x) : Number(max)
+            )
+        )
+      )
+        return false;
+      if (
+        state?.brands?.length > 0 &&
+        !state?.brands?.some((entry) => entry.match(wallbox.manufacturer))
+      )
+        return false;
+      return true;
+    });
 
-    //   if (
-    //     state?.loadingWeights?.length > 0 &&
-    //     state?.loadingWeights?.every(
-    //       (entry) =>
-    //         entry.min > car.loadingWeight.value ||
-    //         entry.max < car.loadingWeight.value
-    //     )
-    //   )
-    //     return false;
-    //   if (
-    //     state?.rangeLithiums?.length > 0 &&
-    //     state?.rangeLithiums?.every(
-    //       (entry) => entry.min > rangeval || entry.max < rangeval
-    //     )
-    //   )
-    //     return false;
-    //   if (
-    //     state?.maxSpeeds?.length > 0 &&
-    //     state?.maxSpeeds?.every(
-    //       (entry) =>
-    //         entry.min > car.maxSpeed.value || entry.max < car.maxSpeed.value
-    //     )
-    //   )
-    //     return false;
-    //   if (
-    //     state?.chargingTimeLithiums?.length > 0 &&
-    //     state?.chargingTimeLithiums?.every(
-    //       (entry) => entry.min > chargingTimeval || entry.max < chargingTimeval
-    //     )
-    //   )
-    //     return false;
-    //   if (
-    //     state?.categorys?.length > 0 &&
-    //     !state?.categorys?.some((entry) => entry.min == car.category)
-    //   )
-    //     return false;
-    //   if (
-    //     state?.brands?.length > 0 &&
-    //     !state?.brands?.some(
-    //       (entry) => entry.split(/[\s-]+/)[0] == car.name.split(/[\s-]+/)[0]
-    //     )
-    //   )
-    //     return false;
-    //   return true;
-    // });
-
-    // setShownWallboxes(filteredCars);
-    setShownWallboxes(props.sortedWallboxes);
+    setShownWallboxes(filteredWallboxes);
+    //  setShownWallboxes(props.sortedWallboxes);
   }, [
-    // state?.prices,
-    // state?.loadingWeights,
-    // state?.rangeLithiums,
-    // state?.maxSpeeds,
-    // state?.chargingTimeLithiums,
-    // state?.categorys,
-    // state?.brands,
+    state?.prices,
+    state?.brands,
+    state?.electricityCounters,
+    state?.chargeStatusPreviews,
+    state?.weatherResistances,
+    state?.powers,
+    state?.connections,
     props.sortedWallboxes,
   ]);
   /* ɢᴇᴛ pop up for not meeting criteria */

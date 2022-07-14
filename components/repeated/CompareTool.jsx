@@ -53,39 +53,13 @@ const details = [
       },
     ],
   },
-
-  {
-    category: "Nutzlast",
-    options: [
-      {
-        id: "1",
-        title: "ab 100kg",
-        value: "100",
-      },
-      {
-        id: "2",
-        title: "ab 250kg",
-        value: "250",
-      },
-      {
-        id: "3",
-        title: "ab 450kg",
-        value: "450",
-      },
-      {
-        id: "4",
-        title: "ab 500kg",
-        value: "500",
-      },
-    ],
-  },
 ];
 const CompareTool = ({ getBrands }) => {
   const router = useRouter();
   const { state, dispatch } = useStore();
   const [choosePrice, setChoosePrice] = useState(details[0].options[0].value);
-  const [chooseRange, setChooseRange] = useState(details[1].options[0].value);
-  const [chooseWeight, setChooseWeight] = useState(details[2].options[0].value);
+  const [choosePower, setChoosePower] = useState(details[1].options[0].value);
+  const [chooseBrand, setChooseBrand] = useState(getBrands[0]);
   // console.log(state?.prices);
   return (
     <div>
@@ -110,7 +84,7 @@ const CompareTool = ({ getBrands }) => {
                 className="relative w-full p-4 pl-1 m-0 text-base font-bold tracking-wider bg-transparent border-none appearance-none bottom-6 text-blue-dark "
                 id="rangeLithium"
                 onChange={(e) => {
-                  setChooseRange(e.target.value);
+                  setChoosePower(e.target.value);
                 }}
               >
                 <OptionItem details={details[1].options} />
@@ -149,7 +123,7 @@ const CompareTool = ({ getBrands }) => {
                 className="relative w-full p-4 pl-1 m-0 text-base font-bold tracking-wider bg-transparent border-none appearance-none bottom-6 text-blue-dark"
                 id="rangeLithium"
                 onChange={(e) => {
-                  setChooseWeight(e.target.value);
+                  setChooseBrand(e.target.value);
                 }}
               >
                 <OptionItem details={getBrands} />
@@ -172,22 +146,17 @@ const CompareTool = ({ getBrands }) => {
                     ],
                   });
                   dispatch({
-                    type: "rangeLithium",
+                    type: "power",
                     data: [
                       {
-                        min: Number(chooseRange),
+                        min: Number(choosePower),
                         max: 100000,
                       },
                     ],
                   });
                   dispatch({
-                    type: "loadingWeight",
-                    data: [
-                      {
-                        min: Number(chooseWeight),
-                        max: 100000,
-                      },
-                    ],
+                    type: "brand",
+                    data: [chooseBrand.title],
                   });
                 }}
               >

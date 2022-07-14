@@ -1,7 +1,7 @@
 ---
-title: skata
-name: skata
-price: 425
+title: zzzskata
+name: zzzskata
+price: 995
 relatedBlogs: WALLBOX-kaufberater-in-3-schritten-zum-passenden-e-transporter
 manufacturer: angelo-motors
 description: zdcgb
@@ -47,7 +47,7 @@ consumption:
   baseUnit: kw
 power:
   key: Ladeleistung
-  value: "11& 22"
+  value: "11"
   baseUnit: KW
 SmartHomeCompatible:
   key: Smarthomekompatibel

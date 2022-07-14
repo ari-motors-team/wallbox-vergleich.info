@@ -22,65 +22,33 @@ export default function comparePage(props) {
     setGetBrands(props.brands);
     setGetCarsReviews(props.wallboxreviews);
     /* PRICE SORTING */
-    // const getCarslowestPrice = props.wallboxes
-    //   ?.sort((a, b) => parseFloat(a.price) * 1 - parseFloat(b.price) * 1)
-    //   .map((item) => item);
+    const getCarslowestPrice = props.wallboxes
+      ?.sort((a, b) => parseFloat(a.price) * 1 - parseFloat(b.price) * 1)
+      .map((item) => item);
 
-    // const getCarshighestPrice = props.wallboxes
-    //   ?.sort((a, b) => parseFloat(b.price) - parseFloat(a.price))
-    //   .map((item) => item);
-    // //
-    // // alphabetical sorting
-    // const getCarsAlphabetical = props.wallboxes
-    //   ?.sort(function (a, b) {
-    //     return a.name === b.name ? 0 : a.name < b.name ? -1 : 1;
-    //   })
-    //   .map((item) => item);
-    // // /* cᴀʀs ᴡᴇɪɢʜᴛ ғɪʟᴛᴇʀ */
-    // const getCarslightest = props.wallboxes
-    //   ?.sort((a, b) => b.loadingWeight.value - a.loadingWeight.value)
-    //   .map((item) => item);
-    // const getCarsBymaxSpeed = props.wallboxes
-    //   ?.sort((a, b) => b.maxSpeed.value - a.maxSpeed.value)
-    //   .map((item) => item);
-    // // /* ᴄᴀʀs ʀᴀɴɢᴇ ғɪʟᴛᴇʀ */
+    const getCarshighestPrice = props.wallboxes
+      ?.sort((a, b) => parseFloat(b.price) - parseFloat(a.price))
+      .map((item) => item);
 
-    // const getCarsByRange = props.wallboxes
-    //   ?.sort((a, b) => b.rangeLithium.value - a.rangeLithium.value)
-    //   .map((item) => item);
-
-    // // /* ᴄᴀʀs ᴄʜᴀʀɢɪɴɢ ᴛɪᴍᴇ ғɪʟᴛᴇʀ */
-    // const getCarsfastest = props.wallboxes
-    //   ?.sort(
-    //     (a, b) => a.chargingTimeLithium.value - b.chargingTimeLithium.value
-    //   )
-    //   .map((item) => item);
-
+    // alphabetical sorting
+    const getCarsAlphabetical = props.wallboxes
+      ?.sort(function (a, b) {
+        return a.name === b.name ? 0 : a.name < b.name ? -1 : 1;
+      })
+      .map((item) => item);
+    console.log(state?.activeSortValues[0]?.sortType);
     /* initial value */
-    // setSortedWallboxes(getCarsAlphabetical);
-    // if (state?.activeSortValues[0]?.sortType === "alphabetical") {
-    //   setSortedWallboxes(getCarsAlphabetical);
-    // }
-    // /* ɢᴇᴛ ʀᴇsᴜʟᴛs from sorting */
-    // if (state?.activeSortValues[0]?.sortType === "lowest") {
-    //   setSortedWallboxes(getCarslowestPrice);
-    // }
-    // if (state?.activeSortValues[0]?.sortType === "highest") {
-    //   setSortedWallboxes(getCarshighestPrice);
-    // }
-
-    // if (state?.activeSortValues[0]?.sortType === "highestWeight") {
-    //   setSortedWallboxes(getCarslightest);
-    // }
-    // if (state?.activeSortValues[0]?.sortType == "highestRange") {
-    //   setSortedWallboxes(getCarsByRange);
-    // }
-    // if (state?.activeSortValues[0]?.sortType === "highestVmax") {
-    //   setSortedWallboxes(getCarsBymaxSpeed);
-    // }
-    // if (state?.activeSortValues[0]?.sortType === "chargingTimeLithium") {
-    //   setSortedWallboxes(getCarsfastest);
-    // }
+    setSortedWallboxes(getCarsAlphabetical);
+    if (state?.activeSortValues[0]?.sortType === "alphabetical") {
+      setSortedWallboxes(getCarsAlphabetical);
+    }
+    /* ɢᴇᴛ ʀᴇsᴜʟᴛs from sorting */
+    if (state?.activeSortValues[0]?.sortType === "lowest") {
+      setSortedWallboxes(getCarslowestPrice);
+    }
+    if (state?.activeSortValues[0]?.sortType === "highest") {
+      setSortedWallboxes(getCarshighestPrice);
+    }
   }, [props.wallboxes, state?.activeSortValues]);
   return (
     <div className="relative">

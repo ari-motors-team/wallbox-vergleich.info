@@ -26,7 +26,7 @@ operatingTemperatur:
 connection:
   value:
     - "3.5"
-    - "6"
+    - "2"
   baseUnit: Kabel
   key: Anschluss
 scheduledChargingTimer:
@@ -47,7 +47,7 @@ consumption:
   baseUnit: kw
 power:
   key: Ladeleistung
-  value: "11& 22"
+  value: "11 & 22"
   baseUnit: KW
 SmartHomeCompatible:
   key: Smarthomekompatibel

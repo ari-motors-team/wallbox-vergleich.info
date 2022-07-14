@@ -3,7 +3,7 @@ title: skata3
 name: skata3
 price: 425
 relatedBlogs: WALLBOX-kaufberater-in-3-schritten-zum-passenden-e-transporter
-manufacturer: angelo-motors
+manufacturer: ari-motors
 description: zdcgb
 src: /images/ladezeit-2x.png
 category:
@@ -47,7 +47,7 @@ consumption:
   baseUnit: kw
 power:
   key: Ladeleistung
-  value: "11& 22"
+  value: "22"
   baseUnit: KW
 SmartHomeCompatible:
   key: Smarthomekompatibel
@@ -84,7 +84,7 @@ electricityCounter:
   baseUnit: UNGEeICHt
 weatherResistance:
   value:
-    - IK10
+    - IP55
   key: WETTERSCHUTZ
   baseUnit: AUSSEN
 batteryGuarantee:

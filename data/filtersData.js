@@ -146,25 +146,25 @@ const filtersData = [
     title: "Kabelanschluss",
     options: [
       {
-        title: "bis 2.5",
+        title: "ab 2.5 m",
         value: "2.5",
         id: 1,
         categoryName: "connection",
       },
       {
-        title: "bis 5",
+        title: "ab 5 m",
         value: "5",
         id: 2,
         categoryName: "connection",
       },
       {
-        title: "bis 7.5",
+        title: "ab 7.5 m",
         value: "7.5",
         id: 3,
         categoryName: "connection",
       },
       {
-        title: "bis 10",
+        title: "ab 10 m",
         value: "10",
         id: 3,
         categoryName: "connection",

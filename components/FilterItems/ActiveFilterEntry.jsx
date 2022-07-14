@@ -14,7 +14,6 @@ function ActiveFilterEntry(props) {
   const { state, dispatch } = useStore();
   const [filterData, setFilterData] = useState([]);
   const [herstellerData, setHerstellerData] = useState([]);
-  console.log(state?.chargeStatusPreviews.map((el) => `${el.min}  `).join(""));
   useEffect(() => {
     if (
       state?.prices.length ||
@@ -93,6 +92,14 @@ function ActiveFilterEntry(props) {
             : null,
         image: image5,
       },
+      {
+        id: 6,
+        value:
+          state?.connections.length || state?.connections.length == undefined
+            ? state?.connections.map((el) => `bis ${el.min} m `).join("")
+            : null,
+        image: image5,
+      },
     ]);
     setHerstellerData(
       state?.brands.length
@@ -150,9 +157,10 @@ function ActiveFilterEntry(props) {
               if (item.id === 3)
                 dispatch({ type: "chargeStatusPreview", data: [] });
               if (item.id === 4)
-                dispatch({ type: "electricityCounters", data: [] });
+                dispatch({ type: "electricityCounter", data: [] });
               if (item.id === 5)
-                dispatch({ type: "weatherResistances", data: [] });
+                dispatch({ type: "weatherResistance", data: [] });
+              if (item.id === 6) dispatch({ type: "connection", data: [] });
             }}
             className={"w-3.5 my-auto mr-4 cursor-pointer"}
           >
