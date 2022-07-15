@@ -39,6 +39,7 @@ export default function Details(props) {
     SetGetBlogs(props.blogs);
     SetGetAllReviews(props.carsreviews);
   }, [props]);
+  console.log(wallboxItem);
   return (
     <>
       <div className=" print:hidden">
@@ -55,28 +56,31 @@ export default function Details(props) {
           <TechnicalDetails wallboxItem={wallboxItem} />
           {/* description and articles section */}
         </div>
-
-        <Articles
+        {/*  <Articles
           wallboxItem={wallboxItem}
           getBlogContext={getBlogContext}
           getTestReview={getTestReview}
           getWallboxesReview={getWallboxesReview}
           getAllReviews={getAllReviews}
-        />
+        />{" "}
+        */}
         {/* slider  */}
-        <TopSlider
+        {/* <TopSlider
           getWallboxes={getWallboxes}
           getBlogContext={getBlogContext}
-        />
+        />{" "}
+        */}
         {/*sticky popup  */}
-        <PrintPopUp wallboxItem={wallboxItem} />
+        {/*   <PrintPopUp wallboxItem={wallboxItem} />
+         */}
       </div>
       <div className="hidden print:block">
-        <PrintPreview
+        {/*   <PrintPreview
           wallboxItem={wallboxItem}
           getTestReview={getTestReview}
           getWallboxesReview={getWallboxesReview}
-        />
+        />{" "}
+        */}
       </div>
     </>
   );
@@ -95,7 +99,7 @@ export async function getStaticProps(context) {
     return value;
   });
   wallboxes = wallboxes
-    .filter((item, index) => item.manufacturer === vehicle.manufacturer)
+    .filter((item, index) => item.manufacturer === wallbox.manufacturer)
     .filter((item, index) => item.name !== context.params.wallboxtitle);
   let brands = await getContent("brands", context.locale);
 
@@ -110,13 +114,15 @@ export async function getStaticProps(context) {
   /* catching errors in case there is no wallboxesreview yet */
   let getTestReview = null;
 
-  if (wallboxesreview !== undefined && wallboxesreview !== null) {
+  if (wallboxesreview !== undefined || wallboxesreview !== null) {
     /* serializing the array with mdx */
-    getTestReview = await Promise.all(
-      wallboxesreview?.content.map((item, index) => {
-        return serialize(item.content);
-      })
-    );
+    // getTestReview = await Promise.all(
+    //   wallboxesreview?.content.map((item, index) => {
+    //     return serialize(item.content);
+    //   })
+
+    // );
+    null;
   } else {
     getTestReview = null;
   }
@@ -144,6 +150,7 @@ export async function getStaticProps(context) {
 
   return {
     props: {
+      wallbox,
       wallboxes,
       relatedBlog,
       getTestReview,

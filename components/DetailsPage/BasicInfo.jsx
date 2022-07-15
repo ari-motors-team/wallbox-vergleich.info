@@ -7,10 +7,10 @@ import StarsRating from "../repeated/StarsRating";
 import TestVerdictVertical from "../repeated/TestVerdictVertical";
 import TestVerdict from "../repeated/TestVerdict";
 const BasicInfo = ({
-  carItem,
+  wallboxItem,
   getBlogContext,
   getTestReview,
-  getCarsReview,
+  getWallboxesReview,
   getAllReviews,
 }) => {
   return (
@@ -27,8 +27,8 @@ const BasicInfo = ({
         </div>
         <div className="w-full">
           <Image
-            src={carItem?.src}
-            alt={carItem?.title}
+            src={wallboxItem?.src}
+            alt={wallboxItem?.title}
             width={195}
             height={140}
             layout="responsive"
@@ -41,11 +41,11 @@ const BasicInfo = ({
         {/* DESKTOP VERSION FOR DETAILS TABLE*/}
         <div className="flex-col justify-start hidden px-8 pb-2 lg:flex ">
           <h2 className="hidden p-2 text-3xl font-black 2xl:text-4xl lg:block text-blue-extra">
-            {carItem.title}
+            {wallboxItem.title}
           </h2>
 
           <CarCardDetailsDesktop
-            carItem={carItem}
+            wallboxItem={wallboxItem}
             getAllReviews={getAllReviews}
           />
         </div>
@@ -54,31 +54,34 @@ const BasicInfo = ({
         <div className="flex flex-col w-full my-4 lg:hidden">
           <div className="flex justify-center">
             <h2 className="w-full pb-2 text-2xl font-bold tracking-wide text-center xs:text-3xl md:text-left text-blue-extra ">
-              {carItem.title}
+              {wallboxItem.title}
             </h2>
             <div className="hidden scale-90 sm:block">
               <TestVerdictVertical
-                carItem={carItem}
+                wallboxItem={wallboxItem}
                 getAllReviews={getAllReviews}
               />
             </div>
           </div>
 
           <div className="flex justify-center sm:hidden print:hidden lg:hidden">
-            <TestVerdict carItem={carItem} getAllReviews={getAllReviews} />
+            <TestVerdict
+              wallboxItem={wallboxItem}
+              getAllReviews={getAllReviews}
+            />
           </div>
 
           <div>
-            <CarCardDetailsMobile carItem={carItem} />
+            <CarCardDetailsMobile wallboxItem={wallboxItem} />
           </div>
         </div>
         {/* description */}
         <div className="flex flex-col w-full lg:px-10">
           <h3 className="w-full pb-1 mt-4 text-2xl font-bold text-blue-extra">
-            Über das Fahrzeug:
+            Über das Wallbox:
           </h3>
           <p className="h-auto overflow-hidden font-black leading-7 text-ellipsis">
-            {carItem?.description}
+            {wallboxItem?.description}
           </p>
           {/* <span className="text-sm text-blue-dark">Alle Daten anzeigen</span> */}
         </div>

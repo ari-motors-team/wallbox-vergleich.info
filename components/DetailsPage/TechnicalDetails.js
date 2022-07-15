@@ -3,7 +3,7 @@ import Basics from "./Basics";
 import CarDimentions from "./CarDimentions";
 import Details from "./Details";
 
-const TechnicalDetails = ({ carItem }) => {
+const TechnicalDetails = ({ wallboxItem }) => {
   const [basics, SetBasics] = useState([]);
   const [vehichleDimentions, SetVehichleDimentions] = useState([]);
   const [details, SetDetails] = useState([]);
@@ -12,50 +12,28 @@ const TechnicalDetails = ({ carItem }) => {
   /* get two subsets of the car properties to map them */
   useEffect(() => {
     const basics = [
-      carItem.range230V,
-      carItem.rangeLithium,
-      carItem.maxSpeed,
-      carItem.chargingTimeLithium,
-      carItem.chargingTime230V,
-      carItem.chargingTimeFast,
-      carItem.power,
-      carItem.loadingWeight,
-      carItem.curbweight,
+      wallboxItem.articlelnumber,
+      wallboxItem.connection,
+      wallboxItem.operatingTemperatur,
+
+      wallboxItem.connection230VAvailability,
+      wallboxItem.weatherResistance,
+      wallboxItem.weight,
     ];
     SetBasics(basics);
     const details = [
-      { key: "Garantie:", value: " " },
-      carItem.batteryGuarantee,
-      carItem.guarantee,
-      carItem.availability,
+      wallboxItem.power,
+      wallboxItem.guarantee,
+      wallboxItem.tension,
 
-      carItem.seats,
-      { key: "Akku:", value: " " },
-      carItem.batteryCapacityLithium,
-      carItem.batteryCapacityBlei,
-      carItem.batteryIncluded,
-      carItem.consumption,
-      carItem.subsidies,
+      wallboxItem.electricityCounter,
+      wallboxItem.climateNeutral,
+      wallboxItem.consumption,
+      wallboxItem.subsidies,
     ];
 
     SetDetails(details);
-    const vehichleDimentions = [
-      /* carItem.carSizes, */
-      { key: "Fahrzeugmaße" },
-      carItem.loadingVolumeHeight,
-      carItem.loadingVolumeLength,
-      carItem.wheelbase,
-      carItem.loadingVolumeWidth,
-      carItem.loadingVolume,
-      carItem.carSizesHeight,
-      carItem.carSizesLength,
-      carItem.carSizesWidth,
-      carItem.loadingVolumeTotal,
-      carItem.loadingArea,
-    ];
-
-    SetVehichleDimentions(vehichleDimentions);
-  }, [carItem]);
+  }, [wallboxItem]);
 
   return (
     <div className="flex flex-col items-start justify-center w-full pt-8 pb-16 lg:pt-12 lg:px-4 ">
@@ -63,12 +41,9 @@ const TechnicalDetails = ({ carItem }) => {
         Technische Daten
       </h3>
       <div className="flex flex-col w-full lg:flex-row print:flex-row ">
-        <Basics basics={basics} carItem={carItem} />
-        <CarDimentions
-          vehichleDimentions={vehichleDimentions}
-          carItem={carItem}
-        />
-        <Details details={details} carItem={carItem} />
+        <Basics basics={basics} wallboxItem={wallboxItem} />
+
+        <Details details={details} wallboxItem={wallboxItem} />
       </div>
       {/* <div className="flex flex-col w-full m-auto lg:w-1/2 ">
       </div> */}

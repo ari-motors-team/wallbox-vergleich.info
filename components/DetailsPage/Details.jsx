@@ -2,7 +2,7 @@ const Details = ({ details }) => {
   return (
     <section className="w-full lg:w-1/3 ">
       <h3 className="pt-8 pb-4 pl-4 text-2xl font-bold leading-7 text-blue-extra print:text-base">
-        Details
+        Technische Spezifikationen:
       </h3>
       {details?.map((item, index) => (
         <div

@@ -54,7 +54,7 @@ SmartHomeCompatible:
   value: ja
 rating:
   key: kake
-  value: 0
+  value: 2
 guarantee:
   key: Garantie
   value: 4

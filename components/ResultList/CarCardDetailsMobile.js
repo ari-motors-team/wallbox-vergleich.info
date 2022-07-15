@@ -1,13 +1,10 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-function CarCardDetailsMobile({ carItem }) {
+function CarCardDetailsMobile({ wallboxItem }) {
   const router = useRouter();
 
   // const { cartitle } = router.query;
 
-  //declaring the right range and charging time according to the battery
-  let range = carItem.rangeLithium;
-  carItem.rangeLithium.value == 0 ? (range = carItem.range230V) : null;
   return (
     <div className="flex flex-col justify-between flex-1 lg:hidden">
       <div className="flex flex-col justify-between px-2 pt-4 print:hidden">
@@ -15,22 +12,22 @@ function CarCardDetailsMobile({ carItem }) {
           <div className="flex flex-row flex-1 py-1 ">
             <div className="flex flex-row justify-between flex-1 border-b">
               <div className="w-[65%] font-bold leading-7 text-grey-dark ">
-                {carItem?.loadingWeight.key}:
+                {wallboxItem?.connection.key}:
               </div>
               <div className="flex items-end w-[35%] pl-2 font-bold leading-7 text-blue-dark ">
-                {carItem?.loadingWeight.value}
-                {carItem?.loadingWeight.baseUnit}
+                {wallboxItem?.connection.value}
+                {wallboxItem?.connection.baseUnit}
               </div>
             </div>
           </div>
           <div className="flex flex-row flex-1 py-1">
             <div className="flex flex-row justify-between flex-1 border-b">
               <div className="font-bold leading-7 text-grey-dark w-[65%]">
-                {carItem?.maxSpeed.key}
+                {wallboxItem?.operatingTemperatur.key}
               </div>
               <div className="flex items-end w-[35%] pl-2 font-bold leading-7 text-blue-dark">
-                {carItem?.maxSpeed.value}
-                {carItem?.maxSpeed.baseUnit}
+                {wallboxItem?.operatingTemperatur.value}
+                {wallboxItem?.operatingTemperatur.baseUnit}
               </div>
             </div>
           </div>
@@ -39,31 +36,24 @@ function CarCardDetailsMobile({ carItem }) {
           <div className="flex flex-row flex-1 py-1">
             <div className="flex flex-row justify-between flex-1 border-b">
               <div className="w-[65%] font-bold leading-7 text-grey-dark">
-                {carItem?.rangeLithium.value
-                  ? carItem?.rangeLithium.key
-                  : carItem?.range230V.key}
+                {wallboxItem?.power.value}
               </div>
               <div className="flex items-end w-[35%] pl-2 font-bold leading-7 text-blue-dark ">
-                {range.maxValue
-                  ? `${range.value}-${range.maxValue}`
-                  : range.value}
-                {carItem?.rangeLithium.baseUnit}
+                {wallboxItem.maxValue
+                  ? `${wallboxItem.value}-${wallboxItem.maxValue}`
+                  : wallboxItem.value}
+                {wallboxItem?.power.baseUnit}
               </div>
             </div>
           </div>
           <div className="flex flex-row flex-1 py-1 ">
             <div className="flex flex-row justify-between flex-1 border-b">
               <div className="w-[65%] font-bold leading-7 text-grey-dark">
-                {carItem?.chargingTimeLithium.key
-                  ? carItem?.chargingTimeLithium.key
-                  : carItem?.chargingTime230V.key}
-                :
+                {wallboxItem?.guarantee.key}:
               </div>
               <div className="flex items-end w-[35%] pl-2 font-bold leading-7 text-blue-dark">
-                {carItem?.chargingTimeLithium.value
-                  ? carItem?.chargingTimeLithium.value
-                  : carItem?.chargingTime230V.value}
-                {carItem?.chargingTimeLithium.baseUnit}
+                {wallboxItem?.guarantee.value}
+                {wallboxItem?.guarantee.baseUnit}
               </div>
             </div>
           </div>
@@ -75,7 +65,7 @@ function CarCardDetailsMobile({ carItem }) {
           router.query.cartitle ? "hidden" : "flex flex-wrap justify-end"
         }
       >
-        <Link href={`/transporter/${carItem?.name}`}>
+        <Link href={`/transporter/${wallboxItem?.name}`}>
           <a className="px-4 py-2 m-4 border-2 rounded border-blue-darker text-blue-darker visited:text-blue-dark w-fit">
             Zur Produktseite
           </a>

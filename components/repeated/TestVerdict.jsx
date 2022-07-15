@@ -2,20 +2,20 @@ import Image from "next/image";
 import React from "react";
 import StarsRating from "./StarsRating";
 
-const TestVerdict = ({ reviewDate, getAllReviews, carItem }) => {
-  let rev = getAllReviews
-    .map((item, index) => {
-      let res;
-      carItem?.relatedReviews == item.slug ? (res = index) : null;
-      return res;
-    })
-    .find((value) => value != undefined);
+const TestVerdict = ({ reviewDate, getAllReviews, wallboxItem }) => {
+  // let rev = getAllReviews
+  //   .map((item, index) => {
+  //     let res;
+  //     wallboxItem?.relatedReviews == item.slug ? (res = index) : null;
+  //     return res;
+  //   })
+  //   .find((value) => value != undefined);
   /* date */
-  reviewDate =
-    getAllReviews.find((item) => item.slug == carItem?.relatedReviews)
-      .publishedAt || 22;
+  // reviewDate =
+  //   getAllReviews.find((item) => item.slug == wallboxItem?.relatedReviews)
+  //     .publishedAt || 22;
 
-  reviewDate = reviewDate.slice(-2);
+  // reviewDate = reviewDate.slice(-2);
   return (
     <div className="flex flex-col w-[230px] xs:w-[270px] py-4">
       <div className="text + stars + icon flex justify-between relative">
@@ -24,7 +24,7 @@ const TestVerdict = ({ reviewDate, getAllReviews, carItem }) => {
             TESTURTEIL
           </p>
           <div className="xs:pl-3 xs:scale-[120%]">
-            <StarsRating stars={carItem.rating.value} />
+            <StarsRating stars={wallboxItem.rating.value} />
           </div>
         </div>
         <div className="absolute right-0 xs:right-4 w-[115px] -top-6">
@@ -43,9 +43,9 @@ const TestVerdict = ({ reviewDate, getAllReviews, carItem }) => {
           wallbox-vergleich.info
           <span className="absolute -top-3 text-3xl text-[#3FA535]">✓</span>
         </p>
-        <p className="text-sm text-grey-nav">{`Testbericht ${
+        {/*   <p className="text-sm text-grey-nav">{`Testbericht ${
           rev + 101
-        } von ${reviewDate}`}</p>
+        } von ${reviewDate}`}</p> */}
       </div>
     </div>
   );

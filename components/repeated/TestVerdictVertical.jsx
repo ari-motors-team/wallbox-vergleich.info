@@ -2,19 +2,19 @@ import Image from "next/image";
 import { FcCheckmark } from "react-icons/fc";
 import StarsRating from "./StarsRating";
 const TestVerdictVertical = ({ reviewDate, getAllReviews, wallboxItem }) => {
-  let rev = getAllReviews
-    .map((item, index) => {
-      let res;
-      wallboxItem?.relatedReviews == item.slug ? (res = index) : null;
-      return res;
-    })
-    .find((value) => value != undefined);
-  /* date */
-  reviewDate =
-    getAllReviews.find((item) => item.slug == wallboxItem?.relatedReviews)
-      .publishedAt || 22;
+  // let rev = getAllReviews
+  //   .map((item, index) => {
+  //     let res;
+  //     wallboxItem?.relatedReviews == item.slug ? (res = index) : null;
+  //     return res;
+  //   })
+  //   .find((value) => value != undefined);
+  /* date for the verdict */
+  // reviewDate =
+  //   getAllReviews.find((item) => item.slug == wallbox?.relatedReviews)
+  //     .publishedAt || 22;
 
-  reviewDate = reviewDate.slice(-2);
+  // reviewDate = reviewDate.slice(-2);
 
   return (
     <div className="relative w-[150px] xs:min-w-[150px] h-full bg-white border-2 rounded-sm mx-auto xs:mx-0">
@@ -46,7 +46,8 @@ const TestVerdictVertical = ({ reviewDate, getAllReviews, wallboxItem }) => {
       <div className="absolute flex justify-center w-full px-8 bottom-1">
         <p className=" xs:text-[10px] text-xxs">
           wallbox-vergleich.info
-          <span className="pl-3">{`${rev + 101}/${reviewDate}`}</span>
+          {/*           <span className="pl-3">{`${rev + 101}/${reviewDate}`}</span>
+           */}{" "}
         </p>
       </div>
     </div>
