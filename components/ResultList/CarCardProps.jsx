@@ -23,7 +23,9 @@ function CarCardProps(props) {
             ? props.details?.value
             : ""}
           {Array.isArray(props.details?.value)
-            ? props.details?.value[0] + "/" + props.details?.value[1]
+            ? props.details?.value.map((item, index) =>
+                item == 0 ? "" : `${item}/`
+              )
             : ""}
           {props.details?.maxValue &&
           props.details?.maxValue !== props.details?.value

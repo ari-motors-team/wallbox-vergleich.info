@@ -96,7 +96,7 @@ function ActiveFilterEntry(props) {
         id: 6,
         value:
           state?.connections.length || state?.connections.length == undefined
-            ? state?.connections.map((el) => `bis ${el.min} m `).join("")
+            ? state?.connections.map((el) => `mit ${el.min} `).join("")
             : null,
         image: image5,
       },

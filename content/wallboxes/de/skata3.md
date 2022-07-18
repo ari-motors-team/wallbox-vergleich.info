@@ -8,7 +8,7 @@ description: zdcgb
 src: /images/ladezeit-2x.png
 category:
   - Privat
-ConnectionType2:
+Steckertyp:
   - Typ-2
 articlelnumber:
   key: artikelnummer

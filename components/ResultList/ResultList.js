@@ -58,15 +58,23 @@ const ResultList = (props) => {
         return false;
       if (
         state?.connections?.length > 0 &&
-        !state?.connections?.some(
-          (entry) =>
-            entry.min <
-            wallbox.connection.value.reduce((max, x) =>
-              Number(max) < Number(x) ? Number(x) : Number(max)
-            )
+        !state?.connections?.some((entry) =>
+          entry.min.match(wallbox.connection.baseUnit)
         )
       )
         return false;
+      /* FOR THE POTENTIAL CABLE METER COUNTER */
+      // if (
+      //   state?.connections?.length > 0 &&
+      //   !state?.connections?.some(
+      //     (entry) =>
+      //       entry.min <
+      //       wallbox.connection.value.reduce((max, x) =>
+      //         Number(max) < Number(x) ? Number(x) : Number(max)
+      //       )
+      //   )
+      // )
+      //   return false;
       if (
         state?.brands?.length > 0 &&
         !state?.brands?.some((entry) => entry.match(wallbox.manufacturer))

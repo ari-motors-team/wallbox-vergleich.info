@@ -8,7 +8,7 @@ description: zdcgb
 src: /images/ladezeit-2x.png
 category:
   - Privat
-ConnectionType2:
+Steckertyp:
   - Typ-2
 articlelnumber:
   key: artikelnummer
@@ -25,9 +25,10 @@ operatingTemperatur:
   baseUnit: Grad
 connection:
   value:
-    - "3.5"
-    - "2"
-  baseUnit: Kabel
+    - "3"
+    - "0"
+
+  baseUnit: Stecker und Kabel
   key: Anschluss
 scheduledChargingTimer:
   key: Timer für Zeit- gesteuertes Laden

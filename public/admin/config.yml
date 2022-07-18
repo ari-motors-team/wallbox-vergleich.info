@@ -395,12 +395,12 @@ collections:
         multiple: true
         i18n: duplicate
         options: ["Privat", "Gewerblich"]
-      - label: "Connection-type-2"
-        name: "ConnectionType2"
+      - label: " plug type (Steckertyp)"
+        name: "Steckertyp"
         widget: "select"
-        multiple: true
+        multiple: false
         i18n: duplicate
-        options: ["Typ-2", "Typ-1"]
+        options: ["Typ-2", "Typ-1", "Typ-1 und Typ-2"]
 
       - label: "articlelnumber"
         name: "articlelnumber"
@@ -501,6 +501,8 @@ collections:
           - {
               label: "Value",
               name: "value",
+              hint: "Wenn fuer STECKER waehl einfach 0
+                ",
               widget: "select",
               required: true,
               multiple: true,
@@ -511,9 +513,11 @@ collections:
           - {
               label: "INFO Kabel or Stecker ",
               name: "baseUnit",
-              widget: "string",
+              widget: "select",
               i18n: duplicate,
+              options: ["Kabel", "Stecker", "Stecker und Kabel"],
               required: true,
+              multiple: false,
             }
       - label: "Timer for scheduled charging (Timer für Zeit-gesteuertes Laden)"
         name: "scheduledChargingTimer"
@@ -592,7 +596,7 @@ collections:
               label: "Value",
               name: "value",
               widget: "select",
-              options: [Display, "über app", "LED", "über app und LED"],
+              options: ["über app", "LED", "über app und LED"],
               i18n: duplicate,
               required: true,
             }
@@ -654,7 +658,7 @@ collections:
               required: true,
               widget: "select",
               # multiple: true,
-              options: ["22", "11", "11 & 22"],
+              options: ["22", "11", "11 & 22", "23", "22 & 23"],
               i18n: duplicate,
             }
 
@@ -892,7 +896,7 @@ collections:
               required: true,
               multiple: false,
               i18n: duplicate,
-              options: ["Ja", "Nein", "Über App", "MID"],
+              options: ["Nein", "Über App", "MID"],
             }
           - {
               label: "ungeeicht oder eichrechtskonform oder weitere INFO",
