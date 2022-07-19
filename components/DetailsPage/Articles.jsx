@@ -8,20 +8,20 @@ import StarsRating from "../repeated/StarsRating";
 import TestVerdict from "../repeated/TestVerdict";
 
 const Articles = ({
-  getCarsReview,
-  carItem,
+  getWallboxesReview,
+  wallboxItem,
   getTestReview,
   getBlogContext,
   getAllReviews,
 }) => {
-  let reviewDate = getCarsReview.publishedAt;
-  let rev = getAllReviews
-    .map((item, index) => {
-      let res;
-      carItem?.relatedReviews == item.slug ? (res = index) : null;
-      return res;
-    })
-    .find((value) => value != undefined);
+  // let reviewDate = getWallboxesReview.publishedAt;
+  // let rev = getAllReviews
+  //   .map((item, index) => {
+  //     let res;
+  //     wallboxItem?.relatedReviews == item.slug ? (res = index) : null;
+  //     return res;
+  //   })
+  //   .find((value) => value != undefined);
 
   /* GET THE STAR */
   return (
@@ -29,13 +29,13 @@ const Articles = ({
       <div className="relative flex flex-col justify-center py-4 print:hidden bg-grey-lighter lg:flex-row ">
         <div className="flex flex-col flex-wrap xl:px-40">
           <h3 className="w-full px-4 mt-4 text-2xl font-bold text-black-darkest">
-            Testbericht von {carItem.title}
+            Testbericht von {wallboxItem.title}
           </h3>
           <div className="">
             {getTestReview ? (
               <div className="mb-8">
                 {/* rg */}
-                {getCarsReview?.content?.map((infos, index) => (
+                {getWallboxesReview?.content?.map((infos, index) => (
                   <div
                     key={index}
                     className={`${styles.articles} "relative mb-8"`}
@@ -73,8 +73,8 @@ const Articles = ({
               "kommt bald"
             )}
           </div>
-          {/* {getCarsReview && (
-            <Link href={`/magazin/reviews/${getCarsReview?.slug}`}>
+          {/* {getWallboxesReview && (
+            <Link href={`/magazin/reviews/${getWallboxesReview?.slug}`}>
               <a target="_blank" className="text-blue-500">
                 <button
                   // disabled={getTestReview ? true : false}
@@ -88,11 +88,12 @@ const Articles = ({
         </div>
       </div>
       <div className="flex justify-center my-8">
-        <TestVerdict
-          carItem={carItem}
+        {/*  <TestVerdict
+          wallboxItem={wallboxItem}
           getAllReviews={getAllReviews}
           reviewDate={reviewDate}
-        />
+        />{" "}
+        */}
       </div>
       {/* other articles section */}
       {/* First Article */}{" "}

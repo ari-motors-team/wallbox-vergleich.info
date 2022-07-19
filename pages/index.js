@@ -25,7 +25,7 @@ export default function Home(props) {
         getMarkdownContext={props.context}
         getBrands={props.brands}
       />
-      <TopSlider getCars={props.wallboxes} getContent={props.page} />
+      <TopSlider getWallboxes={props.wallboxes} getContent={props.page} />
       <BlogArticles getMarkdownContext={props.context} />
       <Funnel
         getCars={props.wallboxes}

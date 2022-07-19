@@ -4,8 +4,11 @@ import { HiOutlineArrowRight } from "react-icons/hi";
 import StarsRating from "../repeated/StarsRating";
 
 const TopSliderCard = (props) => {
-  return props?.getCars
-    ? props?.getCars?.map((sliderItem, index) => (
+  console.log(props);
+  console.log(props.getBlogContext);
+
+  return props?.getBlogContext
+    ? props?.getBlogContext?.map((sliderItem, index) => (
         <div
           className="relative pb-4 border rounded-sm shadow-dropdown hover:scale-[101%] snap-center lg:snap-start h-[470px] ease-in-out duration-100 transition"
           key={index}

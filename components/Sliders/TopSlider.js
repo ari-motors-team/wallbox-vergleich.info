@@ -4,32 +4,34 @@ import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
 
 // import Script from "next/script";
 import { useState, useRef, useEffect } from "react";
-const sellingRanking = {
-  "ari-458-pritsche": 13,
-  /* "Piaggo Porter": 12, */
-  "alke-atx-340-e-pritsche": 11,
-  "evum-a-car-pritsche": 10,
-  "Addax MT": 9,
-  "Citroen eJumpy": 8,
-  "Aixam Pro e-Truck": 7,
-  "opel-vivaro-e-cargo": 6,
-  "ari-458-koffer": 5,
-  "vw-abt-e-caddy": 4,
-  "efa-s-e35": 3,
-  "garia-utility-park-ec-pritsche": 2,
-  /* "Renault Kangoo Z.E": 1, */
-};
+//to sort them upon the selling ranking
+// const sellingRanking = {
+//   "ari-458-pritsche": 13,
+//   /* "Piaggo Porter": 12, */
+//   "alke-atx-340-e-pritsche": 11,
+//   "evum-a-car-pritsche": 10,
+//   "Addax MT": 9,
+//   "Citroen eJumpy": 8,
+//   "Aixam Pro e-Truck": 7,
+//   "opel-vivaro-e-cargo": 6,
+//   "ari-458-koffer": 5,
+//   "vw-abt-e-caddy": 4,
+//   "efa-s-e35": 3,
+//   "garia-utility-park-ec-pritsche": 2,
+//   /* "Renault Kangoo Z.E": 1, */
+// };
 
-const TopSlider = ({ getBlogContext, getCars }) => {
+const TopSlider = ({ getBlogContext, getWallboxes }) => {
   const container = useRef();
-
+  // to combine articles and wallboxes into one array
   const [sliderData, setSliderData] = useState(
-    getBlogContext ? [getBlogContext].concat(getCars) : getCars
+    getBlogContext ? [getBlogContext].concat(getWallboxes) : getWallboxes
   );
-
   useEffect(() => {
-    setSliderData(getBlogContext ? [getBlogContext].concat(getCars) : getCars);
-  }, [getCars]);
+    setSliderData(
+      getBlogContext ? [getBlogContext].concat(getWallboxes) : getWallboxes
+    );
+  }, [getWallboxes]);
 
   return (
     <div className="relative pb-8">
@@ -39,7 +41,7 @@ const TopSlider = ({ getBlogContext, getCars }) => {
             container.current.scrollLeft -= 293;
           }}
           className={
-            getCars.length >= 4
+            getWallboxes.length >= 4
               ? " hidden xl:flex items-center hover:scale-110 bg-white transition relative"
               : "hidden"
           }
@@ -69,14 +71,15 @@ const TopSlider = ({ getBlogContext, getCars }) => {
             ref={container}
           >
             <TopSliderCard
-              getCars={sliderData
-                ?.sort((a, b) =>
+              getBlogContext={
+                sliderData?.sort((a, b) =>
                   a.slug === b.slug ? 0 : a.slug < b.slug ? -1 : 1
                 )
-                .sort(
+                /*   .sort(
                   (a, b) =>
                     1 - (sellingRanking[a.name] ? sellingRanking[a.name] : 0)
-                )}
+              )*/
+              }
             />
           </div>
         </div>
@@ -84,7 +87,7 @@ const TopSlider = ({ getBlogContext, getCars }) => {
         <div
           onClick={() => (container.current.scrollLeft += 293)}
           className={
-            getCars.length >= 4
+            getWallboxes.length >= 4
               ? "xl:flex items-center hidden pr-1 hover:scale-110 transition relative"
               : "hidden"
           }
