@@ -1,9 +1,9 @@
 ---
-title: skata3
-name: skata3
-price: 425
+title: zzzskata
+name: skata1
+price: 995
 relatedBlogs: WALLBOX-kaufberater-in-3-schritten-zum-passenden-e-transporter
-manufacturer: ari-motors
+manufacturer: angelo-motors
 description: zdcgb
 src: /images/ladezeit-2x.png
 category:
@@ -18,6 +18,10 @@ weight:
   key: Gewicht
   value: 33
   baseUnit: kg
+colour:
+  key: Farbe
+  value: rot, blau
+  baseUnit: "0"
 operatingTemperatur:
   key: Betriebstemperatur
   value: 2
@@ -47,14 +51,14 @@ consumption:
   baseUnit: kw
 power:
   key: Ladeleistung
-  value: "22"
+  value: "11"
   baseUnit: KW
 SmartHomeCompatible:
   key: Smarthomekompatibel
   value: ja
 rating:
   key: kake
-  value: 2
+  value: 0
 guarantee:
   key: Garantie
   value: 4
@@ -84,7 +88,7 @@ electricityCounter:
   baseUnit: UNGEeICHt
 weatherResistance:
   value:
-    - IP55
+    - IK10
   key: WETTERSCHUTZ
   baseUnit: AUSSEN
 batteryGuarantee:
@@ -100,6 +104,18 @@ sizesTotal:
   key: Masse
   value: 3x3x3
   baseUnit: cm
+wallboxeSizesLength:
+  key: Länge
+  value: "3"
+  baseUnit: m
+wallboxeSizesWidth:
+  key: Breite
+  value: "3"
+  baseUnit: m
+wallboxeSizesHeight:
+  key: Höhe
+  value: "3"
+  baseUnit: m
 sizesLength:
   key: Maße
   value: 295 x 386 x 177

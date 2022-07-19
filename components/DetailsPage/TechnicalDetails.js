@@ -1,24 +1,23 @@
 import { useState, useEffect } from "react";
 import Basics from "./Basics";
-import CarDimentions from "./CarDimentions";
+import WallboxDimentions from "./WallboxDimentions";
 import Details from "./Details";
 
 const TechnicalDetails = ({ wallboxItem }) => {
   const [basics, SetBasics] = useState([]);
-  const [vehichleDimentions, SetVehichleDimentions] = useState([]);
+  const [wallboxDimentions, SetWallboxDimentions] = useState([]);
   const [details, SetDetails] = useState([]);
 
   /* to get the new data in case they are updated */
   /* get two subsets of the car properties to map them */
   useEffect(() => {
     const basics = [
-      wallboxItem.articlelnumber,
       wallboxItem.connection,
       wallboxItem.operatingTemperatur,
+      wallboxItem.subsidies,
 
       wallboxItem.connection230VAvailability,
       wallboxItem.weatherResistance,
-      wallboxItem.weight,
     ];
     SetBasics(basics);
     const details = [
@@ -29,10 +28,19 @@ const TechnicalDetails = ({ wallboxItem }) => {
       wallboxItem.electricityCounter,
       wallboxItem.climateNeutral,
       wallboxItem.consumption,
-      wallboxItem.subsidies,
     ];
 
     SetDetails(details);
+    const wallboxDimentions = [
+      wallboxItem.wallboxeSizesHeight,
+      wallboxItem.wallboxeSizesLength,
+      wallboxItem.wallboxeSizesWidth,
+      wallboxItem.sizesTotal,
+      wallboxItem.weight,
+      wallboxItem.colour,
+    ];
+
+    SetWallboxDimentions(wallboxDimentions);
   }, [wallboxItem]);
 
   return (
@@ -42,6 +50,10 @@ const TechnicalDetails = ({ wallboxItem }) => {
       </h3>
       <div className="flex flex-col w-full lg:flex-row print:flex-row ">
         <Basics basics={basics} wallboxItem={wallboxItem} />
+        <WallboxDimentions
+          wallboxDimentions={wallboxDimentions}
+          wallboxItem={wallboxItem}
+        />
 
         <Details details={details} wallboxItem={wallboxItem} />
       </div>

@@ -16,7 +16,11 @@ const Basics = ({ basics, wallboxItem }) => {
               {item.key}
             </p>
             <p className="flex items-center w-1/2 py-1 pl-4 lg:border-r-2 border-grey-light h-14 text-base ">
-              {item.value ? item.value : "-"} {item.value ? item.baseUnit : ""}
+              {item.value && !Array.isArray(item.value) ? item.value : ""}
+              {Array.isArray(item.value)
+                ? item.value.map((item, index) => (item == 0 ? "" : `${item}/`))
+                : ""}
+              {item.value ? item.baseUnit : ""}
             </p>
           </div>
         ))}

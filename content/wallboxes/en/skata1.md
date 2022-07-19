@@ -1,6 +1,6 @@
 ---
 title: zzzskata
-name: zzzskata
+name: skata1
 price: 995
 relatedBlogs: WALLBOX-kaufberater-in-3-schritten-zum-passenden-e-transporter
 manufacturer: angelo-motors
@@ -100,6 +100,18 @@ sizesTotal:
   key: Masse
   value: 3x3x3
   baseUnit: cm
+wallboxeSizesLength:
+  key: Länge
+  value: "3"
+  baseUnit: m
+wallboxeSizesWidth:
+  key: Breite
+  value: "3"
+  baseUnit: m
+wallboxeSizesHeight:
+  key: Höhe
+  value: "3"
+  baseUnit: m
 sizesLength:
   key: Maße
   value: 295 x 386 x 177

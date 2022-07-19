@@ -248,7 +248,7 @@ collections:
         }
       - label: "related wallbox"
         required: false
-        name: "relatedCars"
+        name: "relatedwallboxes"
         widget: "relation"
         i18n: duplicate
         collection: "wallboxes"
@@ -446,6 +446,21 @@ collections:
               value_type: "float",
               i18n: duplicate,
             }
+          - {
+              label: "baseUnit",
+              name: "baseUnit",
+              widget: "string",
+              i18n: duplicate,
+            }
+      - label: "colour"
+        name: "colour"
+        required: true
+        widget: "object"
+        summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
+        i18n: true
+        fields:
+          - { label: "Key", name: "key", widget: "string", i18n: true }
+          - { label: "Value", name: "value", widget: "string", i18n: duplicate }
           - {
               label: "baseUnit",
               name: "baseUnit",
@@ -996,6 +1011,90 @@ collections:
             }
       - label: "Sizes-Total in 1 x 1 x 1 form"
         name: "sizesTotal"
+        widget: "object"
+        required: true
+        summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
+        i18n: true
+        fields:
+          - {
+              label: "Key",
+              name: "key",
+              widget: "string",
+              i18n: true,
+              required: true,
+            }
+          - {
+              label: "Value",
+              name: "value",
+              widget: "string",
+              i18n: duplicate,
+              required: true,
+            }
+          - {
+              label: "baseUnit",
+              name: "baseUnit",
+              required: true,
+              widget: "string",
+              i18n: duplicate,
+            }
+      - label: "wallbox-Sizes-length"
+        name: "wallboxeSizesLength"
+        widget: "object"
+        required: true
+        summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
+        i18n: true
+        fields:
+          - {
+              label: "Key",
+              name: "key",
+              widget: "string",
+              i18n: true,
+              required: true,
+            }
+          - {
+              label: "Value",
+              name: "value",
+              widget: "string",
+              i18n: duplicate,
+              required: true,
+            }
+          - {
+              label: "baseUnit",
+              name: "baseUnit",
+              required: true,
+              widget: "string",
+              i18n: duplicate,
+            }
+      - label: "wallbox-Sizes-width"
+        name: "wallboxeSizesWidth"
+        widget: "object"
+        required: true
+        summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
+        i18n: true
+        fields:
+          - {
+              label: "Key",
+              name: "key",
+              widget: "string",
+              i18n: true,
+              required: true,
+            }
+          - {
+              label: "Value",
+              name: "value",
+              widget: "string",
+              i18n: duplicate,
+              required: true,
+            }
+          - {
+              label: "baseUnit",
+              name: "baseUnit",
+              required: true,
+              widget: "string",
+              i18n: duplicate,
+            }
+      - label: "wallbox-Sizes-height"
+        name: "wallboxeSizesHeight"
         widget: "object"
         required: true
         summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
