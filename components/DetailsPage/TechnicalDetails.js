@@ -12,22 +12,26 @@ const TechnicalDetails = ({ wallboxItem }) => {
   /* get two subsets of the car properties to map them */
   useEffect(() => {
     const basics = [
-      wallboxItem.connection,
-      wallboxItem.operatingTemperatur,
       wallboxItem.subsidies,
-
-      wallboxItem.connection230VAvailability,
-      wallboxItem.weatherResistance,
+      wallboxItem.availability,
+      wallboxItem.smartHomeCompatible,
+      wallboxItem.languagesApp,
+      wallboxItem.scheduledChargingTimer,
+      wallboxItem.guarantee,
+      wallboxItem.pVCompatible,
     ];
     SetBasics(basics);
     const details = [
+      wallboxItem.connection230VAvailability,
+      wallboxItem.connection,
+
+      wallboxItem.connectionsNumber,
       wallboxItem.power,
-      wallboxItem.guarantee,
+      wallboxItem.consumption,
       wallboxItem.tension,
+      wallboxItem.operatingTemperatur,
 
       wallboxItem.electricityCounter,
-      wallboxItem.climateNeutral,
-      wallboxItem.consumption,
     ];
 
     SetDetails(details);
@@ -35,9 +39,11 @@ const TechnicalDetails = ({ wallboxItem }) => {
       wallboxItem.wallboxeSizesHeight,
       wallboxItem.wallboxeSizesLength,
       wallboxItem.wallboxeSizesWidth,
-      wallboxItem.sizesTotal,
       wallboxItem.weight,
       wallboxItem.colour,
+      wallboxItem.protectionSensorType,
+      wallboxItem.IPprotection,
+      wallboxItem.IKprotection,
     ];
 
     SetWallboxDimentions(wallboxDimentions);

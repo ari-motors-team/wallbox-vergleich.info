@@ -534,6 +534,39 @@ collections:
               required: true,
               multiple: false,
             }
+      - label: "PV-Kompatible"
+        name: "pVCompatible"
+        required: true
+        widget: "object"
+        summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
+        i18n: true
+        fields:
+          - {
+              label: "Key",
+              name: "key",
+              widget: "string",
+              i18n: true,
+              required: true,
+            }
+          - {
+              label: "Value",
+              name: "value",
+
+              widget: "select",
+              required: true,
+              multiple: false,
+              i18n: duplicate,
+              options: ["Ja", "Nein"],
+            }
+
+          - {
+              label: "info",
+              name: "baseUnit",
+              widget: "string",
+              i18n: duplicate,
+              required: false,
+              multiple: false,
+            }
       - label: "Timer for scheduled charging (Timer für Zeit-gesteuertes Laden)"
         name: "scheduledChargingTimer"
         widget: "object"
@@ -685,7 +718,7 @@ collections:
               required: true,
             }
       - label: "Smart home compatible"
-        name: "SmartHomeCompatible"
+        name: "smartHomeCompatible"
         required: true
         widget: "object"
         summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
@@ -921,7 +954,7 @@ collections:
               i18n: true,
             }
       - label: "weather resistance (Witterungsbeständigkeit, Wetterschutz)"
-        name: "weatherResistance"
+        name: "IPprotection"
         widget: "object"
         required: true
         summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
@@ -951,8 +984,39 @@ collections:
               widget: "string",
               i18n: true,
             }
+      - label: " mechanical impact protection (IK Schutzart Gerät)"
+        name: "IKprotection"
+        widget: "object"
+        required: true
+        summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"
+        i18n: true
+        fields:
+          - {
+              label: "Key",
+              name: "key",
+              widget: "string",
+              i18n: true,
+              required: true,
+            }
+          - {
+              label: "Value",
+              name: "value",
+
+              widget: "select",
+              required: true,
+              multiple: true,
+              i18n: duplicate,
+              options: ["IK05", "IK06", "IK07", "IK08", "IK09", "IK10"],
+            }
+          - {
+              label: "comments Spritzwassergeschützt, Außen oder Drin,Flammenfest, etc.",
+              name: "baseUnit",
+              required: true,
+              widget: "string",
+              i18n: true,
+            }
       - label: "App in welchen Sprachen"
-        name: "batteryGuarantee"
+        name: "languagesApp"
         required: true
         widget: "object"
         summary: "{{fields.key}}: {{fields.value}} {{fields.baseUnit}}"

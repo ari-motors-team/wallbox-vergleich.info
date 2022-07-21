@@ -53,8 +53,8 @@ async function main() {
     entry.subsidies = `${entry?.subsidies?.value || " "} ${
       entry?.subsidies?.unit || " "
     }`;
-    entry.batteryGuarantee = `${entry?.batteryGuarantee?.value || " "} ${
-      entry?.batteryGuarantee?.unit || " "
+    entry.languagesApp = `${entry?.languagesApp?.value || " "} ${
+      entry?.languagesApp?.unit || " "
     }`;
     entry.guarantee = `${entry?.guarantee?.value || " "} ${
       entry?.guarantee?.unit || " "
@@ -202,8 +202,6 @@ async function main() {
 /*  writing */
 /*  writing */
 async function writeFile(filetype, data) {
- 
-
   const csv = new ObjectsToCsv(data);
 
   const filename = `./pdf-export-${filetype}-autosETV`;

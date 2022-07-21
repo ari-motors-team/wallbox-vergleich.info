@@ -1,14 +1,8 @@
 ---
 title: skatacopy
-name: skata2copy
-price: 395
 relatedBlogs: ari-bietet-zwei-modelle-als-food-truck-an
 manufacturer: ari-motors
 description: zdcgb
-src: /images/ladezeit-2x.png
-category:
-  - Gewerblich
-Steckertyp: Typ-1
 articlelnumber:
   key: artikelnummer
   value: 001-016-000001
@@ -124,10 +118,6 @@ wallboxeSizesHeight:
   key: Höhe
   value: "3"
   baseUnit: m
-sizesLength:
-  key: Maße
-  value: 295 x 386 x 177
-  baseUnit: mm
 ---
 
 zsfvzdf

@@ -32,6 +32,10 @@ connection:
     - "0"
   baseUnit: Stecker und Kabel
   key: Anschluss
+pVCompatible:
+  key: PV kompatibel
+  value: Nein
+
 scheduledChargingTimer:
   key: Timer für Zeit- gesteuertes Laden
   baseUnit: nein
@@ -45,14 +49,14 @@ chargeStatusPreview:
   value: über app
   baseUnit: sdv
 consumption:
-  key: df
+  key: Stromverbrauch
   value: "4"
   baseUnit: kw
 power:
   key: Ladeleistung
   value: "11"
   baseUnit: KW
-SmartHomeCompatible:
+smartHomeCompatible:
   key: Smarthomekompatibel
   value: ja
 rating:
@@ -84,13 +88,18 @@ protectionSensorType:
 electricityCounter:
   key: Stromzähler
   value: MID
-  baseUnit: UNGEeICHt
-weatherResistance:
+  baseUnit: Ja, ungeeicht
+IPprotection:
   value:
     - IP55
   key: WETTERSCHUTZ
   baseUnit: AUSSEN
-batteryGuarantee:
+IKprotection:
+  value:
+    - IK09
+  key: IK Schutzart Gerät
+  baseUnit: B
+languagesApp:
   key: Sprachen
   value: en und de
   baseUnit: "-"

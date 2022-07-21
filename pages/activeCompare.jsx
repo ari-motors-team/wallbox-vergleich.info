@@ -35,7 +35,7 @@ const carDetails = [
   "loadingHeight",
   "batteryCapacityBlei",
   "batteryCapacityLithium",
-  "batteryGuarantee",
+  "languagesApp",
   "batteryIncluded",
   "consumption",
   "availability",

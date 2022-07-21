@@ -5,8 +5,8 @@ const reducer = (state, action) => {
     /* filter */
     case "price":
       return { ...state, prices: action.data };
-    case "weatherResistance":
-      return { ...state, weatherResistances: action.data };
+    case "IPprotection":
+      return { ...state, IPprotections: action.data };
     case "electricityCounter":
       return { ...state, electricityCounters: action.data };
     case "chargeStatusPreview":
@@ -53,7 +53,7 @@ const initialState = {
 
   electricityCounters: [],
   chargeStatusPreviews: [],
-  weatherResistances: [],
+  IPprotections: [],
   powers: [],
   connections: [],
 

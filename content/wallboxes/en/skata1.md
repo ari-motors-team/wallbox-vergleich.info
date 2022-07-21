@@ -8,8 +8,7 @@ description: zdcgb
 src: /images/ladezeit-2x.png
 category:
   - Privat
-Steckertyp:
-  - Typ-2
+Steckertyp: Typ-1
 articlelnumber:
   key: artikelnummer
   value: 001-016-000001
@@ -18,6 +17,10 @@ weight:
   key: Gewicht
   value: 33
   baseUnit: kg
+colour:
+  key: Farbe
+  value: rot, blau
+  baseUnit: "0"
 operatingTemperatur:
   key: Betriebstemperatur
   value: 2
@@ -29,6 +32,10 @@ connection:
     - "6"
   baseUnit: Kabel
   key: Anschluss
+pVCompatible:
+  key: PV kompatibel
+  value: Ja
+  baseUnit: "0"
 scheduledChargingTimer:
   key: Timer für Zeit- gesteuertes Laden
   baseUnit: nein
@@ -49,7 +56,7 @@ power:
   key: Ladeleistung
   value: "11"
   baseUnit: KW
-SmartHomeCompatible:
+smartHomeCompatible:
   key: Smarthomekompatibel
   value: ja
 rating:
@@ -82,12 +89,17 @@ electricityCounter:
   key: Stromzähler
   value: Über App
   baseUnit: UNGEeICHt
-weatherResistance:
+IPprotection:
   value:
     - IK10
   key: WETTERSCHUTZ
   baseUnit: AUSSEN
-batteryGuarantee:
+IKprotection:
+  value:
+    - IK10
+  key: IK Schutzart Gerät
+  baseUnit: WRGQE
+languagesApp:
   key: Sprachen
   value: en und de
   baseUnit: "-"

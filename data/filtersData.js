@@ -11,31 +11,31 @@ const filtersData = [
 
     image: image5,
     title: "Wetterschutz",
-    category: "weatherResistances",
+    category: "IPprotections",
     options: [
       {
         title: "IP54",
         value: "IP54",
         id: 1,
-        categoryName: "weatherResistance",
+        categoryName: "IPprotection",
       },
       {
         title: "IK10",
         value: "IK10",
         id: 2,
-        categoryName: "weatherResistance",
+        categoryName: "IPprotection",
       },
       {
         title: "IP55",
         value: "IP55",
         id: 3,
-        categoryName: "weatherResistance",
+        categoryName: "IPprotection",
       },
       {
         title: "IP67",
         value: "IP67",
         id: 4,
-        categoryName: "weatherResistance",
+        categoryName: "IPprotection",
       },
     ],
   },

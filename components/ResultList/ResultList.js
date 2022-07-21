@@ -13,7 +13,7 @@ const ResultList = (props) => {
       !state?.prices ||
       !state?.electricityCounters ||
       !state?.chargeStatusPreviews ||
-      !state?.weatherResistances ||
+      !state?.IPprotections ||
       !state?.powers ||
       !state?.connections ||
       !state?.brands ||
@@ -45,9 +45,9 @@ const ResultList = (props) => {
       )
         return false;
       if (
-        state?.weatherResistances?.length > 0 &&
-        !state?.weatherResistances?.some(
-          (entry) => entry.min == wallbox.weatherResistance.value
+        state?.IPprotections?.length > 0 &&
+        !state?.IPprotections?.some(
+          (entry) => entry.min == wallbox.IPprotection.value
         )
       )
         return false;
@@ -90,7 +90,7 @@ const ResultList = (props) => {
     state?.brands,
     state?.electricityCounters,
     state?.chargeStatusPreviews,
-    state?.weatherResistances,
+    state?.IPprotections,
     state?.powers,
     state?.connections,
     props.sortedWallboxes,

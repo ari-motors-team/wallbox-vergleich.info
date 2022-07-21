@@ -20,7 +20,7 @@ function ActiveFilterEntry(props) {
       state?.brands.length ||
       state?.electricityCounters.length ||
       state?.chargeStatusPreviews.length ||
-      state?.weatherResistances.length ||
+      state?.IPprotections.length ||
       state?.powers.length ||
       state?.connections.length
     ) {
@@ -31,7 +31,7 @@ function ActiveFilterEntry(props) {
       !state?.brands.length &&
       !state?.electricityCounters.length &&
       !state?.chargeStatusPreviews.length &&
-      !state?.weatherResistances.length &&
+      !state?.IPprotections.length &&
       !state?.powers.length &&
       !state?.connections.length
     ) {
@@ -86,9 +86,9 @@ function ActiveFilterEntry(props) {
       {
         id: 5,
         value:
-          state?.weatherResistances.length ||
-          state?.weatherResistances.length == undefined
-            ? state?.weatherResistances.map((el) => `${el.min}  `).join("")
+          state?.IPprotections.length ||
+          state?.IPprotections.length == undefined
+            ? state?.IPprotections.map((el) => `${el.min}  `).join("")
             : null,
         image: image5,
       },
@@ -118,7 +118,7 @@ function ActiveFilterEntry(props) {
     state?.powers,
     state?.chargeStatusPreviews,
     state?.electricityCounters,
-    state?.weatherResistances,
+    state?.IPprotections,
     state?.connections,
   ]);
   return (
@@ -158,8 +158,7 @@ function ActiveFilterEntry(props) {
                 dispatch({ type: "chargeStatusPreview", data: [] });
               if (item.id === 4)
                 dispatch({ type: "electricityCounter", data: [] });
-              if (item.id === 5)
-                dispatch({ type: "weatherResistance", data: [] });
+              if (item.id === 5) dispatch({ type: "IPprotection", data: [] });
               if (item.id === 6) dispatch({ type: "connection", data: [] });
             }}
             className={"w-3.5 my-auto mr-4 cursor-pointer"}
@@ -211,7 +210,7 @@ function ActiveFilterEntry(props) {
           state?.prices.length ||
           state?.chargeStatusPreviews.length ||
           state?.powers.length ||
-          state?.weatherResistances.length ||
+          state?.IPprotections.length ||
           state?.brands.length
             ? "flex justify-end items-start lg:items-end md:justify-start pr-2 h-10"
             : "hidden"
@@ -238,7 +237,7 @@ function ActiveFilterEntry(props) {
               data: [],
             });
             dispatch({
-              type: "weatherResistance",
+              type: "IPprotection",
               data: [],
             });
 
