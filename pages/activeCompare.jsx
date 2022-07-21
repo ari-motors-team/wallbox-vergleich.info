@@ -9,39 +9,35 @@ import ActiveCompareSizes from "../components/ActiveCompare/ActiveCompareSizes";
 import ActiveCompareDetails from "../components/ActiveCompare/ActiveCompareDetails";
 
 const allKeys = [
-  "range230V",
-  "rangeLithium",
+  "subsidies",
+  "availability",
   "maxSpeed",
-  "chargingTime230V",
-  "chargingTimeLithium",
-  "chargingTimeFast",
-  "power",
-  "loadingWeight",
-  "curbweight",
+  "smartHomeCompatible",
+  "languagesApp",
+  "scheduledChargingTimer",
+  "guarantee",
+  "pVCompatible",
 ];
-const carSizes = [
-  "loadingVolumeHeight",
-  "loadingVolumeLength",
-  "loadingVolumeWidth",
-  "wheelbase",
-  "carSizesHeight",
-  "carSizesLength",
-  "carSizesWidth",
-  "loadingVolumeTotal",
-  "loadingArea",
+const wallboxDimentions = [
+  "wallboxeSizesHeight",
+  "wallboxeSizesLength",
+  "wallboxeSizesWidth",
+  "weight",
+  "colour",
+  "protectionSensorType",
+  "IPprotection",
+  "IKprotection",
 ];
 
-const carDetails = [
-  "loadingHeight",
-  "batteryCapacityBlei",
-  "batteryCapacityLithium",
-  "languagesApp",
-  "batteryIncluded",
+const wallBoxDetails = [
+  "connection230VAvailability",
+  "connection",
+  "connectionsNumber",
+  "power",
   "consumption",
-  "availability",
-  "guarantee",
-  "seats",
-  "subsidies",
+  "tension",
+  "operatingTemperatur",
+  "electricityCounter",
 ];
 
 export default function activeCompare(props) {
@@ -87,13 +83,13 @@ export default function activeCompare(props) {
           </div>
           <div className="grid grid-flow-col auto-cols-[minmax(160px,_1fr)]">
             <ActiveCompareSizes
-              keys={carSizes}
+              keys={wallboxDimentions}
               comparedWallboxes={comparedWallboxes}
             />
           </div>
           <div className="grid grid-flow-col auto-cols-[minmax(160px,_1fr)]">
             <ActiveCompareDetails
-              keys={carDetails}
+              keys={wallBoxDetails}
               comparedWallboxes={comparedWallboxes}
             />
           </div>

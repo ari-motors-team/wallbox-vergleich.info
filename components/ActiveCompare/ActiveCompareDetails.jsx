@@ -2,31 +2,24 @@ import { useState, useEffect } from "react";
 
 import ButtonAnfragen from "../repeated/ButtonAnfragen";
 
-export default function ActiveCompareDetails({ keys, comparedCars }) {
+export default function ActiveCompareDetails({ keys, comparedWallboxes }) {
   const [entries, setEntries] = useState([]);
 
-  let testResultArr = comparedCars.map((test) => test.rating);
+  let testResultArr = comparedWallboxes.map((test) => test.rating);
 
   useEffect(() => {
-    if (!keys?.length > 0 || !comparedCars?.length > 0) return;
+    if (!keys?.length > 0 || !comparedWallboxes?.length > 0) return;
     let entries = [];
-    let totalWeight = [];
-    for (let i = 0; i < comparedCars.length; i++) {
-      let weight =
-        comparedCars[i].curbweight.value +
-        comparedCars[i].loadingWeight.value +
-        " kg";
-      totalWeight.push(weight);
-    }
+
     const entryKeys = [];
     for (const key of keys) {
       entryKeys.push(
-        comparedCars[0][key].key ? comparedCars[0][key].key : keys[0]
+        comparedWallboxes[0][key].key ? comparedWallboxes[0][key].key : keys[0]
       );
     }
     entries.push(entryKeys);
 
-    for (const car of comparedCars) {
+    for (const car of comparedWallboxes) {
       const carValues = [];
 
       for (const key of keys) {
@@ -42,7 +35,7 @@ export default function ActiveCompareDetails({ keys, comparedCars }) {
     // console.log(entries, "entries test");
     setEntries(entries);
     // console.log(entries);
-  }, [keys, comparedCars]);
+  }, [keys, comparedWallboxes]);
 
   return (
     <>
@@ -83,7 +76,7 @@ export default function ActiveCompareDetails({ keys, comparedCars }) {
             }
           >
             {index !== 0 ? (
-              <ButtonAnfragen carItem={comparedCars[index - 1].title} />
+              <ButtonAnfragen carItem={comparedWallboxes[index - 1].title} />
             ) : (
               // carItem={carItem}
               <div className="h-20 bg-grey-border"></div>

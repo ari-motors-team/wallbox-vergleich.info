@@ -40,12 +40,6 @@ export default function ActiveCompareEntries({ keys, comparedCars }) {
     }
     /* Main keys push to position 8 for calculating the total weight */
 
-    entries[0].splice(9, 0, "Gesamtgewicht");
-    for (let i = 1; i < comparedCars?.length + 1; i++) {
-      // console.log(comparedCars, "comparedCars");
-      entries[i].splice(9, 0, totalWeight[i - 1]);
-    }
-
     setEntries(entries);
     // console.log(entries);
   }, [keys, comparedCars]);
@@ -62,23 +56,11 @@ export default function ActiveCompareEntries({ keys, comparedCars }) {
             </div>
           ) : (
             <div className="flex items-center pb-2 scale-75 pt-7 h-18 lg:pl-8 2xl:pl-4 lg:scale-95">
-              <StarsRating
-                /* stars={testResultArr[index - 1]} */ stars={
+              {/*  <StarsRating
+                stars={
                   comparedCars[index - 1].rating.value
-                }
-              />
-            </div>
-          )}
-          {/* ADDS THE CLASS TYPE AS FIRST LINE */}
-          {index == 0 ? (
-            <div className="flex items-center flex-1 h-12 pl-4 bg-grey-lighter lg:pl-10 ">
-              <p className="text-sm text-blue-extra lg:text-lg">Klasse</p>
-            </div>
-          ) : (
-            <div className="flex items-center flex-1 h-12 pl-4 bg-grey-lighter lg:pl-10 2xl:pl-8">
-              <p className="text-sm text-blue-extra lg:text-lg ">
-                {comparedCars[index - 1].typeClass}
-              </p>
+                
+              /> */}
             </div>
           )}
 

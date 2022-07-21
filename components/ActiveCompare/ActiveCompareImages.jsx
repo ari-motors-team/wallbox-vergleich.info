@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import image from "../../public/images/345-front-1-.jpg";
 
-export default function ActiveCompareImages({ comparedCars }) {
+export default function ActiveCompareImages({ comparedWallboxes }) {
   return (
     <>
       {/* PLACEHOLDER */}
@@ -34,8 +34,8 @@ export default function ActiveCompareImages({ comparedCars }) {
           </a>
         </div>
       </div>
-      {comparedCars.length ? (
-        comparedCars.map((item, index) => (
+      {comparedWallboxes.length ? (
+        comparedWallboxes.map((item, index) => (
           <div
             className="relative h-full bg-grey-lighter p-4 sm:pl-10 md:pl-4 min-w-[160px]"
             key={index}

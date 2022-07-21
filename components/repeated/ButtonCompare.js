@@ -60,16 +60,16 @@ function ButtonCompare(props) {
                 ...state.autoForComparisons,
                 {
                   pic: props.wallboxItem.src,
-                  title: props.carItem.title,
-                  price: props.carItem.price,
-                  auto: props.carItem,
+                  title: props.wallboxItem.title,
+                  price: props.wallboxItem.price,
+                  auto: props.wallboxItem,
                 },
               ],
             });
 
             setDisabled(true);
           } else {
-            dispatch({ type: "maximalThree", data: props.carItem.title });
+            dispatch({ type: "maximalThree", data: props.wallboxItem.title });
           }
         }}
         className={
@@ -81,7 +81,7 @@ function ButtonCompare(props) {
         {disabled ? "Zum Vergleich" : buttonInput}
       </button>
       <p className="text-xs">
-        {state?.maximalThrees === props.carItem?.title
+        {state?.maximalThrees === props.wallboxItem?.title
           ? "Maximal 3 Fahrzeuge"
           : null}
       </p>
