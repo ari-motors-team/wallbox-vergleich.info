@@ -4,7 +4,7 @@ import { filtersData, priceFilterData } from "../../../data/filtersData";
 import FilterItemDesktop from "./FilterItemDesktop";
 import PriceInputs from "../PriceInputs";
 import FilterBrandItemDesktop from "./FilterBrandItemDesktop";
-//h
+//hhh
 const variants = {
   enter: {
     height: 0,
